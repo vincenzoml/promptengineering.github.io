@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Prompt Engineering</title>
-    <link>https://promptengineering.github.io/tags/</link>
+    <link>http://www.promptengineering.it/tags/</link>
     <description>Recent content in Tags on Prompt Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jan 2023 09:52:20 +0100</lastBuildDate><atom:link href="https://promptengineering.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 09:52:20 +0100</lastBuildDate><atom:link href="http://www.promptengineering.it/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>first</title>
-      <link>https://promptengineering.github.io/tags/first/</link>
+      <title>Art</title>
+      <link>http://www.promptengineering.it/tags/art/</link>
       <pubDate>Tue, 10 Jan 2023 09:52:20 +0100</pubDate>
       
-      <guid>https://promptengineering.github.io/tags/first/</guid>
+      <guid>http://www.promptengineering.it/tags/art/</guid>
       <description></description>
     </item>
     

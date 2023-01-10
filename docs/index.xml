@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Prompt Engineering</title>
-    <link>https://promptengineering.github.io/</link>
+    <link>http://www.promptengineering.it/</link>
     <description>Recent content on Prompt Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Jan 2023 09:52:20 +0100</lastBuildDate><atom:link href="https://promptengineering.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 09:52:20 +0100</lastBuildDate><atom:link href="http://www.promptengineering.it/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Prompt Engineering</title>
-      <link>https://promptengineering.github.io/posts/welcome/</link>
+      <title>Welcome to Prompt Engineering</title>
+      <link>http://www.promptengineering.it/posts/welcome/</link>
       <pubDate>Tue, 10 Jan 2023 09:52:20 +0100</pubDate>
       
-      <guid>https://promptengineering.github.io/posts/welcome/</guid>
-      <description>Desc Text.</description>
+      <guid>http://www.promptengineering.it/posts/welcome/</guid>
+      <description>The art of welcoming you.</description>
     </item>
     
   </channel>
