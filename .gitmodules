@@ -4,3 +4,6 @@
 [submodule "www/themes/ananke"]
 	path = www/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke
+[submodule "www/themes/PaperMod"]
+	path = www/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod
