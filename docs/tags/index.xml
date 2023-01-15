@@ -7,11 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 10 Jan 2023 09:52:20 +0100</lastBuildDate><atom:link href="http://www.promptengineering.it/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Art</title>
-      <link>http://www.promptengineering.it/tags/art/</link>
+      <title>Bananas</title>
+      <link>http://www.promptengineering.it/tags/bananas/</link>
       <pubDate>Tue, 10 Jan 2023 09:52:20 +0100</pubDate>
       
-      <guid>http://www.promptengineering.it/tags/art/</guid>
+      <guid>http://www.promptengineering.it/tags/bananas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ChatGPT</title>
+      <link>http://www.promptengineering.it/tags/chatgpt/</link>
+      <pubDate>Tue, 10 Jan 2023 09:52:20 +0100</pubDate>
+      
+      <guid>http://www.promptengineering.it/tags/chatgpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promptbending</title>
+      <link>http://www.promptengineering.it/tags/promptbending/</link>
+      <pubDate>Tue, 10 Jan 2023 09:52:20 +0100</pubDate>
+      
+      <guid>http://www.promptengineering.it/tags/promptbending/</guid>
       <description></description>
     </item>
     
