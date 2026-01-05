@@ -1,0 +1,11 @@
+# Prompt Engineering Italia
+# https://www.promptengineering.it
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.promptengineering.it/sitemap.xml
+
+# RSS Feed
+# https://www.promptengineering.it/feed.xml

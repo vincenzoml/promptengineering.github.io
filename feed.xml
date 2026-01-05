@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prompt Engineering Italia</title>
+    <link>https://www.promptengineering.it</link>
+    <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
+    <language>it-IT</language>
+    <lastBuildDate>Mon, 05 Jan 2026 21:26:16 GMT</lastBuildDate>
+    <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Benvenuto su Prompt Engineering Italia]]></title>
+      <link>https://www.promptengineering.it/#/post/welcome</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/#/post/welcome</guid>
+      <description><![CDATA[Scopri le basi del prompt engineering e impara a comunicare efficacemente con i modelli AI come ChatGPT e Claude.]]></description>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+      <category>introduzione</category>
+      <category>guida</category>
+      <category>AI</category>
+      <category>ChatGPT</category>
+    </item>
+  </channel>
+</rss>

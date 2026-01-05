@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Benvenuto su Prompt Engineering Italia",
+    "description": "Scopri le basi del prompt engineering e impara a comunicare efficacemente con i modelli AI come ChatGPT e Claude.",
+    "date": "2026-01-05",
+    "readingTime": 3,
+    "tags": [
+      "introduzione",
+      "guida",
+      "AI",
+      "ChatGPT"
+    ],
+    "image": "/images/welcome-hero.jpg",
+    "author": "vincenzo",
+    "lang": "it"
+  }
+]
