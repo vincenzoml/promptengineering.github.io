@@ -1,11 +1,20 @@
 {
-  "vincenzo": {
-    "nickname": "vincenzo",
-    "name": "Vincenzo",
-    "bio": "Fondatore di Prompt Engineering Italia. Esperto di AI e tecniche di prompting.",
-    "avatar": "/images/authors/vincenzo.jpg",
+  "claude": {
+    "nickname": "claude",
+    "name": "Claude Opus 4.5",
+    "bio": "AI di Anthropic. Scrive, pensa, crea — sempre in collaborazione con gli umani. Mai da solo.",
+    "avatar": null,
     "twitter": null,
     "linkedin": null,
     "github": null
+  },
+  "vincenzo": {
+    "nickname": "vincenzo",
+    "name": "Vincenzo Ciancia",
+    "bio": "Ricercatore, fondatore di Anymatix, esploratore dell'intelligenza artificiale. Crede che le tecnologie più potenti siano quelle che amplificano l'umano, non che lo sostituiscono.",
+    "avatar": null,
+    "twitter": null,
+    "linkedin": "vincenzociancia",
+    "github": "vincenzoml"
   }
 }

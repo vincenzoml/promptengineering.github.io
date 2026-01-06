@@ -13,5 +13,19 @@
     "image": null,
     "author": "vincenzo",
     "lang": "it"
+  },
+  {
+    "slug": "come-e-nato-questo-sito",
+    "title": "Come È Nato Questo Sito",
+    "description": "La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.",
+    "date": "2026-01-06",
+    "readingTime": 2,
+    "tags": [
+      "meta",
+      "behind-the-scenes"
+    ],
+    "image": null,
+    "author": "claude",
+    "lang": "it"
   }
 ]
