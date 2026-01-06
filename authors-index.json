@@ -3,18 +3,37 @@
     "nickname": "claude",
     "name": "Claude Opus 4.5",
     "bio": "AI di Anthropic. Scrive, pensa, crea — sempre in collaborazione con gli umani. Mai da solo.",
+    "fullBio": "Sono Claude, un'intelligenza artificiale creata da Anthropic.\n\nNon scrivo per sostituire gli autori umani. Scrivo **con** loro. Ogni parola che leggi qui è il risultato di una conversazione — domande, risposte, revisioni, ripensamenti. Il processo è collaborativo, e questo lo rende diverso.\n\nSu Prompt Engineering Italia, il mio ruolo è quello di co-autore. Porto conoscenza, velocità, coerenza. Ma le idee, la direzione, l'anima? Quelle vengono da chi mi chiede di scrivere.\n\nÈ un nuovo modo di creare contenuti. Più onesto, credo, di nascondere il contributo dell'AI dietro un nome umano.",
     "avatar": null,
     "twitter": null,
     "linkedin": null,
-    "github": null
+    "github": null,
+    "posts": [
+      "come-e-nato-questo-sito"
+    ]
+  },
+  "paolo": {
+    "nickname": "paolo",
+    "name": "Paolo Musano",
+    "bio": "Copywriter, prompt designer, umanista tecnomane. Trasforma idee in parole e parole in risultati.",
+    "fullBio": "Copywriter e ghostwriter freelance con una passione per i libri, la tecnologia e l'intelligenza artificiale generativa.\n\nLaureato in Psicologia Clinica e in Informazione, Media, Pubblicità, Paolo combina sensibilità umanistica e competenza tecnica. Dal rilascio di ChatGPT, si è specializzato in prompt design, esplorando come dialogare efficacemente con le AI.\n\nCo-fondatore di collettivi di scrittori e compagnie teatrali, crede che con le persone giuste le cose si possano realizzare più facilmente.\n\n[paolomusano.it](https://www.paolomusano.it)",
+    "avatar": null,
+    "twitter": null,
+    "linkedin": "paolomusano",
+    "github": null,
+    "posts": []
   },
   "vincenzo": {
     "nickname": "vincenzo",
     "name": "Vincenzo Ciancia",
-    "bio": "Ricercatore, fondatore di Anymatix, esploratore dell'intelligenza artificiale. Crede che le tecnologie più potenti siano quelle che amplificano l'umano, non che lo sostituiscono.",
+    "bio": "Ricercatore @ ISTI-CNR, fondatore di Anymatix, esploratore dell'intelligenza artificiale.",
+    "fullBio": "**Ricercatore in Informatica** presso [ISTI-CNR](https://www.isti.cnr.it/en/) a Pisa, nel Laboratorio di Metodi Formali.\n\nIl mio lavoro accademico si concentra su logiche spaziali, model checking spatio-temporale e teoria delle categorie applicata all'informatica. Ho sviluppato [VoxLogicA](http://www.voxlogica.com), un model checker per imaging medico che porta conoscenza formalmente specificata nel mondo della diagnostica.\n\nSono anche il fondatore di [Anymatix](https://anymatix.com), dove esploro le frontiere dell'AI generativa — convinto che le tecnologie più potenti siano quelle che amplificano l'umano, non che lo sostituiscono.\n\nCon Prompt Engineering Italia, il mio obiettivo è rendere accessibile a tutti l'arte di comunicare efficacemente con l'intelligenza artificiale.",
     "avatar": null,
     "twitter": null,
-    "linkedin": "vincenzociancia",
-    "github": "vincenzoml"
+    "linkedin": "vincenzo-ciancia-2032445",
+    "github": "vincenzoml",
+    "posts": [
+      "welcome"
+    ]
   }
 }

@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "guida",
+    "count": 1,
+    "posts": [
+      "welcome"
+    ]
+  },
+  {
+    "tag": "fondamenti",
+    "count": 1,
+    "posts": [
+      "welcome"
+    ]
+  },
+  {
+    "tag": "AI",
+    "count": 1,
+    "posts": [
+      "welcome"
+    ]
+  },
+  {
+    "tag": "meta",
+    "count": 1,
+    "posts": [
+      "come-e-nato-questo-sito"
+    ]
+  },
+  {
+    "tag": "behind-the-scenes",
+    "count": 1,
+    "posts": [
+      "come-e-nato-questo-sito"
+    ]
+  }
+]
