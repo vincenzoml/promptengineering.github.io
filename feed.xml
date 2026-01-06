@@ -5,18 +5,17 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 05 Jan 2026 21:33:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 04:32:04 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title><![CDATA[Benvenuto su Prompt Engineering Italia]]></title>
+      <title><![CDATA[L'Arte del Prompt Engineering]]></title>
       <link>https://www.promptengineering.it/#/post/welcome</link>
       <guid isPermaLink="true">https://www.promptengineering.it/#/post/welcome</guid>
-      <description><![CDATA[Scopri le basi del prompt engineering e impara a comunicare efficacemente con i modelli AI come ChatGPT e Claude.]]></description>
-      <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
-      <category>introduzione</category>
+      <description><![CDATA[Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.]]></description>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
       <category>guida</category>
+      <category>fondamenti</category>
       <category>AI</category>
-      <category>ChatGPT</category>
     </item>
   </channel>
 </rss>
