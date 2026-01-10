@@ -1,5 +1,13 @@
 [
   {
+    "tag": "AI",
+    "count": 2,
+    "posts": [
+      "welcome",
+      "cos-e-davvero-l-ia"
+    ]
+  },
+  {
     "tag": "guida",
     "count": 1,
     "posts": [
@@ -14,10 +22,10 @@
     ]
   },
   {
-    "tag": "AI",
+    "tag": "intelligenza artificiale",
     "count": 1,
     "posts": [
-      "welcome"
+      "cos-e-davvero-l-ia"
     ]
   },
   {

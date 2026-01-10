@@ -1,5 +1,5 @@
 ---
-title: L'Arte del Prompt Engineering
+title: L'arte del prompt engineering
 description: Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.
 date: 2026-01-06
 author: vincenzo
@@ -7,19 +7,19 @@ tags: [guida, fondamenti, AI]
 lang: it
 ---
 
-# L'Arte del Prompt Engineering
+# L'arte del prompt engineering
 
 Il prompt engineering non è programmazione. È comunicazione.
 
 È l'arte di tradurre il pensiero umano in un linguaggio che le macchine possono comprendere e su cui possono agire. E come ogni forma di comunicazione, richiede chiarezza, intenzione e pratica.
 
-## Perché le Parole Contano
+## Perché le parole contano
 
 Quando parliamo con un'intelligenza artificiale, ogni parola ha peso. Non perché la macchina sia esigente, ma perché è precisa. Non indovina ciò che intendiamo—risponde a ciò che diciamo.
 
 Questo ci obbliga a una disciplina rara: pensare prima di parlare. Articolare con precisione ciò che vogliamo. Essere specifici quando il vago non basta, e aperti quando cerchiamo l'inaspettato.
 
-## I Tre Pilastri
+## I tre pilastri
 
 ### 1. Chiarezza
 
@@ -41,7 +41,7 @@ L'AI non conosce la tua situazione. Ogni informazione rilevante che condividi mi
 
 Il primo prompt raramente è l'ultimo. Il vero prompt engineering è un dialogo—affini, specifichi, esplori. Non cercare la perfezione al primo colpo. Cerca la direzione giusta.
 
-## Una Nuova Competenza
+## Una nuova competenza
 
 Siamo all'inizio di qualcosa. La capacità di comunicare efficacemente con l'intelligenza artificiale diventerà fondamentale quanto saper scrivere un'email o fare una presentazione.
 

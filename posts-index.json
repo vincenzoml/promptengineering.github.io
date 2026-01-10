@@ -1,7 +1,21 @@
 [
   {
+    "slug": "cos-e-davvero-l-ia",
+    "title": "Cos’è (davvero) l’intelligenza artificiale?",
+    "description": "Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita",
+    "date": "2026-01-10",
+    "readingTime": 3,
+    "tags": [
+      "AI",
+      "intelligenza artificiale"
+    ],
+    "image": null,
+    "author": "paolo",
+    "lang": "it"
+  },
+  {
     "slug": "welcome",
-    "title": "L'Arte del Prompt Engineering",
+    "title": "L'arte del prompt engineering",
     "description": "Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.",
     "date": "2026-01-06",
     "readingTime": 2,
@@ -16,7 +30,7 @@
   },
   {
     "slug": "come-e-nato-questo-sito",
-    "title": "Come È Nato Questo Sito",
+    "title": "Come è nato questo sito",
     "description": "La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.",
     "date": "2026-01-06",
     "readingTime": 2,

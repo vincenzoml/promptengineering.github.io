@@ -5,10 +5,19 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 07 Jan 2026 22:50:12 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 16:41:39 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title><![CDATA[L'Arte del Prompt Engineering]]></title>
+      <title><![CDATA[Cos’è (davvero) l’intelligenza artificiale?]]></title>
+      <link>https://www.promptengineering.it/#/post/cos-e-davvero-l-ia</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/#/post/cos-e-davvero-l-ia</guid>
+      <description><![CDATA[Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita]]></description>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>intelligenza artificiale</category>
+    </item>
+    <item>
+      <title><![CDATA[L'arte del prompt engineering]]></title>
       <link>https://www.promptengineering.it/#/post/welcome</link>
       <guid isPermaLink="true">https://www.promptengineering.it/#/post/welcome</guid>
       <description><![CDATA[Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.]]></description>
@@ -18,7 +27,7 @@
       <category>AI</category>
     </item>
     <item>
-      <title><![CDATA[Come È Nato Questo Sito]]></title>
+      <title><![CDATA[Come è nato questo sito]]></title>
       <link>https://www.promptengineering.it/#/post/come-e-nato-questo-sito</link>
       <guid isPermaLink="true">https://www.promptengineering.it/#/post/come-e-nato-questo-sito</guid>
       <description><![CDATA[La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.]]></description>
