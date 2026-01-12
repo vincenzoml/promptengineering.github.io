@@ -32,3 +32,6 @@ Negli ultimi anni si parla molto di intelligenza artificiale generativa. È una 
 Una metafora utile è questa: l’IA generativa è come un assistente che ha letto tantissimi libri e ascoltato tantissime conversazioni, ma non ha un punto di vista personale. Se le chiedi qualcosa, ti risponde nel modo più coerente possibile, non nel modo più vero o più giusto. Per questo è uno strumento potente, ma non infallibile.
 
 Capire cos’è davvero l’intelligenza artificiale serve proprio a questo: smettere di temerla come un’entità misteriosa o di idealizzarla come una mente superiore. È tecnologia costruita da persone, con limiti molto concreti. E solo partendo da questa consapevolezza ha senso usarla, discuterne e immaginare come potrà entrare, sempre di più, nella nostra vita quotidiana.
+
+---
+_Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._
