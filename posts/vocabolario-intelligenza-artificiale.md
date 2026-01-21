@@ -90,5 +90,6 @@ Il **vibe coding** descrive un modo informale di programmare con l’aiuto dell�
 Non serve impararle a memoria. Basta riconoscerle. Capire il vocabolario minimo dell’IA permette di seguire le discussioni, usare gli strumenti con maggiore consapevolezza e distinguere ciò che è già qui da ciò che è solo promesso.
 
 L’intelligenza artificiale non è magia, né una minaccia inevitabile. È una tecnologia complessa, ma spiegabile. E ogni buon dialogo, anche con le macchine, parte sempre dalle parole giuste.
+
 ---
 _Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._
