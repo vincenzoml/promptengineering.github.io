@@ -5,12 +5,21 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Mon, 12 Jan 2026 10:52:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jan 2026 13:32:09 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title><![CDATA[Le parole dell'IA, spiegate senza fuffa]]></title>
+      <link>https://www.promptengineering.it/#/post/vocabolario-intelligenza-artificiale</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/#/post/vocabolario-intelligenza-artificiale</guid>
+      <description><![CDATA[Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse]]></description>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
+      <category>IA</category>
+      <category>intelligenza artificiale</category>
+    </item>
+    <item>
       <title><![CDATA[Cos’è (davvero) l’intelligenza artificiale?]]></title>
-      <link>https://www.promptengineering.it/#/post/cos-e-davvero-l-ia</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/cos-e-davvero-l-ia</guid>
+      <link>https://www.promptengineering.it/#/post/cosa-non-e-intelligenza-artificiale</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/#/post/cosa-non-e-intelligenza-artificiale</guid>
       <description><![CDATA[Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita]]></description>
       <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
       <category>AI</category>

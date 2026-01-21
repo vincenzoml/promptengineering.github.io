@@ -1,6 +1,20 @@
 [
   {
-    "slug": "cos-e-davvero-l-ia",
+    "slug": "vocabolario-intelligenza-artificiale",
+    "title": "Le parole dell'IA, spiegate senza fuffa",
+    "description": "Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse",
+    "date": "2026-01-21",
+    "readingTime": 8,
+    "tags": [
+      "IA",
+      "intelligenza artificiale"
+    ],
+    "image": null,
+    "author": "paolo",
+    "lang": "it"
+  },
+  {
+    "slug": "cosa-non-e-intelligenza-artificiale",
     "title": "Cos’è (davvero) l’intelligenza artificiale?",
     "description": "Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita",
     "date": "2026-01-10",

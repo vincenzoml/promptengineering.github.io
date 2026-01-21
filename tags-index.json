@@ -4,7 +4,15 @@
     "count": 2,
     "posts": [
       "welcome",
-      "cos-e-davvero-l-ia"
+      "cosa-non-e-intelligenza-artificiale"
+    ]
+  },
+  {
+    "tag": "intelligenza artificiale",
+    "count": 2,
+    "posts": [
+      "vocabolario-intelligenza-artificiale",
+      "cosa-non-e-intelligenza-artificiale"
     ]
   },
   {
@@ -22,10 +30,10 @@
     ]
   },
   {
-    "tag": "intelligenza artificiale",
+    "tag": "IA",
     "count": 1,
     "posts": [
-      "cos-e-davvero-l-ia"
+      "vocabolario-intelligenza-artificiale"
     ]
   },
   {
