@@ -1,5 +1,5 @@
 ---
-title: Le parole dell'IA, spiegate senza fuffa
+title: Le parole per capire l'IA
 description: Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse
 date: 2026-01-21
 author: paolo
@@ -7,8 +7,8 @@ tags: [IA, intelligenza artificiale]
 lang: it
 ---
 
-# Le parole dell'IA, spiegate senza fuffa
-
+# Le parole per capire l'IA
+![Le parole dell'IA](/images/posts/vocabolario-IA.jpg)
 Questo articolo è pensato per lettori non tecnici, professionisti, imprenditori e curiosi che vogliono capire l’intelligenza artificiale senza diventare esperti, ma con abbastanza chiarezza da orientarsi e usarla con criterio.
 
 Quando si parla di intelligenza artificiale capita spesso di sentirsi esclusi dalla conversazione. Da una parte c’è molta confusione, slogan, promesse esagerate e toni apocalittici o trionfalistici. Dall’altra c’è un linguaggio pieno di sigle, acronimi e termini tecnici che sembrano riservati agli addetti ai lavori. In mezzo restano molte persone che vorrebbero capire meglio, ma non sanno da dove partire.
