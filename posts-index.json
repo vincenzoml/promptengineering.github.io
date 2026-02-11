@@ -1,5 +1,35 @@
 [
   {
+    "slug": "IA-generativa",
+    "title": "IA generativa: la macchina che inventa invece di copiare",
+    "description": "Per decenni l'intelligenza artificiale ha classificato, ordinato, riconosciuto. Ora crea. Ma cosa significa davvero \"generare\" per una macchina?",
+    "date": "2026-02-11",
+    "readingTime": 6,
+    "tags": [
+      "IA",
+      "intelligenza artificiale",
+      "IA generativa"
+    ],
+    "image": null,
+    "author": "paolo",
+    "lang": "it"
+  },
+  {
+    "slug": "IA-come-pappagalli-stocastici",
+    "title": "Pappagalli stocastici: quando l'IA ripete senza capire",
+    "description": "I grandi modelli linguistici sanno di cosa parlano? Un paper del 2021 ha fatto esplodere un putiferio dentro Google.",
+    "date": "2026-02-10",
+    "readingTime": 4,
+    "tags": [
+      "IA",
+      "intelligenza artificiale",
+      "pappagalli stocastici"
+    ],
+    "image": null,
+    "author": "paolo",
+    "lang": "it"
+  },
+  {
     "slug": "vocabolario-intelligenza-artificiale",
     "title": "Le parole per capire l'IA",
     "description": "Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse",

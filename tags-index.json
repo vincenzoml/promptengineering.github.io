@@ -1,17 +1,28 @@
 [
   {
+    "tag": "intelligenza artificiale",
+    "count": 4,
+    "posts": [
+      "vocabolario-intelligenza-artificiale",
+      "cosa-non-e-intelligenza-artificiale",
+      "IA-generativa",
+      "IA-come-pappagalli-stocastici"
+    ]
+  },
+  {
+    "tag": "IA",
+    "count": 3,
+    "posts": [
+      "vocabolario-intelligenza-artificiale",
+      "IA-generativa",
+      "IA-come-pappagalli-stocastici"
+    ]
+  },
+  {
     "tag": "AI",
     "count": 2,
     "posts": [
       "welcome",
-      "cosa-non-e-intelligenza-artificiale"
-    ]
-  },
-  {
-    "tag": "intelligenza artificiale",
-    "count": 2,
-    "posts": [
-      "vocabolario-intelligenza-artificiale",
       "cosa-non-e-intelligenza-artificiale"
     ]
   },
@@ -30,13 +41,6 @@
     ]
   },
   {
-    "tag": "IA",
-    "count": 1,
-    "posts": [
-      "vocabolario-intelligenza-artificiale"
-    ]
-  },
-  {
     "tag": "meta",
     "count": 1,
     "posts": [
@@ -48,6 +52,20 @@
     "count": 1,
     "posts": [
       "come-e-nato-questo-sito"
+    ]
+  },
+  {
+    "tag": "IA generativa",
+    "count": 1,
+    "posts": [
+      "IA-generativa"
+    ]
+  },
+  {
+    "tag": "pappagalli stocastici",
+    "count": 1,
+    "posts": [
+      "IA-come-pappagalli-stocastici"
     ]
   }
 ]
