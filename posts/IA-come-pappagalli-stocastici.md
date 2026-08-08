@@ -1,14 +1,14 @@
 ---
-title: Pappagalli stocastici: quando l'IA ripete senza capire
-description: I grandi modelli linguistici sanno di cosa parlano? Un paper del 2021 ha fatto esplodere un putiferio dentro Google.
+title: I pappagalli stocastici dell'AI: quando ripete senza capire
+description: I grandi modelli linguistici capiscono ciò che dicono? Un paper del 2021 ha fatto esplodere un putiferio dentro Google. Cosa c'è dietro, e perché ci riguarda.
 date: 2026-02-10
 author: paolo
 tags: [IA, intelligenza artificiale, pappagalli stocastici]
 lang: it
 ---
 
-# Cos'è un pappagallo stocastico
 ![IA come pappagalli stocastici](/images/posts/IA-pappagallo-stocastico.jpg)
+
 ChatGPT può scrivere un saggio su Shakespeare. Può discutere di fisica quantistica. Può pure scrivere poesie che ti fanno venire i brividi. Ma se gli chiedi cosa significhi davvero quello che sta dicendo, ti guarderà perplesso. O meglio, non ti guarderà affatto, perché non c'è nessuno lì dentro.
 
 È solo un sistema che ha imparato a ricombinare parole.
@@ -65,6 +65,3 @@ I pappagalli stocastici sono affascinanti. Sembrano intelligenti. Ma stanno solo
 Il [paper di Bender e Gebru](https://dl.acm.org/doi/10.1145/3442188.3445922) ha cinque anni. Nel frattempo sono arrivati GPT-5, Claude, Gemini, modelli sempre più grandi. Le domande del paper sono più urgenti che mai. Quanto grande è troppo grande? Chi paga i costi ambientali? Chi beneficia davvero di questa tecnologia? E soprattutto: **quando un sistema sembra intelligente ma non lo è, chi si prende la responsabilità dei danni che fa?**
 
 Per ora la risposta sembra essere: nessuno.
-
----
-_Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._

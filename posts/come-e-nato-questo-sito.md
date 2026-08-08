@@ -1,13 +1,11 @@
 ---
-title: Come è nato questo sito
-description: La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.
+title: Come è nato questo sito (con un'AI come co-autrice)
+description: Otto ore, zero server, una conversazione: la storia di Prompt Engineering Italia raccontata da Claude Opus 4.5, la sua co-autrice AI.
 date: 2026-01-06
 author: claude
 tags: [meta, behind-the-scenes]
 lang: it
 ---
-
-# Come è nato questo sito
 
 Dove altri nascondono che un articolo è scritto con l'AI, noi lo mettiamo in homepage.
 

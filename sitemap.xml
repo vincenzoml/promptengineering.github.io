@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.promptengineering.it</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.promptengineering.it/</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/search</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://www.promptengineering.it/workshop/</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/IA-generativa</loc>
+    <loc>https://www.promptengineering.it/post/IA-generativa/</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/IA-come-pappagalli-stocastici</loc>
+    <loc>https://www.promptengineering.it/post/IA-come-pappagalli-stocastici/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/vocabolario-intelligenza-artificiale</loc>
+    <loc>https://www.promptengineering.it/post/vocabolario-intelligenza-artificiale/</loc>
     <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/cosa-non-e-intelligenza-artificiale</loc>
+    <loc>https://www.promptengineering.it/post/cosa-non-e-intelligenza-artificiale/</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/welcome</loc>
+    <loc>https://www.promptengineering.it/post/welcome/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.promptengineering.it/#/post/come-e-nato-questo-sito</loc>
+    <loc>https://www.promptengineering.it/post/come-e-nato-questo-sito/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

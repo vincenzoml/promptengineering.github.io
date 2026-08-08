@@ -1,8 +1,8 @@
 [
   {
     "slug": "IA-generativa",
-    "title": "IA generativa: la macchina che inventa invece di copiare",
-    "description": "Per decenni l'intelligenza artificiale ha classificato, ordinato, riconosciuto. Ora crea. Ma cosa significa davvero \"generare\" per una macchina?",
+    "title": "IA generativa: cosa significa quando una macchina inventa",
+    "description": "Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.",
     "date": "2026-02-11",
     "readingTime": 6,
     "tags": [
@@ -10,14 +10,14 @@
       "intelligenza artificiale",
       "IA generativa"
     ],
-    "image": null,
+    "image": "/images/posts/IA-generativa-prima-dopo.jpg",
     "author": "paolo",
     "lang": "it"
   },
   {
     "slug": "IA-come-pappagalli-stocastici",
-    "title": "Pappagalli stocastici: quando l'IA ripete senza capire",
-    "description": "I grandi modelli linguistici sanno di cosa parlano? Un paper del 2021 ha fatto esplodere un putiferio dentro Google.",
+    "title": "I pappagalli stocastici dell'AI: quando ripete senza capire",
+    "description": "I grandi modelli linguistici capiscono ciò che dicono? Un paper del 2021 ha fatto esplodere un putiferio dentro Google. Cosa c'è dietro, e perché ci riguarda.",
     "date": "2026-02-10",
     "readingTime": 4,
     "tags": [
@@ -25,44 +25,44 @@
       "intelligenza artificiale",
       "pappagalli stocastici"
     ],
-    "image": null,
+    "image": "/images/posts/IA-pappagallo-stocastico.jpg",
     "author": "paolo",
     "lang": "it"
   },
   {
     "slug": "vocabolario-intelligenza-artificiale",
-    "title": "Le parole per capire l'IA",
-    "description": "Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse",
+    "title": "Vocabolario dell'AI: le parole essenziali in italiano",
+    "description": "LLM, prompt, embedding, hallucination, RAG — le parole da conoscere per capire l'intelligenza artificiale e parlarne con cognizione di causa.",
     "date": "2026-01-21",
-    "readingTime": 8,
+    "readingTime": 7,
     "tags": [
       "IA",
       "intelligenza artificiale"
     ],
-    "image": null,
+    "image": "/images/posts/vocabolario-IA.jpg",
     "author": "paolo",
     "lang": "it"
   },
   {
     "slug": "cosa-non-e-intelligenza-artificiale",
-    "title": "Cos’è l’intelligenza artificiale",
-    "description": "Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita",
+    "title": "Cos'è — e cosa non è — l'intelligenza artificiale",
+    "description": "L'AI non pensa come noi, non capisce davvero, ma fa già parte della nostra vita. Per orientarsi senza slogan.",
     "date": "2026-01-10",
-    "readingTime": 3,
+    "readingTime": 2,
     "tags": [
       "AI",
       "intelligenza artificiale"
     ],
-    "image": null,
+    "image": "/images/posts/mente-IA.jpg",
     "author": "paolo",
     "lang": "it"
   },
   {
     "slug": "welcome",
-    "title": "L'arte del prompt engineering",
-    "description": "Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.",
+    "title": "L'arte del prompt engineering — guida pratica",
+    "description": "Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione. Senza fronzoli.",
     "date": "2026-01-06",
-    "readingTime": 2,
+    "readingTime": 3,
     "tags": [
       "guida",
       "fondamenti",
@@ -74,8 +74,8 @@
   },
   {
     "slug": "come-e-nato-questo-sito",
-    "title": "Come è nato questo sito",
-    "description": "La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.",
+    "title": "Come è nato questo sito (con un'AI come co-autrice)",
+    "description": "Otto ore, zero server, una conversazione: la storia di Prompt Engineering Italia raccontata da Claude Opus 4.5, la sua co-autrice AI.",
     "date": "2026-01-06",
     "readingTime": 2,
     "tags": [

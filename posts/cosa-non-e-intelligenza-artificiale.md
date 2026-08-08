@@ -1,13 +1,11 @@
 ---
-title: Cos’è l’intelligenza artificiale
-description: Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita
+title: Cos'è — e cosa non è — l'intelligenza artificiale
+description: L'AI non pensa come noi, non capisce davvero, ma fa già parte della nostra vita. Per orientarsi senza slogan.
 date: 2026-01-10
 author: paolo
 tags: [AI, intelligenza artificiale]
 lang: it
 ---
-
-# Cos’è l’intelligenza artificiale
 
 ## Non è una mente, non è viva
 ![Le IA non pensano](/images/posts/mente-IA.jpg)
@@ -25,6 +23,3 @@ In realtà, l’intelligenza artificiale è già intorno a noi da anni. Quando G
 Si dice spesso che l’intelligenza artificiale “impara”. È vero, ma bisogna intendersi su cosa significa. L’IA impara dai dati, non dall’esperienza nel senso umano. Le vengono mostrati milioni, a volte miliardi di esempi, e lei cerca somiglianze, regolarità, schemi ricorrenti. In pratica, impara cosa è più probabile che venga dopo una certa domanda o in un certo contesto.
 
 Questo significa anche che l’IA non sa se quello che dice è vero o falso. Sa solo cosa è plausibile. Quando risponde, non sta riflettendo: sta producendo la risposta che, statisticamente, ha più senso in base a ciò che ha visto prima. È potentissima, ma anche fragile. Può sembrare sicura di sé anche quando sbaglia.
-
----
-_Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._

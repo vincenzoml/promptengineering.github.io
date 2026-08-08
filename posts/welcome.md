@@ -1,13 +1,11 @@
 ---
-title: L'arte del prompt engineering
-description: Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.
+title: L'arte del prompt engineering — guida pratica
+description: Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione. Senza fronzoli.
 date: 2026-01-06
 author: vincenzo
 tags: [guida, fondamenti, AI]
 lang: it
 ---
-
-# L'arte del prompt engineering
 
 Il prompt engineering non è programmazione. È comunicazione.
 
@@ -45,8 +43,20 @@ Il primo prompt raramente è l'ultimo. Il vero prompt engineering è un dialogo�
 
 Siamo all'inizio di qualcosa. La capacità di comunicare efficacemente con l'intelligenza artificiale diventerà fondamentale quanto saper scrivere un'email o fare una presentazione.
 
-Non è una competenza tecnica. È una competenza umana applicata alla tecnologia.
+Una competenza umana applicata alla tecnologia.
+
+## E poi
+
+Tre pilastri non bastano. Appena si lavora davvero con l'AI ne emergono altri, che diventano centrali in fretta. Ne nomino cinque, senza spiegarli — sono i punti che approfondisco nel workshop in studio.
+
+- **Tornare indietro.** Versionare i prompt, sandboxare gli esperimenti, fare backup di quello che funziona. L'AI è veloce a rompere il lavoro: serve un sistema per non perderlo.
+- **Decorare i prompt.** Moodboard, esempi, riferimenti, system prompt scritti come specifiche. Il prompt comincia molto prima della riga che digiti.
+- **Un metodo di studio.** Imparare l'AI non funziona a osmosi. Funziona con sessioni dedicate, esercizi mirati, revisione periodica di quello che si fa.
+- **Riconoscere i confini.** Sapere quando smettere di fare da soli e chiamare un ingegnere.
+- **Disciplina di chiusura.** Tanti progetti AI partono entusiasti e si fermano a metà. Il punto è arrivare in fondo.
+
+Questi sono i moduli del [workshop in studio](#/workshop). Se vi interessa applicarli al vostro lavoro, parliamone.
 
 ---
 
-*Questo è il primo di una serie di articoli sul prompt engineering. Seguici per approfondimenti, tecniche avanzate e casi pratici.*
+*Primo di una serie di articoli sul prompt engineering.*

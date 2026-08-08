@@ -5,61 +5,61 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 11 Feb 2026 00:05:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 14:45:53 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title><![CDATA[IA generativa: la macchina che inventa invece di copiare]]></title>
-      <link>https://www.promptengineering.it/#/post/IA-generativa</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/IA-generativa</guid>
-      <description><![CDATA[Per decenni l'intelligenza artificiale ha classificato, ordinato, riconosciuto. Ora crea. Ma cosa significa davvero "generare" per una macchina?]]></description>
+      <title><![CDATA[IA generativa: cosa significa quando una macchina inventa]]></title>
+      <link>https://www.promptengineering.it/post/IA-generativa/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/IA-generativa/</guid>
+      <description><![CDATA[Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.]]></description>
       <pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate>
       <category>IA</category>
       <category>intelligenza artificiale</category>
       <category>IA generativa</category>
     </item>
     <item>
-      <title><![CDATA[Pappagalli stocastici: quando l'IA ripete senza capire]]></title>
-      <link>https://www.promptengineering.it/#/post/IA-come-pappagalli-stocastici</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/IA-come-pappagalli-stocastici</guid>
-      <description><![CDATA[I grandi modelli linguistici sanno di cosa parlano? Un paper del 2021 ha fatto esplodere un putiferio dentro Google.]]></description>
+      <title><![CDATA[I pappagalli stocastici dell'AI: quando ripete senza capire]]></title>
+      <link>https://www.promptengineering.it/post/IA-come-pappagalli-stocastici/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/IA-come-pappagalli-stocastici/</guid>
+      <description><![CDATA[I grandi modelli linguistici capiscono ciò che dicono? Un paper del 2021 ha fatto esplodere un putiferio dentro Google. Cosa c'è dietro, e perché ci riguarda.]]></description>
       <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
       <category>IA</category>
       <category>intelligenza artificiale</category>
       <category>pappagalli stocastici</category>
     </item>
     <item>
-      <title><![CDATA[Le parole per capire l'IA]]></title>
-      <link>https://www.promptengineering.it/#/post/vocabolario-intelligenza-artificiale</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/vocabolario-intelligenza-artificiale</guid>
-      <description><![CDATA[Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse]]></description>
+      <title><![CDATA[Vocabolario dell'AI: le parole essenziali in italiano]]></title>
+      <link>https://www.promptengineering.it/post/vocabolario-intelligenza-artificiale/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/vocabolario-intelligenza-artificiale/</guid>
+      <description><![CDATA[LLM, prompt, embedding, hallucination, RAG — le parole da conoscere per capire l'intelligenza artificiale e parlarne con cognizione di causa.]]></description>
       <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
       <category>IA</category>
       <category>intelligenza artificiale</category>
     </item>
     <item>
-      <title><![CDATA[Cos’è l’intelligenza artificiale]]></title>
-      <link>https://www.promptengineering.it/#/post/cosa-non-e-intelligenza-artificiale</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/cosa-non-e-intelligenza-artificiale</guid>
-      <description><![CDATA[Perché l’intelligenza artificiale non pensa come noi, ma è già parte della nostra vita]]></description>
+      <title><![CDATA[Cos'è — e cosa non è — l'intelligenza artificiale]]></title>
+      <link>https://www.promptengineering.it/post/cosa-non-e-intelligenza-artificiale/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/cosa-non-e-intelligenza-artificiale/</guid>
+      <description><![CDATA[L'AI non pensa come noi, non capisce davvero, ma fa già parte della nostra vita. Per orientarsi senza slogan.]]></description>
       <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
       <category>AI</category>
       <category>intelligenza artificiale</category>
     </item>
     <item>
-      <title><![CDATA[L'arte del prompt engineering]]></title>
-      <link>https://www.promptengineering.it/#/post/welcome</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/welcome</guid>
-      <description><![CDATA[Scopri come trasformare le tue idee in conversazioni efficaci con l'intelligenza artificiale. Una guida per chi vuole padroneggiare la comunicazione uomo-macchina.]]></description>
+      <title><![CDATA[L'arte del prompt engineering — guida pratica]]></title>
+      <link>https://www.promptengineering.it/post/welcome/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/welcome/</guid>
+      <description><![CDATA[Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione. Senza fronzoli.]]></description>
       <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
       <category>guida</category>
       <category>fondamenti</category>
       <category>AI</category>
     </item>
     <item>
-      <title><![CDATA[Come è nato questo sito]]></title>
-      <link>https://www.promptengineering.it/#/post/come-e-nato-questo-sito</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/#/post/come-e-nato-questo-sito</guid>
-      <description><![CDATA[La storia di Prompt Engineering Italia raccontata in prima persona dall'AI che l'ha costruito. Un esperimento di collaborazione uomo-macchina.]]></description>
+      <title><![CDATA[Come è nato questo sito (con un'AI come co-autrice)]]></title>
+      <link>https://www.promptengineering.it/post/come-e-nato-questo-sito/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/come-e-nato-questo-sito/</guid>
+      <description><![CDATA[Otto ore, zero server, una conversazione: la storia di Prompt Engineering Italia raccontata da Claude Opus 4.5, la sua co-autrice AI.]]></description>
       <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
       <category>meta</category>
       <category>behind-the-scenes</category>

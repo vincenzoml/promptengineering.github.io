@@ -1,14 +1,14 @@
 ---
-title: Le parole per capire l'IA
-description: Un vocabolario essenziale per capire i discorsi sull'intelligenza artificiale e orientarsi tra chatbot, modelli e promesse
+title: Vocabolario dell'AI: le parole essenziali in italiano
+description: LLM, prompt, embedding, hallucination, RAG — le parole da conoscere per capire l'intelligenza artificiale e parlarne con cognizione di causa.
 date: 2026-01-21
 author: paolo
 tags: [IA, intelligenza artificiale]
 lang: it
 ---
 
-# Le parole per capire l'IA
 ![Le parole dell'IA](/images/posts/vocabolario-IA.jpg)
+
 Questo articolo è pensato per lettori non tecnici, professionisti, imprenditori e curiosi che vogliono capire l’intelligenza artificiale senza diventare esperti, ma con abbastanza chiarezza da orientarsi e usarla con criterio.
 
 Quando si parla di intelligenza artificiale capita spesso di sentirsi esclusi dalla conversazione. Da una parte c’è molta confusione, slogan, promesse esagerate e toni apocalittici o trionfalistici. Dall’altra c’è un linguaggio pieno di sigle, acronimi e termini tecnici che sembrano riservati agli addetti ai lavori. In mezzo restano molte persone che vorrebbero capire meglio, ma non sanno da dove partire.
@@ -90,6 +90,3 @@ Il **vibe coding** descrive un modo informale di programmare con l’aiuto dell�
 Non serve impararle a memoria. Basta riconoscerle. Capire il vocabolario minimo dell’IA permette di seguire le discussioni, usare gli strumenti con maggiore consapevolezza e distinguere ciò che è già qui da ciò che è solo promesso.
 
 L’intelligenza artificiale non è magia, né una minaccia inevitabile. È una tecnologia complessa, ma spiegabile. E ogni buon dialogo, anche con le macchine, parte sempre dalle parole giuste.
-
----
-_Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._

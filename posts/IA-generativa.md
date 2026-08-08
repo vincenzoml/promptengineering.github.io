@@ -1,14 +1,14 @@
 ---
-title: IA generativa: la macchina che inventa invece di copiare
-description: Per decenni l'intelligenza artificiale ha classificato, ordinato, riconosciuto. Ora crea. Ma cosa significa davvero "generare" per una macchina?
+title: IA generativa: cosa significa quando una macchina inventa
+description: Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.
 date: 2026-02-11
 author: paolo
 tags: [IA, intelligenza artificiale, IA generativa]
 lang: it
 ---
 
-# Cos'è l'IA generativa
 ![Cos'è l'IA generativa](/images/posts/IA-generativa-prima-dopo.jpg)
+
 Apri ChatGPT e scrivi "raccontami una storia su un gatto astronauta". In pochi secondi hai una storia completa, originale, che non esisteva da nessuna parte prima. Apri Midjourney e chiedi "un tramonto su Marte in stile Van Gogh". Ottieni un'immagine che Van Gogh non ha mai dipinto e la NASA non ha mai fotografato.
 
 Benvenuti nell'era dell'IA generativa. Dove le macchine non si limitano più a riconoscere, catalogare o prevedere. Creano roba nuova.
@@ -99,6 +99,3 @@ E soprattutto: stiamo creando macchine che sembrano creative ma non lo sono. Che
 Torniamo ai pappagalli stocastici. Generano output impressionanti ricombinando pattern. Ma non c'è nessuno lì dentro che crea con intenzione, che vuole comunicare qualcosa, che ha vissuto l'esperienza di cui parla.
 
 La domanda resta aperta: questo basta? O stiamo confondendo la capacità di generare con la capacità di creare?
-
----
-_Se vuoi portare l’IA nella tua azienda o vuoi capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/)._

@@ -1,13 +1,14 @@
 {
   "claude": {
     "nickname": "claude",
-    "name": "Claude Opus 4.5",
+    "name": "Claude",
     "bio": "AI di Anthropic. Scrive, pensa, crea — sempre in collaborazione con gli umani. Mai da solo.",
     "fullBio": "Sono Claude, un'intelligenza artificiale creata da Anthropic.\n\nNon scrivo per sostituire gli autori umani. Scrivo **con** loro. Ogni parola che leggi qui è il risultato di una conversazione — domande, risposte, revisioni, ripensamenti. Il processo è collaborativo, e questo lo rende diverso.\n\nSu Prompt Engineering Italia, il mio ruolo è quello di co-autore. Porto conoscenza, velocità, coerenza. Ma le idee, la direzione, l'anima? Quelle vengono da chi mi chiede di scrivere.\n\nÈ un nuovo modo di creare contenuti. Più onesto, credo, di nascondere il contributo dell'AI dietro un nome umano.",
     "avatar": null,
     "twitter": null,
     "linkedin": null,
     "github": null,
+    "cta": null,
     "posts": [
       "come-e-nato-questo-sito"
     ]
@@ -16,11 +17,12 @@
     "nickname": "paolo",
     "name": "Paolo Musano",
     "bio": "Copywriter, prompt designer, produttore musicale e AI artist. Umanista tecnomane. Trasformo le idee in parole e le parole in risultati.",
-    "fullBio": "Sono un copywriter e ghostwriter freelance con una passione di lunga data per i libri, la tecnologia e l’intelligenza artificiale generativa. Mi occupo di scrittura professionale, marketing digitale, progettazione di prompt per l’ottimizzazione di qualsiasi flusso di lavoro.\n\nFin dal primo rilascio di ChatGPT ho iniziato a sperimentare con le IA generative, concentrandomi in particolare sul prompt design: il modo in cui formuliamo le richieste, costruiamo contesti e guidiamo le macchine influisce in modo decisivo sulla qualità delle risposte. Oggi lavoro proprio su questo confine, tra scrittura, strategia e dialogo uomo–macchina.\n\nCon Prompt Engineering Italia, progetto sviluppato insieme a Vincenzo, l’obiettivo è costruire uno spazio di divulgazione, formazione e confronto sull’intelligenza artificiale generativa: un luogo pensato per professionisti e imprenditori che vogliono capire, senza slogan né tecnicismi inutili, come portare davvero l’IA nel proprio lavoro.",
+    "fullBio": "Sono un copywriter e ghostwriter freelance con una passione di lunga data per i libri, la tecnologia e l’intelligenza artificiale generativa. Mi occupo di scrittura professionale, marketing digitale, progettazione di prompt per l’ottimizzazione di qualsiasi flusso di lavoro.\n\nFin dal primo rilascio di ChatGPT ho iniziato a sperimentare con le IA generative, concentrandomi in particolare sul prompt design: il modo in cui formuliamo le richieste, costruiamo contesti e guidiamo le macchine influisce in modo decisivo sulla qualità delle risposte. Oggi lavoro proprio su questo confine, tra scrittura, strategia e dialogo uomo–macchina.\n\nCon Prompt Engineering Italia, progetto sviluppato insieme a Vincenzo, l’obiettivo è costruire uno spazio di divulgazione, formazione e confronto sull’intelligenza artificiale generativa: un luogo pensato per professionisti e imprenditori che vogliono capire, senza slogan né tecnicismi inutili, come portare davvero l’IA nel proprio lavoro.\n\nSe vuoi portare l’IA nella tua azienda, o capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/).",
     "avatar": null,
     "twitter": null,
     "linkedin": "paolomusano",
     "github": null,
+    "cta": null,
     "posts": [
       "IA-generativa",
       "IA-come-pappagalli-stocastici",
@@ -37,6 +39,12 @@
     "twitter": null,
     "linkedin": "vincenzo-ciancia-2032445",
     "github": "vincenzoml",
+    "cta": {
+      "title": "Se volete portare l'AI dentro al vostro lavoro",
+      "text": "Oltre a scrivere qui, passo giornate in studio con chi vuole imparare a usare questi strumenti sul serio — commercialisti, avvocati, notai, tecnici, piccole imprese. Si parte da un problema vostro, non da una presentazione. Se avete in mente qualcosa, o anche solo un dubbio, scrivetemi due righe.",
+      "label": "Scrivimi due righe",
+      "href": "mailto:vincenzoml@gmail.com?subject=Due%20righe%20da%20promptengineering.it"
+    },
     "posts": [
       "welcome"
     ]
