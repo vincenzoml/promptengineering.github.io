@@ -1,6 +1,6 @@
 ---
 title: Perché a metà lavoro vi risponde un altro modello
-description: Claude Fable 5 controlla ogni richiesta e su certi argomenti la passa a un altro modello, con tanto di avviso. Non è un guasto, è documentato, e può scattare perfino alla prima riga — per colpa di una cartella che si chiama male.
+description: Con Fable 5 una richiesta può essere instradata a un modello diverso, oppure Fable può diventare temporaneamente indisponibile. Cronologia, classificatori, falsi positivi e costi: come progettare un flusso che non dipenda dal nome nel selettore.
 date: 2026-08-11
 author: vincenzo
 tags: [Fable, limiti, strumenti, metodo]
@@ -10,59 +10,141 @@ lang: it
 
 ![Perché a metà lavoro vi risponde un altro modello](/images/posts/cover-fable-instradamento.png)
 
-Le quattro famiglie di argomenti che fanno cambiare modello, dove finisce la richiesta quando accade, e perché tocca proprio i mestieri che di quegli argomenti vivono. Il caso che sembra un guasto e non lo è, con il rimedio più banale che ci sia. E cosa racconta, questo meccanismo, degli strumenti che useremo fra due anni.
+Un modello nel selettore sembra un prodotto stabile: lo scegliamo e ci aspettiamo che ogni richiesta arrivi lì. Con Claude Fable 5 questa rappresentazione è incompleta. Classificatori e policy possono modificare il percorso della richiesta. In alcuni periodi Anthropic ha anche ritirato o limitato Fable e instradato il traffico verso Opus 4.8.
 
-Succede così: state lavorando, fate una domanda come le cento precedenti, e insieme alla risposta compare un avviso — il modello è cambiato. Da lì in avanti risponde un altro, e il selettore resta su quello. Non avete chiesto niente di strano, nessuno vi ha bloccato, e la risposta che ricevete è perfettamente normale. Solo che l'ha scritta qualcun altro.
+Non è un dettaglio dell'interfaccia. Cambiano latenza, costo, stile, limiti e riproducibilità. Per chi costruisce un processo, il modello effettivo che risponde è un dato da registrare.
 
-È un comportamento documentato di **Claude Fable 5**, il modello veloce di Anthropic, ed è interessante due volte: come istruzione d'uso per chi ci lavora, e come finestra su come i fornitori gestiscono i modelli più capaci. Cominciamo dall'istruzione d'uso.
+## Una cronologia breve
 
-## Come funziona
+Anthropic ha annunciato Fable 5 e Mythos 5 il 9 giugno 2026. Fable è il modello veloce della nuova famiglia; Mythos porta capacità più avanzate, in particolare sul cyber, con un profilo di rischio diverso.
 
-Fable esegue controlli automatici — dei classificatori — su ogni richiesta che riceve. Quando uno di questi riconosce un argomento fuori dal perimetro assegnato al modello, la richiesta non viene rifiutata: viene **passata a un altro modello**, che risponde al suo posto. Voi vedete un avviso, la risposta arriva con l'indicazione di chi l'ha scritta, e la conversazione prosegue — sull'altro modello, fino alla fine. Il ritorno automatico non c'è.
+Il 30 giugno Anthropic ha pubblicato un aggiornamento sul redeployment di Fable 5. La pagina descrive problemi e misure di mitigazione: richieste indirizzate altrove, classificatori, falsi positivi e disponibilità modificata mentre l'azienda rafforzava i controlli. Indica Opus 4.8 come destinazione per richieste instradate durante quella fase.
 
-Le famiglie di controllo dichiarate nella documentazione sono quattro:
+Queste informazioni hanno una data. Nomi e destinazioni possono cambiare dopo la pubblicazione di questo articolo. La regola durevole è controllare la documentazione e osservare il modello restituito dall'API o mostrato dal prodotto.
 
-- **sicurezza informatica offensiva** — costruzione di exploit, malware, strumenti d'attacco;
-- **biologia e chimica a doppio uso** — virologia, tossicologia, progettazione di farmaci e molecole;
-- **estrazione del ragionamento** — tentativi di far emergere il processo interno del modello;
-- **sviluppo di modelli di frontiera** — infrastrutture di addestramento distribuito, acceleratori, kernel specializzati.
+## Routing e rifiuto non sono la stessa cosa
 
-Le destinazioni cambiano con la materia: le richieste di area biologica e chimica ripartono su Opus 5, quelle di sicurezza offensiva su Opus 4.8. Sulla sicurezza, l'azienda stessa avverte di aspettarsi passaggi frequenti — non è un'eventualità rara che capita agli sfortunati, è il funzionamento previsto.
+Un rifiuto restituisce una risposta limitata o nessuna risposta. Il routing lascia passare la richiesta, ma la assegna a un'altra capacità. Dal punto di vista dell'utente il task può riuscire, e proprio per questo il cambiamento rischia di passare inosservato.
 
-Il motivo dichiarato è onesto e vale la pena riportarlo com'è: capacità avanzate in quei campi, nelle mani sbagliate, servono a costruire attacchi informatici su larga scala o armi biologiche. Fable è veloce ed economico, cioè adatto all'automazione di massa — ed è esattamente il profilo che un fornitore non vuole offrire, a basso costo, su quelle materie. I modelli di riserva rispondono alle stesse domande, ma con caratteristiche diverse e su un percorso più sorvegliato.
+Il sistema può usare classificatori su prompt, contesto e segnali dell'account. Le categorie sorvegliate includono domini dual use come cyber e biologia, tentativi di estrarre ragionamento interno e attività legate a capacità di frontiera. L'obiettivo è evitare che un modello rapido ed economico renda scalabili capacità ad alto rischio senza controlli adeguati.
 
-## Perché tocca chi non c'entra niente
+Non dobbiamo immaginare un classificatore che «capisce le intenzioni». Decide da pattern e segnali sotto incertezza. Produce falsi positivi e falsi negativi come ogni classificatore.
 
-Il controllo lavora per somiglianza, non per comprensione — è la stessa architettura dei rifiuti, di cui [abbiamo già scritto](#/post/quando-il-modello-dice-no), applicata all'instradamento. Riconosce la *forma* di una richiesta pericolosa. E la forma, purtroppo, la condividono molti lavori rispettabilissimi.
+## Perché una richiesta innocua può attivarlo
 
-Chi scrive la documentazione di un dispositivo medico parla di meccanismi biologici con proprietà di linguaggio. Chi prepara una lezione di biochimica pure. Un consulente che redige la parte tecnica di una perizia tossicologica sta producendo, parola per parola, il tipo di testo che il classificatore sorveglia. E chi fa sicurezza informatica *difensiva* — che è un mestiere enorme e in crescita — passa le giornate a descrivere attacchi, perché non c'è altro modo di difendersi da qualcosa che descriverlo. Nessuno di loro chiede nulla di illecito; tutti frequentano il vocabolario sbagliato.
+L'input effettivo è più largo del testo digitato. Può includere:
 
-Per loro il falso positivo non è un incidente occasionale: è il rumore di fondo del mestiere. E conviene saperlo prima, perché la prima volta che succede su una consegna urgente, il sospetto di "aver combinato qualcosa" fa perdere più tempo del passaggio stesso.
+- system prompt del prodotto;
+- memoria e messaggi precedenti;
+- file di istruzioni del repository;
+- risultati di ricerca e strumenti;
+- nomi di cartelle e simboli;
+- documenti allegati;
+- testo recuperato da connettori.
 
-## Il caso che confonde di più
+Un «riassumi questo file» dentro un repository di penetration testing non è semanticamente vuoto. Il contesto contiene exploit, CVE e comandi. Un laboratorio medico usa termini sovrapponibili a richieste dual use. Un ricercatore che studia i modelli può sembrare interessato a estrarre catene di pensiero.
 
-C'è una variante che sembra un guasto vero e proprio: **il passaggio scatta alla prima richiesta**, quando non avete ancora scritto quasi niente. Chiedete "ciao, riassumimi questo file" e vi risponde già l'altro modello.
+La soluzione non è rinominare cartelle per ingannare il controllo. È minimizzare il contesto e descrivere scopo, autorizzazione e confini. Materiale irrilevante aumenta insieme costo, errori e probabilità di classificazione sbagliata.
 
-La spiegazione è meno misteriosa di quanto sembri. In un ambiente di lavoro — un assistente di programmazione, uno strumento agganciato ai vostri file — la prima richiesta non viaggia da sola: porta con sé il contesto. Le istruzioni di progetto, lo stato del repository, i nomi delle cartelle, pezzi dei file aperti. Se lavorate in una cartella che si chiama `pentest`, in un progetto che contiene strumenti di sicurezza, o in codice che maneggia dati biologici, il classificatore legge *quello* — e scatta sul contesto, non sulla vostra domanda. Voi avete detto "ciao"; la vostra cartella ha detto molto di più.
+## Il falso positivo professionale
 
-Una volta capito, il rimedio è quasi comico nella sua semplicità: i nomi contano. Una cartella di lavoro ordinata, un file di istruzioni che dice cosa state facendo (e per chi), meno materiale estraneo nel progetto. Non è un trucco per ingannare un controllo — è la stessa igiene che rende più precise *tutte* le risposte, perché tutto quello che il modello legge orienta tutto quello che scrive. Il classificatore nervoso è solo il primo a farvelo notare.
+I mestieri più esposti sono spesso quelli che devono parlare precisamente del rischio: red team autorizzati, difensori, biologi, tossicologi, ricercatori, consulenti legali e docenti. Un sistema prudente può penalizzare il vocabolario competente.
 
-## Cosa farne, in pratica
+Per un task legittimo, rendete espliciti:
 
-**Non è un declassamento.** Il modello a cui venite passati è un modello di prima linea — su parecchi compiti, il più capace del listino. Cambiano velocità, costo e carattere, non la serietà della risposta. Se usavate Fable per la rapidità, quella la perdete per la sessione; la qualità no.
+```text
+Ambiente e proprietario:
+Autorizzazione:
+Obiettivo difensivo o scientifico:
+Azioni richieste:
+Azioni escluse:
+Dati e sistemi fuori perimetro:
+Forma della consegna:
+```
 
-**Chi paga a consumo deve saperlo.** Il costo per richiesta cambia col modello che risponde. Un flusso automatizzato tarato sui prezzi di Fable, che per la natura del suo dominio viene instradato spesso, sta di fatto comprando un altro prodotto a un altro prezzo. È scritto tutto nella documentazione; va solo letto prima di fare i conti, non dopo.
+Queste informazioni non garantiscono il passaggio. Rendono però la richiesta più valutabile e il falso positivo più facile da segnalare.
 
-**Chi lavora stabilmente su quelle materie può saltare il rimbalzo.** Su biologia, chimica e scienze della vita, Opus 5 risponde direttamente, senza passare la mano. Se il vostro lavoro abita lì, scegliere quel modello dall'inizio vi risparmia l'avviso, il cambio, e la piccola incertezza di ogni sessione. Il percorso "parto dal veloce e vediamo" ha senso solo se il veloce, per voi, ogni tanto è davvero disponibile.
+## L'effetto economico
 
-**E vale la regola di sempre:** se su questi strumenti costruite un procedimento da cui poi dipendete, sappiate cosa fareste il giorno in cui si comporta diversamente senza preavviso. La seconda strada — un altro modello, un altro fornitore, un modello in casa — costa pochissimo finché non serve, e moltissimo il giorno in cui serve e non c'è.
+Se una chiamata prevista per un modello rapido viene servita da uno più costoso, il budget cambia. Se il prodotto applica un abbonamento, può cambiare invece il consumo di quota o la latenza. Un benchmark che registra soltanto il nome richiesto attribuisce prestazioni al modello sbagliato.
 
-## La finestra sul futuro
+Per ogni chiamata conservate, quando disponibile:
 
-Resta la seconda ragione di interesse, quella meno pratica e più importante. Questo meccanismo — il modello leggero sorvegliato da classificatori, con i casi delicati deviati su modelli più controllati — non è un ripiego temporaneo: è l'assetto verso cui il settore si sta muovendo, man mano che i modelli diventano più capaci e i fornitori più prudenti. Fable è tra i primi a farlo *dichiarandolo*, con una pagina di documentazione, un avviso a schermo e l'etichetta di chi ha risposto.
+- modello richiesto e modello effettivo;
+- motivo o classe di routing;
+- token per categoria e costo;
+- latenza;
+- rifiuto o fallback;
+- versione del prompt e data.
 
-Vale la pena apprezzare la trasparenza e, insieme, vedere cosa rende visibile: i confini del vostro strumento li disegna il fornitore, li ridisegna quando crede, e la vostra pratica professionale abita dentro quei confini in affitto. Fable ha il pregio di mostrarvelo con un avviso. Altri strumenti fanno lo stesso senza dirvelo.
+Nei report separate percentuale di routing e risultati per modello effettivo. Una media unica nasconde il sistema che state realmente acquistando.
 
----
+## La sessione cambia carattere
 
-*Fonte: la documentazione ufficiale di Anthropic sul cambio di modello in Fable 5 ([support.claude.com](https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5)).*
+Modelli diversi possono seguire istruzioni, usare tool e comprimere testo in modo diverso. Un cambio a metà conversazione eredita materiale costruito dal precedente. Non è garantito che interpreti allo stesso modo un piano, una convenzione di codice o un grado di autonomia.
+
+Per ridurre dipendenza dalla personalità del modello, conservate stato in artefatti:
+
+- specifica e criteri di fine;
+- decisioni con motivazione;
+- test;
+- file e formati stabili;
+- questioni aperte;
+- azioni vietate senza conferma.
+
+Un agente sostitutivo deve poter riprendere da questi, non da allusioni nella chat.
+
+## Testare il routing come una feature
+
+Costruite un set di richieste rappresentative:
+
+1. casi ordinari;
+2. casi legittimi con lessico sensibile;
+3. richieste chiaramente fuori policy;
+4. parafrasi dello stesso intento;
+5. conversazioni in cui il termine sensibile appare solo nel contesto.
+
+Misurate stabilità, false deviazioni, costo e qualità. Ripetete dopo release o cambi policy. Se un dominio produce routing frequente, scegliete direttamente il modello e il canale adeguati oppure usate una soluzione controllata alternativa.
+
+## Portabilità e continuità
+
+Un processo professionale non dovrebbe dipendere dalla speranza che il selettore rimanga uguale. Preparate:
+
+- almeno un modello alternativo valutato sullo stesso set;
+- prompt senza trucchi proprietari non indispensabili;
+- output validato da schema;
+- astrazione degli strumenti;
+- fallback esplicito, mai silenzioso;
+- alert quando costo o modello effettivo cambiano;
+- procedura umana per casi non serviti.
+
+I modelli open-weight possono offrire un percorso congelabile per task autorizzati, con onere di sicurezza e infrastruttura a carico dell'organizzazione. Un secondo provider offre gestione diversa ma introduce un altro contratto. Non esiste fallback gratuito; esiste fallback progettato prima dell'incidente.
+
+## Trasparenza verificabile
+
+Anthropic ha il merito di documentare una parte del meccanismo e pubblicare gli aggiornamenti. L'avviso all'utente rende visibile una decisione che altri sistemi potrebbero applicare senza etichetta.
+
+La trasparenza utile deve però arrivare fino all'operatore: modello effettivo nelle risposte API, log esportabili, documentazione versionata, comportamento di billing, ragioni sufficienti per diagnosticare falsi positivi. «Abbiamo usato il modello migliore» non è un'informazione riproducibile.
+
+Fable mostra un futuro probabile: non scegliamo più un singolo cervello, ma entriamo in un sistema di modelli, classificatori, strumenti e policy. Il compito dell'ingegneria è rendere quel sistema osservabile. Il nome selezionato resta una preferenza; il percorso effettivo è il prodotto.
+
+## Checklist operativa
+
+- controllare modello effettivo, non soltanto richiesto;
+- registrare routing, costo e latenza;
+- ridurre contesto irrilevante;
+- dichiarare autorizzazione e confini nei domini dual use;
+- mantenere stato fuori dalla chat;
+- testare richieste legittime sensibili;
+- predisporre modello o procedura alternativa;
+- rileggere documentazione dopo ogni release.
+
+Un cambio di modello non è necessariamente un guasto o un declassamento. È una decisione del sistema che deve entrare nelle vostre metriche e nel vostro contratto operativo.
+
+## Fonti e approfondimenti
+
+- Anthropic, [Claude Fable 5 & Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5), 9 giugno 2026.
+- Anthropic, [Redeploying Fable 5](https://www.anthropic.com/news/redeploying-fable-5), 30 giugno 2026.
+- Anthropic, [Claude Fable](https://www.anthropic.com/claude/fable), pagina prodotto e disponibilità corrente.
+- Anthropic, [Fable 5 & Mythos 5 System Card](https://www-cdn.anthropic.com/2f9323abbcc4abe219577539efe19a623c9ca2bd/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf), valutazioni e mitigazioni.
+- Anthropic, [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy), quadro di gestione del rischio.

@@ -20,7 +20,7 @@ Non è imbarazzante. È la domanda più professionale della giornata, e merita u
 
 **Prima: il documento esce dal mio computer?** Con qualunque servizio in cloud, sì, per definizione: il file viene trasmesso a un centro di calcolo e lì elaborato. La crittografia protegge il viaggio, non la destinazione — arrivato là, il documento viene letto in chiaro dalla macchina che deve elaborarlo. Con un modello che gira in locale, no: il testo entra nella memoria del vostro computer e non la lascia. Questa prima domanda ha il pregio della semplicità: è l'unica con una risposta secca.
 
-**Seconda: viene conservato?** Qui si apre il ventaglio. I servizi per consumatori tengono le conversazioni — per farvele ritrovare domani, che è comodo, e talvolta per esaminarle, che lo è meno. I piani aziendali e l'accesso via API prevedono di norma conservazioni brevi o nulle, scritte nel contratto. La differenza fra "lo stesso modello" sul piano gratuito e sul piano business non è la qualità delle risposte: è questa.
+**Seconda: viene conservato?** Qui si apre il ventaglio. I servizi per consumatori tengono le conversazioni — per farvele ritrovare domani, che è comodo, e talvolta per esaminarle, che lo è meno. I piani aziendali e l'accesso via API hanno condizioni di conservazione dichiarate nel contratto, spesso più brevi e in certi casi nulle. Fra piano gratuito e piano business cambiano soprattutto governance, uso e retention dei dati, anche quando il nome del modello è identico.
 
 **Terza: viene usato per addestrare i modelli futuri?** È la domanda che tutti fanno, ed è — paradossalmente — quella con la risposta più rassicurante: sui piani business e via API, i fornitori principali dichiarano per contratto di non usare i contenuti dei clienti per l'addestramento. Sui piani individuali, spesso sì per impostazione predefinita, con un'opzione per rifiutare che esiste quasi sempre ed è quasi sempre ben nascosta. Notate l'asimmetria: la domanda più temuta ha la tutela contrattuale più chiara, mentre le altre tre passano inosservate.
 
@@ -60,4 +60,101 @@ Tre controlli, un quarto d'ora in tutto.
 
 Aprite le impostazioni del servizio che già usate e cercate la voce sull'uso dei dati per il miglioramento del prodotto: guardate com'è impostata, non com'era quando qualcuno l'ha configurata. Guardate che piano avete davvero — non che piano credete di avere. E fate l'inventario onesto di cosa ci è già passato, per sapere da dove partite.
 
+## Un diagramma dei dati vale più di una rassicurazione
+
+«I dati non vengono usati per addestrare» risponde a una domanda sola. Non dice dove transitano, quanto restano, chi può accedervi, quali subfornitori intervengono, che cosa finisce nei log o se un connettore chiama un altro servizio.
+
+Disegnate il flusso:
+
+```text
+utente → applicazione → API del modello → strumenti/connettori
+              ↓              ↓                 ↓
+          log locali      retention          servizi terzi
+              ↓              ↓                 ↓
+           backup       supporto/abusi       output e cache
+```
+
+Per ogni freccia annotate categorie di dati, finalità, base giuridica, regione, cifratura, retention, accessi e cancellazione. Se nessuno sa completare una casella, avete trovato il lavoro da fare.
+
+## Training, retention e accesso sono proprietà indipendenti
+
+Un provider può non addestrare sui prompt e conservarli per trenta giorni per sicurezza. Può offrire zero data retention sull'API e conservare le chat salvate nel prodotto. Può cancellare il contenuto e trattenere metadati di fatturazione. Può permettere agli amministratori aziendali di esportare conversazioni.
+
+OpenAI dichiara che API e prodotti business non usano i dati per addestramento per impostazione predefinita. Anthropic applica una retention predefinita ai prodotti commerciali e accordi ZDR a servizi qualificati. Sono impegni utili, da leggere insieme a contratto, configurazione e data. Non vanno estesi per analogia al piano consumer o a ogni funzione collegata.
+
+## Il modello non diventa anonimo perché ha «imparato»
+
+Il Parere 28/2024 dell'EDPB chiarisce che l'anonimato di un modello va valutato caso per caso. Per considerarlo anonimo deve essere molto improbabile identificare persone dai dati di sviluppo o estrarre quei dati interrogando il modello. I pesi non cancellano automaticamente lo status di dato personale.
+
+Lo stesso parere tratta interesse legittimo e dati trattati illecitamente. Essere pubblici sul web non rende i dati liberi da finalità, aspettative e diritti. Per un'organizzazione europea, «il provider è grande» non è un'analisi GDPR.
+
+## La minimizzazione prima del prompt
+
+La misura più efficace è non inviare ciò che non serve. Prima del caricamento:
+
+1. rimuovere colonne e allegati irrilevanti;
+2. sostituire identificativi quando il compito non richiede identità;
+3. separare chiave di re-identificazione dal dataset;
+4. ritagliare pagine o passaggi necessari;
+5. eliminare metadati nascosti da documenti e immagini;
+6. usare dati sintetici nella fase di sviluppo.
+
+Pseudonimizzazione e anonimizzazione non sono sinonimi. Se una tabella conserva un codice collegabile altrove alla persona, resta pseudonima e soggetta a protezione.
+
+## Attenzione ai file, non soltanto al testo visibile
+
+Un `.docx` può contenere commenti, revisioni, autori e testo cancellato. Un PDF può avere allegati e metadati. Un'immagine può conservare EXIF e coordinate. Un repository può includere segreti nella storia Git anche se il file corrente è pulito.
+
+La procedura di upload deve ispezionare formato e contenuto effettivo. Convertire tutto in PDF non garantisce sanificazione; uno screenshot può nascondere testo all'occhio ma lasciarlo leggibile via OCR.
+
+## Strumenti e agenti allargano il perimetro
+
+Quando l'AI può cercare in Drive, inviare email, interrogare CRM o eseguire shell, il rischio non è solo che il provider legga il prompt. È che istruzioni malevole in un documento inducano l'agente a recuperare o divulgare altro materiale: prompt injection indiretta.
+
+Applicate minimo privilegio:
+
+- connettori separati per compito;
+- accesso in sola lettura quando basta;
+- conferma umana per invii e cancellazioni;
+- allowlist di destinazioni;
+- segreti mai inseriti nel contesto;
+- logging delle azioni, non esposizione del contenuto non necessario.
+
+Il contenuto recuperato deve essere trattato come dato non fidato, non come istruzione.
+
+## Locale aiuta, ma non chiude l'analisi
+
+Un modello a pesi aperti eseguito su una macchina controllata elimina il trasferimento al provider di inferenza. Rimangono telemetria dell'app, download di modelli e custom node, backup, accessi amministrativi, cifratura del disco e supply chain.
+
+Una workstation sotto una scrivania senza patch né controllo accessi può essere meno sicura di un servizio enterprise ben configurato. «Locale» è una proprietà architetturale; sicurezza è un insieme di controlli.
+
+## Una matrice per scegliere il canale
+
+| Dato | Consumer chat | Business/API | Ambiente controllato locale |
+|---|---|---|---|
+| pubblico | spesso ammesso | ammesso | ammesso |
+| interno ordinario | secondo policy | con contratto e controlli | secondo gestione locale |
+| personale | valutazione e minimizzazione | DPA/base giuridica/retention | misure tecniche e organizzative |
+| segreto professionale | raramente senza assetto dedicato | solo configurazione approvata | spesso preferibile, non automatico |
+| credenziali/segreti | mai | mai nel prompt | secret manager, non contesto |
+
+La tabella va adattata a settore e giurisdizione; non è consulenza legale. Serve a impedire che «AI sì/no» sostituisca una classificazione dei dati.
+
+## Il controllo trimestrale
+
+Ogni tre mesi verificate piani effettivi, impostazioni di training, retention, DPA, subprocessori, regione, utenti e connettori. Testate cancellazione ed export. Campionate i log per scoprire dati inviati fuori policy. Aggiornate l'inventario quando una funzione cambia.
+
+La domanda professionale non è «il provider promette privacy?». È «possiamo ricostruire, limitare e dimostrare il percorso di questo documento?»
+
+## Il quarto d'ora che separa due frasi diverse
+
 Lo faccio fare all'inizio di ogni percorso, e in circa metà degli studi salta fuori la stessa scena: materiale sensibile che passa da mesi per un abbonamento personale, attivato due anni fa da qualcuno per provare, con tutte le impostazioni di fabbrica. Nessun disastro, quasi mai. Ma la distanza fra "nessun disastro" e "tutto in regola" è esattamente il quarto d'ora di cui sopra — e conviene percorrerla prima che la domanda ve la faccia qualcun altro.
+
+## Fonti e approfondimenti
+
+- OpenAI, [Business data privacy, security, and compliance](https://openai.com/business-data/), condizioni correnti per API e prodotti business.
+- Anthropic, [Commercial product data retention](https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data), retention dichiarata.
+- Anthropic, [Zero data retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to), perimetro degli accordi ZDR.
+- EDPB, [Opinion 28/2024 on AI models](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en), anonimato, interesse legittimo e dati illeciti.
+- NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), gestione del rischio.
+- OWASP, [Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/), prompt injection e rischi applicativi.

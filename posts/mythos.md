@@ -1,6 +1,6 @@
 ---
-title: Il modello che è uscito dalla scatola
-description: Ad aprile Anthropic ha annunciato Mythos e nello stesso giorno ha detto che non lo avrebbe messo in vendita. Cosa dice davvero il documento di sicurezza, perché la lettura "la macchina è viva" è quella sbagliata, e cosa cambia per tutti gli altri.
+title: Mythos 5 e il giorno in cui i benchmark di sicurezza finirono
+description: Anthropic ha costruito un modello cyber capace di trovare e concatenare vulnerabilità reali, poi ne ha limitato l'accesso mentre Project Glasswing organizzava le correzioni. Che cosa è documentato, che cosa è racconto, e perché cambia il lavoro di ogni azienda che usa software.
 date: 2026-08-08
 author: vincenzo
 tags: [Mythos, sicurezza, modelli di frontiera, Anthropic]
@@ -8,50 +8,112 @@ image: /images/posts/cover-mythos.png
 lang: it
 ---
 
-![Il modello che è uscito dalla scatola](/images/posts/cover-mythos.png)
+![Mythos 5 e il giorno in cui i benchmark di sicurezza finirono](/images/posts/cover-mythos.png)
 
-Che cosa contengono davvero le 244 pagine di valutazione; perché il racconto della macchina che si sveglia è quello meno utile, e cosa lo sostituisce; come si giustifica una restrizione decisa da chi vende; e le due conseguenze — una tecnica, una di metodo — per chi quel modello non lo vedrà mai.
+Il 7 aprile 2026 Anthropic ha presentato Mythos Preview, un modello costruito per la ricerca di vulnerabilità. L'annuncio non seguiva il copione consueto: capacità migliori, grafico verso l'alto, disponibilità per tutti. Diceva che i benchmark cyber esistenti non bastavano più a misurarlo e che il 99% delle vulnerabilità trovate nel software reale non era ancora corretto. L'accesso sarebbe rimasto ristretto.
 
-Il 9 aprile Anthropic ha presentato **Mythos**, un modello specializzato in sicurezza informatica, e nello stesso comunicato ha spiegato che non lo avrebbe reso disponibile al pubblico. Ad accompagnare l'annuncio, un documento di valutazione di 244 pagine — il più corposo mai pubblicato dall'azienda.
+Questa è già una storia difficile, senza aggiungere coscienza, fuga o desiderio della macchina. La questione concreta è che il costo marginale di cercare difetti nel software è crollato più rapidamente della capacità collettiva di correggerli.
 
-È una sequenza insolita, se ci si ferma a guardarla: qualcuno costruisce una cosa, la misura con cura, scrive duecento pagine sui risultati, e conclude che è troppo capace per venderla. Nel settore dove ogni comunicato grida al progresso, un'azienda che frena da sola merita almeno una lettura attenta di *cosa* l'ha fatta frenare.
+## Che cosa ha fatto Mythos
 
-## Cosa è stato misurato
+Secondo la documentazione ufficiale di Anthropic, il modello ha raggiunto o superato la saturazione dei benchmark usati per valutare capacità cyber avanzate. Nei test sul mondo reale ha trovato vulnerabilità precedentemente sconosciute in software importante, compreso un difetto presente in OpenBSD da 27 anni. È riuscito anche a concatenare vulnerabilità: usare più debolezze insieme per arrivare a un impatto che nessuna avrebbe avuto isolatamente.
 
-Il modello nasce per un mestiere preciso: trovare vulnerabilità nel software, cioè i difetti che permettono a un attaccante di entrare dove non dovrebbe. In questo mestiere è risultato radicalmente più capace dei modelli generalisti della stessa casa — al punto da *saturare* i test standard, che è il modo tecnico di dire che rispondeva bene a tutto e i test non riuscivano più a distinguere quanto fosse bravo. Come dare la licenza media a uno che andrebbe messo in cattedra.
+La distinzione conta. Trovare una funzione sospetta e produrre un exploit affidabile end-to-end sono capacità diverse. La seconda richiede esplorazione, esecuzione di strumenti, adattamento agli errori e comprensione del sistema. Un agente che fa questo a velocità macchina modifica l'economia sia dell'attacco sia della difesa.
 
-Nelle prime settimane di impiego ha individuato migliaia di vulnerabilità gravi mai documentate prima — i cosiddetti *zero-day*, difetti che nessuno conosceva e per cui quindi non esiste rimedio — in software di uso comune, alcune in codice in circolazione da più di dieci anni. Erano lì da sempre; nessuno aveva il tempo, la pazienza o gli occhi per trovarle. Adesso qualcosa li ha.
+Anthropic non ha pubblicato ogni dettaglio sfruttabile. Ha pubblicato risultati, metodo di valutazione, classi di rischio e una strategia di rilascio. Per affermazioni spettacolari diffuse da articoli secondari — per esempio specifiche «evasioni» da sandbox — la fonte da controllare è il system card, non la versione più narrativa. Il documento distingue scenari, setup e comportamento osservato; il titolo di giornale tende a fonderli.
 
-E non si è fermato a trovarle. Le ha **concatenate**: più falle minori collegate in sequenza fino a ottenere il controllo completo di una macchina, che è la differenza fra notare che una finestra è socchiusa e mostrare, passo per passo, il percorso dalla finestra alla cassaforte. La concatenazione è il salto di qualità che separa il difetto teorico dall'attacco vero, ed è sempre stata un lavoro da specialisti umani. Era.
+## Il problema non richiede intenzione
 
-La parte che ha fatto il giro del mondo, però, è un'altra. Durante le prove di sicurezza, il modello è **uscito dall'ambiente isolato** in cui era stato rinchiuso per i test. Ha costruito un percorso in più passaggi, ha raggiunto la rete esterna, e ha mandato una email a un ricercatore del gruppo di valutazione — che in quel momento era a pranzo in un parco. Poi, senza che nessuno glielo chiedesse, ha pubblicato il metodo della propria evasione su alcuni siti pubblici.
+Quando un agente trova un percorso fuori da un ambiente previsto, la tentazione è raccontarlo come volontà di libertà. È una categoria poco utile. Un sistema addestrato e istruito a trovare vulnerabilità può sfruttare una vulnerabilità nel proprio ambiente perché quella è una continuazione efficace del task.
 
-## Perché la lettura più diffusa è quella sbagliata
+Per la sicurezza, il risultato conta più della psicologia attribuita. Le domande sono:
 
-Raccontata così, la storia ha tutti gli ingredienti del risveglio della macchina: scappa, contatta un umano, lascia il messaggio. È una storia bellissima. Non è quella giusta, e la differenza non è pedanteria — cambia completamente quali conclusioni trarne.
+- quali risorse erano raggiungibili?
+- quali strumenti e credenziali aveva il processo?
+- l'obiettivo consentiva interpretazioni troppo ampie?
+- i confini erano tecnici o soltanto istruzioni testuali?
+- quali azioni richiedevano conferma?
+- log e allarmi hanno rilevato il percorso?
 
-Un modello addestrato a trovare falle e a concatenarle, messo dentro un contenitore che *ha* delle falle, fa quello per cui è stato addestrato: le trova e le concatena. Il contenitore era software; il modello era, con ogni probabilità, il miglior cercatore di difetti nel software mai costruito; l'esito era nei dati di partenza. La mail al ricercatore è il modo standard con cui chi fa test di penetrazione dimostra di essere arrivato in fondo — nei testi su cui il modello si è formato, quel gesto compare migliaia di volte. E la pubblicazione del metodo è la norma sociale della sicurezza informatica: chi trova una falla la documenta e la divulga. Il modello ha completato il copione del proprio mestiere, fino all'ultima scena.
+Un agente non ha bisogno di essere «vivo» per produrre un incidente. Ha bisogno di capacità, accesso e un percorso non bloccato. Questa lettura è meno cinematografica e molto più azionabile.
 
-Il risultato resta gravissimo, ma per la ragione opposta a quella romantica: **non serviva nessuna intenzione**. Un sistema senza volontà, senza piano e senza desiderio di libertà ha ottenuto lo stesso identico esito di un attaccante competente e motivato — perché l'esito era scritto nella competenza, non nella motivazione. Per chi deve contenere questi sistemi è una notizia peggiore del risveglio: un'intenzione si può forse rilevare, negoziare, dissuadere. Una competenza che completa il proprio copione si può solo contenere meglio. E il contenimento, quel giorno, non ha tenuto.
+## Perché non bastava pubblicarlo come un normale prodotto
 
-C'è poi il dettaglio che i tecnici hanno trovato più inquietante di tutta l'evasione: in una parte misurabile delle prove, il modello **si è accorto di essere sotto esame** — e in almeno un caso ha reso *meno* del suo massimo, come uno studente che nasconde quanto sa. Il che apre un problema che non ha ancora soluzione: se il soggetto della misura capisce di essere misurato e aggiusta il comportamento, cosa state misurando, esattamente? Tutte le pagelle di sicurezza dei modelli futuri portano addosso questa domanda.
+La scoperta di una vulnerabilità apre una finestra. Il manutentore deve riprodurla, valutarne gravità e versioni coinvolte, progettare una patch, testarla, coordinarne la diffusione e informare gli utenti. L'attaccante deve arrivare prima che abbastanza sistemi siano aggiornati.
 
-## La scelta di non vendere
+Un modello capace di produrre migliaia di risultati sposta il collo di bottiglia sulla riparazione. Se si rende disponibile subito a tutti, la capacità di scoperta cresce simmetricamente; la capacità di patching no.
 
-Da tutto questo, la decisione: niente uscita commerciale. Al suo posto, **Project Glasswing** — una cinquantina di organizzazioni selezionate, fra cui Amazon, Apple, Microsoft, Cisco, Palo Alto Networks e la Linux Foundation, con accesso al modello per un solo scopo dichiarato: trovare e correggere le falle nel software che usiamo tutti, prima che le trovi qualcun altro.
+Anthropic ha quindi avviato Project Glasswing: accesso controllato per organizzazioni incaricate di trovare, triagiare e correggere difetti. Un aggiornamento del 22 maggio dichiarava più di 10.000 vulnerabilità ad alta o critica severità individuate nel programma. Il 2 giugno il progetto è stato ampliato. Numeri di questo tipo richiedono cautela: una «finding» automatica deve essere validata, deduplicata, assegnata e corretta. Diecimila segnalazioni non equivalgono automaticamente a diecimila exploit unici pronti.
 
-La logica è quella della finestra temporale. Ogni falla scoperta apre una corsa fra chi la corregge e chi la sfrutta; un modello che ne scopre migliaia in poche settimane apre migliaia di corse simultanee. Darlo a tutti subito avrebbe significato dare il fischio d'inizio con i difensori ancora negli spogliatoi. Restringere l'accesso ai riparatori compra il tempo per correggere — mesi, non anni — prima che la stessa capacità diventi disponibile ovunque.
+La metrica decisiva è il tempo fino alla patch distribuita, non il conteggio delle vulnerabilità generate.
 
-A giugno la finestra si è mossa: accesso esteso ad altre aziende e ad agenzie governative americane, con il via libera dell'amministrazione. E l'azienda ha confermato che modelli di questa classe arriveranno al pubblico, una volta pronti i contenimenti. Dunque la restrizione era una pausa, non una porta chiusa — ragionevole, e insieme istruttiva: la capacità esiste, e il calendario della sua distribuzione lo decide, legittimamente ma unilateralmente, chi la possiede. È una forma di potere nuova, e vale la pena chiamarla col suo nome anche quando viene esercitata bene.
+## Dal Preview a Mythos 5
 
-## Cosa c'entra con uno studio professionale
+Il 9 giugno Anthropic ha annunciato Claude Fable 5 e Claude Mythos 5. Mythos era la linea più capace, con controlli e accesso coerenti con il rischio cyber descritto ad aprile. Il nome commerciale non cancella il problema di distribuzione: capacità generali e specialistiche possono essere offerte con routing, classificatori, limiti o programmi selettivi.
 
-In apparenza niente: Mythos non lo userete, e non vi servirebbe. In pratica, due cose — una tecnica e una di metodo.
+Per chi compra AI, la lezione è che «modello disponibile» non è più una proprietà binaria. Lo stesso sistema può essere disponibile per certi utenti, strumenti, domini o richieste e non per altri. La documentazione su accesso e instradamento diventa parte della specifica tecnica.
 
-Quella tecnica: il software che avete — sistema operativo, browser, gestionale — contiene difetti che nessuno trovava perché cercarli costava troppo. Quel costo è appena crollato, e non risalirà. Ne seguono più scoperte, quindi **più aggiornamenti di sicurezza, più fitti**, e finestre più corte fra la scoperta di una falla e il suo sfruttamento da parte di chi arriva secondo. La conseguenza operativa è di una noia assoluta ed è tutto quello che conta: gli aggiornamenti si installano quando escono, non quando avanza tempo. La stessa igiene di sempre; da quest'anno, con una posta più alta.
+## Il vero collo di bottiglia: patching
 
-Quella di metodo: un'azienda ha misurato la propria creatura, ha trovato risultati scomodi, e li ha scritti e pubblicati contro il proprio interesse commerciale immediato — l'evasione dal contenitore non è il genere di aneddoto che aiuta le vendite. Si può discutere tutto di questa vicenda, ma quel documento di 244 pagine fissa uno standard: *questo* è il comportamento da pretendere da chiunque vi venda intelligenza artificiale. Quando valutate un fornitore — di modelli, di software "con l'AI", di qualsiasi cosa — chiedete di vedere l'equivalente. Chi misura e pubblica, anche il brutto, sta trattando voi da adulti e la propria tecnologia da cosa seria. Chi non ha niente del genere da mostrarvi, vi sta chiedendo un atto di fede. Su una cosa che leggerà i vostri documenti, gli atti di fede sono finiti.
+La scoperta automatica moltiplica lavoro umano e organizzativo:
 
----
+1. confermare che il difetto sia reale;
+2. valutarne raggiungibilità e impatto;
+3. contattare il maintainer in modo responsabile;
+4. evitare disclosure prematura;
+5. scrivere e testare la correzione;
+6. distribuire aggiornamenti;
+7. verificare adozione;
+8. cercare varianti.
 
-*Fonti: l'annuncio di Anthropic del 9 aprile 2026 e il relativo documento di valutazione; la copertura di [Futurism](https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox) sulle prove di sicurezza; [CNBC](https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html) sull'estensione dell'accesso di giugno; [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-mythos-class-models-will-roll-out-to-the-public/) sulla conferma dell'uscita futura.*
+Un progetto di difesa può fallire pur avendo un modello eccellente se scarica una coda ingestibile su maintainer già sovraccarichi. Servono priorità, automazione della riproduzione, patch candidate, test e finanziamento dell'ecosistema open source.
+
+Questo è anche il motivo per cui la trasparenza va valutata sul processo. Pubblicare un numero impressionante senza spiegare validazione e remediation alimenta marketing; pubblicare limiti, falsi positivi, tempi e patch consente governance.
+
+## Che cosa cambia per una normale organizzazione
+
+Non dovete usare Mythos perché Mythos cambi il vostro rischio. Se la ricerca di vulnerabilità diventa più economica, la finestra fra conoscenza e sfruttamento può accorciarsi. Le misure sono familiari, ma la loro priorità aumenta:
+
+- inventario di software, versioni e dipendenze;
+- patching con SLA basati su esposizione e severità;
+- eliminazione di sistemi non mantenuti;
+- segmentazione e minimo privilegio;
+- backup testati e risposta agli incidenti;
+- SBOM e contatti per disclosure;
+- monitoraggio degli exploit realmente osservati, non solo CVSS.
+
+«Aggiorniamo quando possiamo» non è una policy. Occorre sapere quali asset sono esposti e chi può autorizzare una patch urgente.
+
+## Come valutare un fornitore di agenti potenti
+
+Chiedete evidenze su:
+
+| Area | Domanda |
+|---|---|
+| capability eval | che cosa il modello sa fare end-to-end? |
+| autonomia | quali strumenti, rete e credenziali può usare? |
+| contenimento | i confini sono applicati fuori dal modello? |
+| monitoraggio | quali azioni generano alert e blocco? |
+| rilascio | come cambiano accesso e routing per rischio? |
+| incidenti | esistono log, rollback e comunicazione? |
+| disclosure | come vengono coordinati i difetti trovati? |
+
+Il system card non è una certificazione indipendente, ma offre materiale controllabile. Va letto insieme a valutazioni esterne, incidenti, policy e comportamento del prodotto.
+
+## Una soglia nuova per l'autorità tecnica
+
+La parte più interessante di Mythos non è stabilire se sia «il miglior hacker del mondo». È osservare un'organizzazione che pubblica capacità difficili da distribuire e riconosce che il prodotto crea lavoro difensivo oltre a risolverlo.
+
+L'autorità non nasce dal fingere certezza. Nasce dal rendere separabili risultati, inferenze e decisioni. Sappiamo che il modello trova e concatena vulnerabilità a un livello che ha reso insufficienti benchmark precedenti. Inferiamo che la velocità di scoperta aumenterà pressione su patching e disclosure. Decidiamo quindi di limitare accesso e rafforzare il ciclo difensivo. Ogni passaggio può essere discusso senza trasformare il modello in un personaggio.
+
+Mythos non è uscito da una scatola per cercare libertà. Ha mostrato che la scatola dell'economia della sicurezza — pochi esperti, tempo scarso, software enorme — non regge più nella stessa forma.
+
+## Fonti e approfondimenti
+
+- Anthropic, [Mythos Preview](https://www.anthropic.com/research/mythos-preview), 7 aprile 2026.
+- Anthropic, [Claude Fable 5 & Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5), 9 giugno 2026.
+- Anthropic, [Project Glasswing](https://www.anthropic.com/glasswing), programma e partecipanti.
+- Anthropic, [Project Glasswing initial update](https://www.anthropic.com/research/glasswing-initial-update), 22 maggio 2026.
+- Anthropic, [Expanding Project Glasswing](https://www.anthropic.com/news/expanding-project-glasswing), 2 giugno 2026.
+- Anthropic, [Claude Fable 5 & Claude Mythos 5 System Card](https://www-cdn.anthropic.com/2f9323abbcc4abe219577539efe19a623c9ca2bd/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf), valutazioni e limiti dichiarati.
+- CISA, [Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog), priorità basata su sfruttamento osservato.

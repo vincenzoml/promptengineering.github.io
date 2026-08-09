@@ -48,4 +48,86 @@ Sulla brevità c'è un caso in cui conviene fare l'opposto, e va detto per non t
 
 Quando il compito richiede di ragionare — un calcolo articolato, un'analisi con più vincoli, un problema in cui vanno tenute insieme diverse cose — costringere il modello alla brevità **peggiora il risultato**. Scrivere i passaggi è il modo in cui questi sistemi arrivano a conclusioni migliori: tolto lo spazio per farlo, saltano ai risultati, e sbagliano di più.
 
+## Una correzione importante sul «ragionare per esteso»
+
+I modelli recenti possono usare ragionamento interno che non coincide con il testo mostrato. Chiedere una lunga catena di pensiero visibile non è sempre necessario, né garantisce fedeltà: una spiegazione può essere costruita dopo la risposta. Per controllare il lavoro servono evidenze verificabili — calcoli, citazioni, test, assunzioni — non un monologo psicologico.
+
+La formulazione che uso oggi è:
+
+```text
+Fai il lavoro con il livello di analisi necessario.
+Restituisci la risposta in 5 punti, massimo 120 parole.
+Mostra soltanto: ipotesi decisive, calcoli riproducibili, fonti e rischi.
+```
+
+Così separo il budget cognitivo dal budget di lettura. La risposta può essere breve senza imporre al sistema una scorciatoia.
+
+## Specificare il contenitore, non l'aggettivo
+
+«Sii conciso» richiede al modello di indovinare quanto. Un contenitore rende la consegna verificabile:
+
+- 80–100 parole per un executive summary;
+- 5 bullet, una frase ciascuno;
+- una tabella con 4 righe e 3 colonne;
+- una decisione, due motivi, un rischio;
+- titolo di 60 caratteri e descrizione di 155.
+
+Il limite deve corrispondere al mezzo. Tre righe su un telefono non sono tre righe in Markdown. Parole, caratteri, righe di tabella o numero di sezioni sono misure più stabili.
+
+Un'altra tecnica è assegnare una priorità editoriale:
+
+```text
+Se devi tagliare, conserva nell'ordine: decisione, eccezioni, numeri,
+azioni. Elimina nell'ordine: introduzioni, ripetizioni, contesto già noto,
+aggettivi.
+```
+
+Senza priorità, il modello può rispettare la lunghezza eliminando proprio il caveat che rende la risposta corretta.
+
+## Progressive disclosure
+
+Una risposta breve non deve contenere tutto. Può essere il primo strato di un oggetto navigabile:
+
+1. una sintesi che sta sullo schermo;
+2. dettagli per ciascun punto;
+3. appendice con fonti, dati e metodo.
+
+È il formato naturale per documenti decisionali e articoli online. Il lettore interrompe dopo il primo livello senza perdere la conclusione; chi deve verificare può scendere.
+
+Un prompt corrispondente:
+
+```text
+Apri con una risposta autosufficiente di 100 parole.
+Segue una sezione per ciascuna ipotesi, leggibile indipendentemente.
+Chiudi con metodo e fonti. Non anticipare nell'introduzione ciò che il
+lettore può trovare sotto.
+```
+
+## Brevità nei sistemi agentici
+
+Per un agente di coding la verbosità non occupa solo lo schermo. Aggiornamenti, log e risultati degli strumenti possono restare nel contesto e venire riletti a ogni turno. Qui serve una politica: silenzio sulle azioni ordinarie, interruzioni per rischio o decisioni, output dei comandi filtrati vicino alla sorgente.
+
+La sintesi finale deve comunque essere operativa: file cambiati, verifiche, questioni residue. «Fatto» è breve ma non consente controllo.
+
+## Un piccolo protocollo di compressione
+
+Quando una risposta è troppo lunga, non chiedete subito di «accorciarla». Fate tre passaggi:
+
+1. estrarre le affermazioni indispensabili;
+2. ordinare per decisione del lettore;
+3. comprimere eliminando duplicazioni, non prove.
+
+Poi controllate che numeri, negazioni ed eccezioni siano sopravvissuti. Sono gli elementi che più facilmente spariscono in una sintesi e che più spesso cambiano il significato.
+
+La brevità riuscita non dice meno del necessario. Fa pagare a ogni frase l'affitto dello spazio che occupa.
+
+## Ragionamento lungo, consegna corta
+
 La combinazione buona, in quei casi, è chiedere entrambe le cose separandole: "ragiona pure per esteso, poi chiudi con la risposta in tre righe". Ottenete il ragionamento, che serve al modello, e la sintesi, che serve a voi. Ed è anche il modo migliore per controllarlo: se la sintesi convince e i passaggi no, avete trovato dove sta il problema.
+
+## Fonti e approfondimenti
+
+- Anthropic, [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents), sul rapporto segnale/rumore nel contesto.
+- Anthropic, [Code execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp), sull'effetto degli output degli strumenti.
+- OpenAI, [Reasoning best practices](https://platform.openai.com/docs/guides/reasoning-best-practices), sul modo di istruire modelli di ragionamento.
+- Liu et al., [Lost in the Middle](https://arxiv.org/abs/2307.03172), sull'uso dell'informazione nei contesti lunghi.

@@ -46,4 +46,74 @@ Il segnale più affidabile che un testo è stato prodotto senza indicazioni non 
 
 E allora la contromisura non è stilistica ma di sostanza: mettere nel testo qualcosa che il modello non poteva sapere. Un numero preso dai vostri dati. Una cosa che vi ha detto un cliente. Una volta in cui vi è andata male.
 
+## Un'impronta statistica, non una prova forense
+
+Liste di parole «da ChatGPT» circolano continuamente: *delve*, «cruciale», «panorama in evoluzione», «è importante sottolineare». Sono indizi utili per l'editing, pessimi per attribuire una paternità. Anche gli umani usano quelle parole; dopo che i cliché vengono pubblicamente denunciati, i modelli e i prompt cambiano.
+
+La ricerca sul rilevamento mostra una gara instabile. Parafrasi, traduzione, editing umano e cambio di modello riducono l'affidabilità dei detector. Un classificatore può misurare somiglianza con i dati su cui è stato addestrato, non dimostrare chi ha scritto una pagina. In ambito scolastico o lavorativo, trattare il punteggio come prova può produrre falsi accusati.
+
+Per un editore la domanda più utile è un'altra: quali passaggi non portano informazione?
+
+## Perché nasce il lessico medio
+
+Un prompt generico chiede al modello di campionare una risposta probabile per un pubblico non definito. Emergono formule frequenti, sicure e trasferibili. «Nel panorama attuale» apre qualsiasi tema; «fondamentale» segnala importanza senza doverla dimostrare; la conclusione ricapitola perché molti esempi di addestramento lo fanno.
+
+L'allineamento aggiunge convenzioni di servizio: transizioni ordinate, tono positivo, equilibrio artificiale, disponibilità a continuare. Sono caratteristiche utili in chat e monotone in venti articoli consecutivi.
+
+## Fare un inventario, non una lista nera
+
+Prendete dieci testi e contate:
+
+- aperture astratte prima del primo fatto;
+- aggettivi di importanza privi di conseguenza;
+- strutture ripetute fra sezioni;
+- conclusioni che riassumono senza avanzare;
+- coppie oppositive meccaniche;
+- elenchi sempre della stessa lunghezza;
+- metafore intercambiabili.
+
+Poi costruite un *lint* editoriale. Non vieta automaticamente; segnala. Se «cruciale» introduce davvero la variabile da cui dipende un rischio, può restare. Se sparisce senza perdita, era aria.
+
+## Il prompt che costringe a uscire dalla media
+
+```text
+Prima di scrivere, estrai dal materiale:
+- cinque fatti che non appartengono a un'introduzione generica;
+- due tensioni o risultati controintuitivi;
+- una decisione che il lettore può prendere;
+- i limiti delle fonti.
+
+Costruisci ogni sezione attorno a uno di questi elementi.
+Vieta frasi che dichiarano importanza senza specificarne l'effetto.
+Non usare introduzione panoramica né riepilogo finale.
+```
+
+Il modello può comunque produrre manierismi. La differenza è che ora ogni paragrafo ha un debito informativo da pagare.
+
+## Varietà non significa voce
+
+Chiedere sinonimi o «burstiness» crea superficie irregolare, non autenticità. Una voce deriva da selezione: quali esempi meritano spazio, quale posizione viene difesa, quale dubbio rimane aperto. Anche una frase perfettamente imitata resta vuota se potrebbe comparire in un articolo opposto.
+
+Gli studi sull'imitazione autoriale trovano proprio questo limite: i modelli riproducono meglio stili strutturati e segnali espliciti, peggio le sfumature implicite dei testi informali. L'editing deve quindi cercare non solo parole sospette, ma decisioni che nessuno ha preso.
+
+## Una revisione in quattro colori
+
+Segnate nel testo:
+
+- **verde**: fatto verificabile o esempio originale;
+- **blu**: inferenza necessaria fra fatti;
+- **giallo**: orientamento utile al lettore;
+- **rosso**: frase che potrebbe stare in qualunque articolo.
+
+Eliminate il rosso, controllate il blu, citate il verde, accorciate il giallo. La percentuale di testo generato non conta; conta la densità di informazione difendibile.
+
+## Un fatto vero dentro il testo
+
 Un testo con dentro un fatto vero non somiglia più a nessun altro, quali che siano le parole.
+
+## Fonti e approfondimenti
+
+- Patel et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), EMNLP 2025, sull'imitazione di stili impliciti.
+- Sadasivan et al., [Can AI-Generated Text be Reliably Detected?](https://arxiv.org/abs/2303.11156), sui limiti teorici e pratici del rilevamento.
+- OpenAI, [AI classifier no longer available due to low rate of accuracy](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), un caso documentato di ritiro di un detector.
+- [Personalized Style Transfer via Post-Editing](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.

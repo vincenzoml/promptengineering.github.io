@@ -56,4 +56,84 @@ Non ho una soluzione. So che gli studi che ci stanno pensando adesso — facendo
 
 Non sostituisce il vostro lavoro. Ne toglie dei pezzi, e quali dipende da cosa fate davvero, non da come si chiama il vostro mestiere.
 
+## L'unità di analisi è il compito
+
+Le professioni sono fasci di attività con tecnologie, responsabilità e relazioni diverse. «Avvocato» comprende ricerca, udienze, negoziazione, raccolta di fatti, redazione, strategia, acquisizione clienti e firma. Un benchmark può automatizzare una parte della ricerca senza sostituire la responsabilità professionale né il rapporto fiduciario.
+
+L'ILO, nel suo indice globale 2025, valuta l'esposizione a livello di task e conclude che la trasformazione dei lavori è, in generale, più probabile della loro completa scomparsa. «Esposizione» non significa licenziamento: indica che una tecnologia può eseguire o modificare una quota delle attività. Adozione, organizzazione, domanda e regolazione decidono l'effetto occupazionale.
+
+La domanda corretta diventa: quali task cambiano costo, qualità o velocità abbastanza da ridisegnare il processo?
+
+## Una mappa più utile di «automatizzabile sì/no»
+
+Per ogni attività di una settimana annotate:
+
+| Dimensione | Domanda |
+|---|---|
+| frequenza | quante volte ricorre? |
+| durata | quante ore assorbe? |
+| variabilità | input e regole sono stabili? |
+| verificabilità | un test o una persona può controllare l'esito? |
+| costo dell'errore | che cosa succede se è sbagliato? |
+| dati | possono essere inviati al sistema scelto? |
+| responsabilità | chi deve spiegare e firmare? |
+| apprendimento | togliere il task erode competenza futura? |
+
+I candidati migliori hanno alta frequenza, regole relativamente stabili, verifica economica e conseguenze contenute. I peggiori combinano casi rari, dati sensibili, obiettivi ambigui e danni difficili da recuperare.
+
+## Automazione, accelerazione, cambiamento di ruolo
+
+Distinguo tre effetti.
+
+**Automazione:** il sistema completa quasi tutto il task e l'umano controlla eccezioni. Esempio: classificare documenti standard con schema e soglie.
+
+**Accelerazione:** l'umano mantiene il centro del lavoro ma prepara, cerca o riscrive più rapidamente. Esempio: prima bozza di un parere su fonti selezionate.
+
+**Ricomposizione:** attività prima separate si fondono. Uno sviluppatore prototipa interfaccia, test e documentazione nello stesso ciclo; un analista interroga dati senza attendere una pipeline ad hoc. Qui il ruolo cambia anche se nessun task viene «sostituito» integralmente.
+
+L'Anthropic Economic Index osserva l'uso reale dei modelli e distingue pattern di automazione e collaborazione. I dati dipendono dalla clientela Anthropic e non rappresentano tutta l'economia; sono però più informativi di un sondaggio sulle intenzioni.
+
+## Il collo di bottiglia si sposta
+
+Se produrre una bozza costa dieci volte meno, non avremo necessariamente dieci volte meno persone. Potremmo avere più bozze, più personalizzazione e più revisione. Il lavoro si sposta verso selezione, verifica, integrazione e responsabilità.
+
+Questo può creare un paradosso: chi usa l'AI produce di più e aumenta il carico su chi approva. Se il controllo rimane manuale e seriale, l'organizzazione trasferisce il collo di bottiglia senza rimuoverlo. Serve riprogettare il processo: criteri prima della generazione, output strutturati, controlli automatici, campionamento proporzionato al rischio.
+
+## La competenza che l'automazione può consumare
+
+Delegare i compiti junior può ridurre il percorso con cui si diventa senior. Se nessuno legge più i primi cento contratti o risolve i bug semplici, chi saprà riconoscere il caso anomalo fra cinque anni?
+
+La ricerca sugli effetti formativi è ancora in evoluzione. Uno studio randomizzato NBER del 2026 su 1.174 partecipanti ha osservato guadagni di performance e una riduzione del divario legato all'istruzione, ma sottolinea che i benefici di apprendimento trattenuti richiedono impegno, non semplice delega. Produttività immediata e costruzione di capacità sono obiettivi distinti.
+
+Un'organizzazione deve quindi riservare task per apprendimento, imporre spiegazioni e revisioni, ruotare le persone sui casi e misurare ciò che sanno fare senza assistenza.
+
+## Un esperimento di quattro settimane
+
+Scegliete un task frequente e reversibile. Definite baseline: tempo, errori, rework, soddisfazione del destinatario. Create una procedura con AI, non solo un prompt. Eseguite un campione parallelo, controllando ogni uscita. Dopo quattro settimane confrontate:
+
+- tempo end-to-end, non solo tempo di generazione;
+- tasso e gravità degli errori;
+- tempo di revisione;
+- casi rifiutati o fuori distribuzione;
+- impatto su competenza e carico mentale;
+- costo totale, inclusi setup e integrazione.
+
+Se funziona, automatizzate il flusso e mantenete audit. Se non funziona, avete comprato conoscenza sul processo a rischio limitato.
+
+## La domanda strategica
+
+Un mestiere è più difendibile quando possiede contesto raro, responsabilità reale, accesso ai dati, rapporto con le persone e capacità di verificare. Ma nessuna di queste qualità è un talismano. Va incorporata in un sistema di lavoro che usa il calcolo economico dove aiuta.
+
+Non chiedete se l'AI sostituirà il titolo sul biglietto da visita. Chiedete chi controllerà il nuovo processo, chi possiederà i dati e chi saprà dire quando il risultato non regge.
+
+## L'agenda di una settimana vera
+
 Il modo di scoprirlo non è leggere previsioni: è prendere l'agenda di una settimana vera, dividere le attività nei due gruppi, e fare la somma. Chi ha molte ore nel primo gruppo ha un'opportunità e un problema, e in genere si accorge prima dell'opportunità.
+
+## Fonti e approfondimenti
+
+- ILO, [Generative AI and Jobs: A Refined Global Index of Occupational Exposure](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), 2025.
+- Anthropic, [Economic Index — June 2026 report](https://www.anthropic.com/research/economic-index-june-2026-report), dati d'uso e limiti metodologici.
+- Anthropic, [How AI is transforming software development](https://www.anthropic.com/research/impact-software-development), analisi di Claude Code.
+- NBER, [Generative AI, Performance, and Education](https://www.nber.org/papers/w34851), studio randomizzato 2026.
+- NBER, [The Economics of Generative AI](https://www.nber.org/reporter/2024number1/economics-generative-ai), rassegna di evidenze iniziali.

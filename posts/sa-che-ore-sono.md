@@ -46,4 +46,66 @@ Questo è il punto pratico: il rischio non è distribuito a caso, si concentra s
 
 Vale la pena notare che gli strumenti che cercano in rete risolvono metà del problema e ne aprono un altro: le informazioni sono aggiornate, ma provengono da qualunque cosa il motore abbia trovato, e la qualità della fonte diventa un vostro problema. Un modello che cita una pagina qualsiasi è meno affidabile di un modello che ragiona su un testo che gli avete dato voi, sapendo cos'è.
 
+## Modello, prodotto e strumenti
+
+La frase del titolo vale per il modello isolato. Il prodotto può aggiungere un system prompt con data corrente; un agente può chiamare un orologio, un calendario o una ricerca web. Quando Claude o ChatGPT risponde correttamente, bisogna chiedersi da quale strato arriva l'informazione.
+
+La distinzione evita test sbagliati. Se chiediamo «che ore sono?» stiamo valutando integrazione e permessi del prodotto, non conoscenza appresa nei pesi. Se chiediamo «qual è la versione corrente di una libreria?» serve una fonte aggiornata, non la data del system prompt.
+
+## Quattro tempi diversi
+
+1. **data della conversazione**, fornita dal sistema;
+2. **cutoff della conoscenza**, fino a cui arriva il training dichiarato;
+3. **data della fonte**, quando la pagina o il documento è stato aggiornato;
+4. **validità del fatto**, l'intervallo in cui prezzo, norma o incarico è vero.
+
+Una pagina aggiornata oggi può descrivere dati del 2023. Un PDF del 2020 può contenere una definizione ancora vigente. «Fonte recente» e «fatto corrente» non sono sinonimi.
+
+## Rendere esplicita la data di validità
+
+Per le richieste instabili uso una formula precisa:
+
+```text
+Verifica questa informazione alla data del 9 agosto 2026.
+Usa fonti primarie. Per ogni fatto variabile indica data della fonte e
+data a cui il fatto si riferisce. Se non puoi verificare, non completare
+con la tua memoria: marca "non verificato".
+```
+
+Per leggi e policy aggiungo giurisdizione e versione. Per prezzi, valuta, imposte e regione. Per software, numero di release e canale. Per persone, ruolo e data di osservazione.
+
+## La ricerca web non è una macchina della verità
+
+Un motore ottimizza reperibilità, non autorità. Pagine SEO possono superare documentazione ufficiale; snippet possono omettere negazioni; articoli nuovi possono ricopiare una fonte vecchia. L'agente deve aprire il documento e collegare ogni affermazione al passaggio pertinente.
+
+Ordine preferibile:
+
+1. norma, documentazione o comunicato primario;
+2. dataset e paper originale;
+3. fonte secondaria autorevole per contesto;
+4. aggregatori soltanto per scoprire fonti.
+
+Se le fonti primarie divergono, mostrate versioni e date invece di fonderle.
+
+## Procedure sensibili al tempo
+
+I workflow automatici devono portare timestamp e scadenza. Una verifica KYC, una quotazione o una disponibilità GPU non rimane valida indefinitamente. Inserite un TTL: se il dato è troppo vecchio, il sistema lo recupera di nuovo o si ferma.
+
+Anche i test vanno rieseguiti dopo aggiornamenti del modello. Un prompt che produceva correttamente JSON o citazioni può cambiare comportamento pur mantenendo lo stesso nome commerciale.
+
+## Un audit di freschezza
+
+Per un articolo o una decisione, estraete tutte le affermazioni che possono cambiare: prezzi, ruoli, versioni, numeri, policy, disponibilità, prestazioni. Per ciascuna annotate fonte primaria, data di controllo e prossima revisione. Il resto — definizioni storiche, teoremi, descrizioni stabili — non richiede la stessa manutenzione.
+
+Questo trasforma «aggiornato» da aggettivo a proprietà verificabile.
+
+## Dateglielo, non speratelo
+
 La regola che ne ricavo, dopo un paio d'anni di uso quotidiano: **il modello è bravissimo a lavorare sui documenti, e inaffidabile a ricordarseli**. Tutto quello che conta, dateglielo. Quello che non gli date, non lo state usando: lo state solo sperando.
+
+## Fonti e approfondimenti
+
+- OpenAI, [Web search tool](https://platform.openai.com/docs/guides/tools-web-search), documentazione su ricerca e citazioni.
+- Anthropic, [Web search tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool), documentazione ufficiale.
+- OpenAI, [Model release notes](https://help.openai.com/en/articles/9624314-model-release-notes), cronologia dei cambiamenti.
+- Anthropic, [Model deprecations](https://docs.anthropic.com/en/docs/about-claude/model-deprecations), ciclo di vita dei modelli.

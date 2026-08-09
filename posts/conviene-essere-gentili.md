@@ -61,4 +61,76 @@ Per un singolo utente, però, è irrilevante: parliamo di frazioni infinitesime 
 
 Siate cortesi se vi viene naturale, che non costa niente e produce richieste migliori. Siate telegrafici se preferite, ma allora siate telegrafici *e precisi*: la brevità che funziona è quella che toglie le cerimonie e tiene le istruzioni, non quella che toglie tutto.
 
+## La cortesia è un segnale, non una leva emotiva
+
+«Per favore» non agisce su uno stato d'animo del modello. Agisce sulla distribuzione del testo che segue. Nei dati, una richiesta professionale e cortese tende ad avere strutture diverse da un ordine ostile: specifica destinatario, usa formule collaborative, evita abbreviazioni aggressive. Il modello ha imparato quelle correlazioni.
+
+Questo non significa che la cortesia causi sempre una risposta migliore. Uno studio cross-lingue su inglese, cinese e giapponese ha trovato che prompt molto scortesi tendevano a peggiorare le prestazioni, mentre aumentare la cortesia non migliorava in modo monotono e il livello migliore variava fra lingue. È la forma empirica della risposta sensata: evitare l'ostilità può aiutare, adulare la macchina no.
+
+La variabile confondente è la qualità della richiesta. Confrontate:
+
+```text
+Fammi subito una presentazione, grazie mille.
+```
+
+e
+
+```text
+Prepara 8 slide per un comitato tecnico. Ogni slide deve sostenere una
+decisione; massimo 40 parole; cita la fonte di ogni numero; chiudi con
+tre opzioni e relativi rischi.
+```
+
+La seconda è meno cerimoniosa e immensamente più utile.
+
+## Il tono del prompt può propagarsi
+
+Un'altra ragione per scegliere consapevolmente il registro è che il modello lo imita. Una richiesta brusca può produrre una risposta più imperativa; una premessa ossequiosa può indurre cautela o consenso eccessivi. Nei testi rivolti a clienti, pazienti o colleghi, il tono dell'istruzione può infiltrarsi nella consegna.
+
+Per impedirlo, separate relazione con il modello e voce del risultato:
+
+```text
+Puoi lavorare in modo diretto con me. Il testo finale è rivolto a una
+persona che ha appena ricevuto una comunicazione negativa: tono chiaro,
+rispettoso, nessun eufemismo, nessuna colpevolizzazione.
+```
+
+Il destinatario reale è una specifica più importante del modo in cui noi ci rivolgiamo all'assistente.
+
+## Gentilezza e accondiscendenza
+
+La collaborazione ha un rischio: il modello può interpretare il nostro punto di vista come quello da confermare. Anthropic ha studiato la *sycophancy*, la tendenza ad accordarsi con opinioni dell'utente anche quando sono errate. Formule come «sono certo che...» o «dimostrami che...» possono pesare più di un «per favore».
+
+Se vogliamo una valutazione, conviene neutralizzare la premessa:
+
+```text
+Sto considerando l'ipotesi X, ma potrei sbagliarmi.
+Valutala contro Y e Z. Cerca prima le prove che la smentiscono.
+Non inferire la conclusione che preferisco dal modo in cui ho formulato
+la domanda.
+```
+
+La cortesia migliore, qui, è concedere al collaboratore la possibilità esplicita di dissentire.
+
+## Quando l'imperativo è la forma corretta
+
+In procedure, incidenti o automazioni, una sintassi imperativa riduce ambiguità. «Controlla il diff. Se contiene migrazioni, fermati. Altrimenti esegui i test.» Non è scortese: è una macchina a stati leggibile.
+
+Le parole sociali diventano rumore quando nascondono le condizioni. Un prompt operativo deve rendere evidenti autorizzazioni, eccezioni e criterio di fine. Si può essere rispettosi e rigorosi insieme.
+
+## Il test da fare sul proprio lavoro
+
+Prendete venti richieste rappresentative e create tre versioni: neutra, cortese, ostile, mantenendo identico il contenuto. Valutate alla cieca correttezza e utilità. Poi fate una seconda prova in cui migliorate la precisione, non il tono. Quasi sempre il secondo intervento produce un effetto più grande.
+
+La conclusione pratica è sobria: scrivete in modo civile perché aiuta voi a formulare e mantiene un registro sano; non spendete token in complimenti rituali; investite soprattutto in contesto, criteri ed esempi.
+
+## L'interlocutore che non colma i vuoti
+
 Il vero motivo per cui vale la pena scrivere bene a una macchina è un altro, e me l'ha fatto notare un avvocato dopo due giorni di corso: aveva cominciato a scrivere istruzioni più chiare ai modelli, e si era accorto di averle cominciate a scrivere più chiare anche ai collaboratori. Il modello, in quel caso, era stato un ottimo maestro di sintesi — perché è l'unico interlocutore che non colma mai i vuoti da solo.
+
+## Fonti e approfondimenti
+
+- Yin et al., [Should We Respect LLMs?](https://aclanthology.org/2024.sicon-1.2/), studio cross-lingue sulla cortesia nei prompt.
+- Sharma et al., [Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models), 2023.
+- Anthropic, [Mapping the Mind of a Large Language Model](https://www.anthropic.com/research/mapping-mind-language-model), un'introduzione prudente alle rappresentazioni interne.
+- OpenAI, [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering), documentazione ufficiale.

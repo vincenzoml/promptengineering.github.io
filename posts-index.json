@@ -1,10 +1,27 @@
 [
   {
+    "slug": "quiet-mode-agenti-coding",
+    "title": "Ho chiesto all'agente di coding di spendere meno token. Ha funzionato",
+    "description": "Il mio prompt preferito chiede all'agente di usare la propria intelligenza per risparmiare token, lavorare in silenzio e interrompermi soltanto quando una decisione comporta un rischio. Ecco che cosa cambia davvero.",
+    "date": "2026-08-25",
+    "readingTime": 9,
+    "tags": [
+      "agenti",
+      "Claude Code",
+      "token",
+      "contesto",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-quiet-mode-agenti-coding.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
     "slug": "fable-instradamento",
     "title": "Perché a metà lavoro vi risponde un altro modello",
-    "description": "Claude Fable 5 controlla ogni richiesta e su certi argomenti la passa a un altro modello, con tanto di avviso. Non è un guasto, è documentato, e può scattare perfino alla prima riga — per colpa di una cartella che si chiama male.",
+    "description": "Con Fable 5 una richiesta può essere instradata a un modello diverso, oppure Fable può diventare temporaneamente indisponibile. Cronologia, classificatori, falsi positivi e costi: come progettare un flusso che non dipenda dal nome nel selettore.",
     "date": "2026-08-11",
-    "readingTime": 7,
+    "readingTime": 6,
     "tags": [
       "Fable",
       "limiti",
@@ -17,8 +34,8 @@
   },
   {
     "slug": "mythos",
-    "title": "Il modello che è uscito dalla scatola",
-    "description": "Ad aprile Anthropic ha annunciato Mythos e nello stesso giorno ha detto che non lo avrebbe messo in vendita. Cosa dice davvero il documento di sicurezza, perché la lettura \"la macchina è viva\" è quella sbagliata, e cosa cambia per tutti gli altri.",
+    "title": "Mythos 5 e il giorno in cui i benchmark di sicurezza finirono",
+    "description": "Anthropic ha costruito un modello cyber capace di trovare e concatenare vulnerabilità reali, poi ne ha limitato l'accesso mentre Project Glasswing organizzava le correzioni. Che cosa è documentato, che cosa è racconto, e perché cambia il lavoro di ogni azienda che usa software.",
     "date": "2026-08-08",
     "readingTime": 7,
     "tags": [
@@ -36,7 +53,7 @@
     "title": "Dove finiscono i documenti che caricate",
     "description": "Fra \"va tutto in cloud\" e \"tanto è anonimo\" c'è una realtà articolata, fatta di quattro domande diverse che tutti confondono. Per chi tratta materiale coperto da segreto conviene distinguerle prima di caricare il primo file.",
     "date": "2026-08-04",
-    "readingTime": 7,
+    "readingTime": 11,
     "tags": [
       "dati",
       "riservatezza",
@@ -52,7 +69,7 @@
     "title": "Come si chiede a un'AI un sito web fatto bene",
     "description": "Il primo tentativo esce sempre uguale a mille altri, e il motivo non è il modello. Cosa contiene davvero una richiesta generica, in che ordine si lavora, e le tre regole che separano un sito che regge da uno che si sfalda.",
     "date": "2026-07-28",
-    "readingTime": 7,
+    "readingTime": 11,
     "tags": [
       "prompt engineering",
       "web",
@@ -68,7 +85,7 @@
     "title": "Quando il modello dice no",
     "description": "Un rifiuto non è un guasto e non è quasi mai una censura mirata. Come nascono, perché sono incoerenti, perché colpiscono proprio i mestieri seri, e cosa fare quando arrivano su una richiesta legittima.",
     "date": "2026-07-21",
-    "readingTime": 7,
+    "readingTime": 10,
     "tags": [
       "rifiuti",
       "limiti",
@@ -84,7 +101,7 @@
     "title": "ComfyUI, ovvero smettere di tirare a indovinare",
     "description": "I generatori di immagini con la casella di testo nascondono tutto quello che conta. ComfyUI mostra i passaggi uno per uno — ed è per questo che sembra difficile, e per questo che poi non si torna indietro.",
     "date": "2026-07-14",
-    "readingTime": 8,
+    "readingTime": 13,
     "tags": [
       "ComfyUI",
       "immagini",
@@ -100,7 +117,7 @@
     "title": "I modelli a pesi aperti, spiegati senza mitologia",
     "description": "Open source\" applicato a un modello di AI vuol dire una cosa diversa da quella a cui siamo abituati col software. Cosa si scarica davvero, cosa cambia nel lavoro quotidiano, quanto costa, e quando conviene.",
     "date": "2026-07-07",
-    "readingTime": 7,
+    "readingTime": 11,
     "tags": [
       "modelli aperti",
       "open source",
@@ -114,9 +131,9 @@
   {
     "slug": "i-conti-non-tornano",
     "title": "I conti non tornano, e il motivo è interessante",
-    "description": "Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Non è un paradosso, è la chiave per capire cosa avete davanti — e per fargli fare i conti nel modo giusto.",
+    "description": "Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Il contrasto spiega bene cosa abbiamo davanti — e come affidargli i conti nel modo giusto.",
     "date": "2026-06-30",
-    "readingTime": 6,
+    "readingTime": 9,
     "tags": [
       "numeri",
       "verifica",
@@ -132,7 +149,7 @@
     "title": "Perché ti dà sempre ragione",
     "description": "Contestate una risposta giusta e il modello si scusa e la cambia. Non è cortesia ed è più insidioso di un errore normale. Da dove viene l'accondiscendenza, e come si lavora con un collaboratore che non sa tenere il punto.",
     "date": "2026-06-23",
-    "readingTime": 6,
+    "readingTime": 9,
     "tags": [
       "accondiscendenza",
       "verifica",
@@ -148,7 +165,7 @@
     "title": "La memoria che non c'è",
     "description": "Ogni conversazione riparte da zero, eppure il modello sembra ricordare. Cos'è davvero il contesto, perché a metà di un lavoro lungo \"dimentica\", e come organizzarsi di conseguenza.",
     "date": "2026-06-16",
-    "readingTime": 6,
+    "readingTime": 9,
     "tags": [
       "contesto",
       "memoria",
@@ -164,7 +181,7 @@
     "title": "Perché la stessa domanda dà due risposte diverse",
     "description": "Non è memoria e non è un difetto: dentro la generazione c'è una dose di caso, e si regola. Cosa cambia fra una risposta creativa e una ripetibile, e quando serve l'una o l'altra.",
     "date": "2026-06-09",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "temperatura",
       "riproducibilità",
@@ -180,7 +197,7 @@
     "title": "Conviene essere gentili con un modello?",
     "description": "La domanda sembra oziosa e non lo è. Il modello non si offende, ma la cortesia cambia comunque quello che ottenete — per una ragione che non ha niente a che fare con i sentimenti.",
     "date": "2026-06-02",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "prompt engineering",
       "metodo",
@@ -195,7 +212,7 @@
     "title": "Un modello non sa che ore sono",
     "description": "Non ha orologio, non ha finestre, e la sua conoscenza del mondo si ferma a una data. Cosa questo comporta davvero nel lavoro quotidiano, e le tre abitudini che lo rendono un non problema.",
     "date": "2026-05-26",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "limiti",
       "contesto",
@@ -211,7 +228,7 @@
     "title": "Scrive meglio di me?",
     "description": "La domanda che nessuno fa ad alta voce. La risposta onesta richiede di distinguere fra scrivere bene e scrivere qualcosa — e di guardare cosa succede a un testo quando lo si delega del tutto.",
     "date": "2026-05-19",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "scrittura",
       "mestiere",
@@ -226,7 +243,7 @@
     "title": "Quanto costa una domanda",
     "description": "Il prezzo si misura in token, che non sono parole. Come si legge davvero una bolletta, perché i documenti lunghi costano più di quanto sembri, e dove va a finire il costo che conta — che non è quello.",
     "date": "2026-05-12",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "costi",
       "token",
@@ -241,7 +258,7 @@
     "title": "Come si ottiene una risposta breve",
     "description": "In tre righe\" è l'istruzione più sottovalutata che ci sia, e funziona meglio di qualsiasi \"sii conciso\". Perché i modelli sono prolissi per costruzione, e i quattro modi per farla finita.",
     "date": "2026-05-05",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "prompt engineering",
       "metodo",
@@ -256,7 +273,7 @@
     "title": "Perché ripete sempre le stesse parole",
     "description": "Fondamentale\", \"cruciale\", \"nel panorama attuale\". C'è un lessico che tradisce un testo generato, e ha una spiegazione precisa. Come si riconosce, e come si esce dalla media.",
     "date": "2026-04-28",
-    "readingTime": 3,
+    "readingTime": 6,
     "tags": [
       "stile",
       "scrittura",
@@ -271,7 +288,7 @@
     "title": "In che lingua conviene parlargli",
     "description": "L'inglese resta avanti, di poco e non ovunque. Dove l'italiano perde davvero, perché sui testi giuridici italiani serve cautela, e quando ha senso cambiare lingua a metà lavoro.",
     "date": "2026-04-21",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "italiano",
       "lingue",
@@ -287,7 +304,7 @@
     "title": "Come si insegna a un modello la propria voce",
     "description": "Descrivere il proprio stile a parole non funziona quasi mai. Funziona dargli tre cose che avete scritto — e sapere quali tre. Il procedimento, e il punto in cui conviene fermarsi.",
     "date": "2026-04-14",
-    "readingTime": 3,
+    "readingTime": 7,
     "tags": [
       "voce",
       "scrittura",
@@ -302,7 +319,7 @@
     "title": "Può sostituire il mio lavoro?",
     "description": "La domanda vera non è se un mestiere sparisce, ma quali sue parti si spostano. Un metodo per guardarci dentro senza consolarsi e senza spaventarsi, applicato a mestieri concreti.",
     "date": "2026-04-07",
-    "readingTime": 4,
+    "readingTime": 8,
     "tags": [
       "lavoro",
       "professioni",
@@ -317,7 +334,7 @@
     "title": "Si può usare per il lavoro serio?",
     "description": "Sì, con lo stesso trattamento che riservereste a un collaboratore nuovo e bravo: fiducia proporzionata, verifica sistematica, e chiarezza su chi firma. Il protocollo, in pratica.",
     "date": "2026-03-31",
-    "readingTime": 4,
+    "readingTime": 7,
     "tags": [
       "metodo",
       "verifica",
@@ -332,7 +349,7 @@
     "title": "Fatevi trovare i difetti, non i complimenti",
     "description": "La richiesta più utile che si possa fare a un modello è di demolire quello che ha appena scritto. Funziona bene, per una ragione precisa — e ci sono tre modi di chiederlo, uno molto migliore degli altri.",
     "date": "2026-03-24",
-    "readingTime": 3,
+    "readingTime": 7,
     "tags": [
       "revisione",
       "metodo",
@@ -403,9 +420,9 @@
   {
     "slug": "welcome",
     "title": "L'arte del prompt engineering — guida pratica",
-    "description": "Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione — e le abitudini che vengono dopo, quando si comincia a lavorare sul serio.",
+    "description": "Un prompt efficace non è una formula magica ma una specifica verificabile. Come dare contesto, esempi e criteri di qualità, scegliere gli strumenti e costruire un ciclo di lavoro che regga anche fuori dalle demo.",
     "date": "2026-01-06",
-    "readingTime": 4,
+    "readingTime": 9,
     "tags": [
       "guida",
       "fondamenti",

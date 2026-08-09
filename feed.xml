@@ -5,13 +5,25 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 09 Aug 2026 15:36:53 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 19:35:03 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[Ho chiesto all'agente di coding di spendere meno token. Ha funzionato]]></title>
+      <link>https://www.promptengineering.it/post/quiet-mode-agenti-coding/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/quiet-mode-agenti-coding/</guid>
+      <description><![CDATA[Il mio prompt preferito chiede all'agente di usare la propria intelligenza per risparmiare token, lavorare in silenzio e interrompermi soltanto quando una decisione comporta un rischio. Ecco che cosa cambia davvero.]]></description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <category>agenti</category>
+      <category>Claude Code</category>
+      <category>token</category>
+      <category>contesto</category>
+      <category>metodo</category>
+    </item>
     <item>
       <title><![CDATA[Perché a metà lavoro vi risponde un altro modello]]></title>
       <link>https://www.promptengineering.it/post/fable-instradamento/</link>
       <guid isPermaLink="true">https://www.promptengineering.it/post/fable-instradamento/</guid>
-      <description><![CDATA[Claude Fable 5 controlla ogni richiesta e su certi argomenti la passa a un altro modello, con tanto di avviso. Non è un guasto, è documentato, e può scattare perfino alla prima riga — per colpa di una cartella che si chiama male.]]></description>
+      <description><![CDATA[Con Fable 5 una richiesta può essere instradata a un modello diverso, oppure Fable può diventare temporaneamente indisponibile. Cronologia, classificatori, falsi positivi e costi: come progettare un flusso che non dipenda dal nome nel selettore.]]></description>
       <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
       <category>Fable</category>
       <category>limiti</category>
@@ -19,10 +31,10 @@
       <category>metodo</category>
     </item>
     <item>
-      <title><![CDATA[Il modello che è uscito dalla scatola]]></title>
+      <title><![CDATA[Mythos 5 e il giorno in cui i benchmark di sicurezza finirono]]></title>
       <link>https://www.promptengineering.it/post/mythos/</link>
       <guid isPermaLink="true">https://www.promptengineering.it/post/mythos/</guid>
-      <description><![CDATA[Ad aprile Anthropic ha annunciato Mythos e nello stesso giorno ha detto che non lo avrebbe messo in vendita. Cosa dice davvero il documento di sicurezza, perché la lettura "la macchina è viva" è quella sbagliata, e cosa cambia per tutti gli altri.]]></description>
+      <description><![CDATA[Anthropic ha costruito un modello cyber capace di trovare e concatenare vulnerabilità reali, poi ne ha limitato l'accesso mentre Project Glasswing organizzava le correzioni. Che cosa è documentato, che cosa è racconto, e perché cambia il lavoro di ogni azienda che usa software.]]></description>
       <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
       <category>Mythos</category>
       <category>sicurezza</category>
@@ -88,7 +100,7 @@
       <title><![CDATA[I conti non tornano, e il motivo è interessante]]></title>
       <link>https://www.promptengineering.it/post/i-conti-non-tornano/</link>
       <guid isPermaLink="true">https://www.promptengineering.it/post/i-conti-non-tornano/</guid>
-      <description><![CDATA[Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Non è un paradosso, è la chiave per capire cosa avete davanti — e per fargli fare i conti nel modo giusto.]]></description>
+      <description><![CDATA[Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Il contrasto spiega bene cosa abbiamo davanti — e come affidargli i conti nel modo giusto.]]></description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <category>numeri</category>
       <category>verifica</category>
@@ -209,16 +221,6 @@
       <category>voce</category>
       <category>scrittura</category>
       <category>prompt engineering</category>
-    </item>
-    <item>
-      <title><![CDATA[Può sostituire il mio lavoro?]]></title>
-      <link>https://www.promptengineering.it/post/puo-sostituire-il-mio-lavoro/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/puo-sostituire-il-mio-lavoro/</guid>
-      <description><![CDATA[La domanda vera non è se un mestiere sparisce, ma quali sue parti si spostano. Un metodo per guardarci dentro senza consolarsi e senza spaventarsi, applicato a mestieri concreti.]]></description>
-      <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
-      <category>lavoro</category>
-      <category>professioni</category>
-      <category>metodo</category>
     </item>
   </channel>
 </rss>

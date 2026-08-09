@@ -58,4 +58,79 @@ Molti, fatta la prova, resteranno sul cloud — per ottime ragioni: modelli migl
 
 Sono il pavimento del mercato. Fissano il livello sotto il quale non ha senso pagare, e costringono chi vende a valere la differenza. E sono la risposta alla domanda che ogni dipendenza da fornitore dovrebbe avere pronta: *e se domani?* Se domani il prezzo raddoppia, se il servizio chiude, se le condizioni cambiano, se un aggiornamento rompe il flusso che usate da un anno — la strada di riserva esiste, è percorribile, e sapere che esiste cambia il potere contrattuale anche di chi non la imbocca.
 
+## Aperto rispetto a che cosa
+
+Nel software classico, open source consente di studiare, modificare e distribuire il codice secondo una licenza. Un sistema di AI aggiunge dati, codice di training, parametri, architettura e procedure di valutazione. Pubblicare soltanto i pesi rende possibile l'inferenza e spesso il fine-tuning, ma non ricostruisce necessariamente il sistema.
+
+La Open Source AI Definition dell'OSI richiede libertà di uso, studio, modifica e condivisione e informazioni sufficienti sui dati, oltre a codice e parametri. Per questo è utile dire **open weights** quando è esattamente ciò che abbiamo: evita di importare una garanzia che la licenza o la documentazione non offrono.
+
+## Licenza, policy e provenienza
+
+Due modelli scaricabili possono avere libertà molto diverse. Uno usa Apache 2.0; un altro limita settori, dimensione dell'organizzazione o uso commerciale; un terzo accompagna la licenza con una policy d'uso separata. Controllate:
+
+- licenza dei pesi e del codice;
+- condizioni su output e modelli derivati;
+- obblighi di attribuzione o redistribuzione;
+- acceptable use policy;
+- licenze di tokenizer, dataset e componenti;
+- restrizioni dei modelli incorporati nel workflow.
+
+GPT-OSS, per esempio, è pubblicato da OpenAI con pesi e licenza Apache 2.0 insieme a una usage policy e a un model card. È molto più informativo dell'etichetta «aperto» presa da sola.
+
+## Il costo vero dell'esecuzione
+
+I pesi gratuiti non rendono gratuita l'inferenza. Servono download, storage, RAM/VRAM, energia, tempo operativo e aggiornamenti. Il costo dipende da precisione e quantizzazione, lunghezza del contesto, batch, throughput e latenza richiesta.
+
+Per un uso saltuario, una API può essere più economica di una GPU accesa. Per carico continuo e prevedibile, hardware posseduto o istanze noleggiate possono vincere. Per dati sensibili, il valore del controllo può dominare il conto.
+
+Misurate costo per esito accettato includendo setup, retry e revisione. Un modello più piccolo che sbaglia campi critici è costoso anche se produce token quasi gratis.
+
+## Quantizzazione e qualità
+
+Ridurre i bit dei pesi permette di eseguire modelli grandi su hardware più piccolo. La perdita non è uniforme: alcuni compiti e layer sono più sensibili; formati e runtime implementano compromessi diversi. «4-bit» non è un benchmark.
+
+Testate sul vostro set con identico prompt e criteri. Misurate qualità, token al secondo, memoria e stabilità su contesti lunghi. Conservate modello esatto, quantizzazione e runtime: il nome della famiglia non basta a riprodurre il risultato.
+
+## Controllo non significa sicurezza automatica
+
+Eseguire localmente impedisce al provider di inferenza di ricevere prompt e output. Restano vulnerabilità del runtime, custom code, modelli malevoli, telemetria, download, backup e accesso fisico. Inoltre un modello locale non riceve automaticamente patch di sicurezza o miglioramenti dei filtri.
+
+Il vantaggio è la possibilità di scegliere e congelare. La responsabilità di aggiornare, isolare e monitorare passa all'operatore.
+
+## Il valore strategico: sostituibilità
+
+Un'architettura sana separa l'applicazione dal modello. Definite un contratto di input/output, una suite di eval, un registro di versioni e una fallback. Così potete confrontare modello cloud, open-weight locale e GPU remota senza riscrivere il prodotto.
+
+La portabilità non è completa se il prompt dipende da idiosincrasie del provider o il workflow usa strumenti proprietari. Va testata: eseguite periodicamente un campione sul modello alternativo e misurate il divario.
+
+## Quando convengono
+
+I pesi aperti sono forti quando servono:
+
+- dati sotto controllo diretto;
+- comportamento congelabile e versionato;
+- personalizzazione profonda;
+- alto volume stabile;
+- funzionamento offline o edge;
+- ricerca su rappresentazioni e inferenza;
+- indipendenza da una sola API.
+
+Sono meno attraenti quando il team non vuole gestire infrastruttura, il carico è intermittente, il modello frontier è decisamente migliore sul task o servono tool e supporto gestiti.
+
+## Un benchmark di un pomeriggio fatto bene
+
+Preparate 30–50 casi anonimizzati, con risposte attese o criteri. Confrontate almeno un modello gestito e uno open-weight. Registrate qualità cieca, errori critici, latenza, memoria, costo, facilità di integrazione e licenza. Provate un contesto realistico, non la domanda promozionale più breve.
+
+Ripetete ogni sei o dodici mesi. Il risultato non è «chi vince» in astratto: è il prezzo corrente della vostra possibilità di uscita.
+
+## Un pomeriggio all'anno
+
 Per questo il consiglio che do più spesso non è "passate ai modelli aperti". È più piccolo e più utile: provatene uno una volta l'anno, un pomeriggio, sui vostri documenti. Non per adottarlo — per sapere dov'è arrivato il pavimento. Chi fa questa prova regolarmente prende decisioni migliori anche sul cloud: sa cosa sta comprando, perché ha visto cosa c'è gratis.
+
+## Fonti e approfondimenti
+
+- Open Source Initiative, [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition), versione corrente.
+- OSI, [Open Source AI FAQ](https://opensource.org/ai/faq), distinzione fra componenti e libertà richieste.
+- OpenAI, [gpt-oss model card](https://openai.com/index/gpt-oss-model-card/), esempio documentato di modello open-weight.
+- Hugging Face, [Model Cards](https://huggingface.co/docs/hub/model-cards), provenienza, licenze e limitazioni.
+- NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), valutazione e governance.

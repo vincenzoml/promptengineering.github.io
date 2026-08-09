@@ -56,4 +56,76 @@ Tutto questo ha anche un lato buono, che vale la pena dire: l'assenza di memoria
 
 Chi lavora bene con questi strumenti finisce per usare l'azzeramento come una risorsa: conversazioni corte, dedicate a una cosa sola, aperte e chiuse come si apre e si chiude una pratica. La chat infinita che contiene tutto — il lavoro, le prove, le curiosità della pausa pranzo — è comoda finché è corta e diventa il problema quando è lunga.
 
+## Oggi esistono più memorie, e vanno distinte
+
+Dire che «ogni conversazione riparte da zero» descrive bene il modello nudo, meno bene i prodotti del 2026. ChatGPT, Claude e gli agenti di coding possono conservare preferenze, cercare chat passate, mantenere file di istruzioni o recuperare note da archivi esterni. La memoria esiste a livello di prodotto; non è una facoltà uniforme del modello.
+
+Conviene separare quattro meccanismi:
+
+1. **finestra di contesto**: messaggi e materiali disponibili in questa esecuzione;
+2. **memoria del prodotto**: fatti o preferenze salvati fra conversazioni;
+3. **recupero esterno**: ricerca in file, database, repository o chat precedenti;
+4. **stato del processo**: artefatti, checkpoint, test e decisioni conservati fuori dal modello.
+
+La differenza è operativa. Un'informazione «salvata» non è necessariamente inserita in ogni richiesta; può essere recuperata solo quando un classificatore la ritiene pertinente. Un documento nel repository non occupa contesto finché l'agente non lo apre. Un checkpoint su disco sopravvive anche se cambiamo modello.
+
+## La finestra lunga non elimina il problema
+
+Centomila o un milione di token sembrano memoria sufficiente. Ma disponibilità e uso non coincidono. *Lost in the Middle* ha mostrato che modelli long-context possono sfruttare peggio informazione collocata in mezzo rispetto a inizio e fine. Lavori successivi hanno proposto meccanismi e addestramenti che riducono il problema, senza trasformare il contesto in un database perfetto.
+
+Inoltre ogni token irrilevante compete per attenzione e può aumentare costo e latenza. Anthropic descrive il *context engineering* come la ricerca del più piccolo insieme di token ad alto segnale necessario al prossimo passo. È una definizione migliore di «mettere tutto nella chat».
+
+## Memoria di progetto, non autobiografia della chat
+
+Per un lavoro lungo mantengo un file breve con:
+
+```text
+Obiettivo e criterio di completamento
+Vincoli e decisioni irreversibili
+Architettura o struttura corrente
+Fonti di verità
+Decisioni prese con motivazione
+Questioni aperte
+Ultima verifica eseguita
+```
+
+La chat può contenere esplorazioni e ipotesi scartate. Il file contiene solo stato valido. Quando una decisione cambia, si aggiorna; non si aggiunge una seconda versione contraddittoria in fondo.
+
+Per il software, codice e test sono memoria più affidabile della prosa. Per una ricerca, dataset, notebook e bibliografia. Per un articolo, scaletta, matrice fonti–affermazioni e bozza. L'agente deve poter ricostruire il punto del lavoro dagli artefatti.
+
+## Compattare senza perdere il motivo
+
+I sistemi compattano le conversazioni lunghe riassumendo messaggi vecchi. Il rischio è conservare la decisione e perdere il perché, oppure eliminare un'eccezione rara. Prima della compattazione conviene produrre un checkpoint strutturato:
+
+- fatti verificati, con fonte;
+- ipotesi ancora aperte;
+- alternative scartate e ragione;
+- file modificati;
+- test eseguiti e test mancanti;
+- prossima azione.
+
+Non chiedete «riassumi la chat». Chiedete uno stato sufficiente a proseguire senza la chat. Sono oggetti diversi.
+
+## Privacy e memoria persistente
+
+Una funzione di memoria utile può conservare dettagli che non volevamo rendere permanenti. Le impostazioni, la possibilità di ispezionare e cancellare, il piano contrattuale e la retention contano. Non inserite segreti in una memoria solo perché evita di ripeterli. Credenziali e dati sensibili appartengono a sistemi dedicati con accessi e ciclo di vita controllati.
+
+La regola è dare alla memoria il minimo necessario, con provenienza e scadenza. Una preferenza editoriale può durare; il nome di un cliente in un incidente corrente dovrebbe forse sparire a chiusura.
+
+## Il test di ripresa
+
+Chiudete la chat, apritene una nuova e fornite soltanto gli artefatti di progetto. Se l'agente non sa spiegare obiettivo, stato, vincoli e prossimo passo, la memoria del lavoro era nella conversazione sbagliata.
+
+La chat è un tavolo. La memoria durevole sono gli oggetti che decidiamo di lasciare ordinati quando ci alziamo.
+
+## La forma della macchina
+
 La memoria che non c'è, insomma, non è un difetto da aggirare. È la forma della macchina. E come tutte le forme, appena la conosci ci lavori dentro meglio.
+
+## Fonti e approfondimenti
+
+- Liu et al., [Lost in the Middle](https://arxiv.org/abs/2307.03172), 2023.
+- Zhang et al., [Found in the Middle](https://arxiv.org/abs/2406.16008), su mitigazioni della dipendenza dalla posizione.
+- Anthropic, [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents), 2025.
+- OpenAI, [Memory FAQ](https://help.openai.com/en/articles/8590148-memory-faq), funzioni e controlli correnti del prodotto.
+- Anthropic, [Claude Code memory](https://docs.anthropic.com/en/docs/claude-code/memory), istruzioni persistenti e gerarchia dei file.

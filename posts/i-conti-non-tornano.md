@@ -1,6 +1,6 @@
 ---
 title: I conti non tornano, e il motivo è interessante
-description: Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Non è un paradosso, è la chiave per capire cosa avete davanti — e per fargli fare i conti nel modo giusto.
+description: Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Il contrasto spiega bene cosa abbiamo davanti — e come affidargli i conti nel modo giusto.
 date: 2026-06-30
 author: vincenzo
 tags: [numeri, verifica, fondamenta, LLM]
@@ -36,7 +36,7 @@ L'errore numerico dei modelli ha una fisionomia riconoscibile, e conoscerla aiut
 
 **Sbaglia in silenzio.** Una persona che non è sicura di una somma lo dice, o almeno esita. Il modello no: il totale sbagliato arriva con la stessa prosa sicura di quello giusto, dentro un prospetto ordinato che comunica affidabilità. La forma curata non è un indizio di correttezza. Con questi sistemi non lo è mai.
 
-## La soluzione non è rinunciare, è spostare il lavoro
+## Spostare il lavoro nel posto giusto
 
 Sarebbe sbagliato concludere che i modelli non servono per i lavori con i numeri. Servono moltissimo — a patto di dividere i compiti secondo le nature.
 
@@ -52,4 +52,84 @@ Questa storia dei numeri è il caso più nitido di un principio che vale per tut
 
 Il tranello è che il modello non rifiuta mai i compiti esatti. Li accetta con entusiasmo e li svolge con la sua unica arte, che è la plausibilità. Quando va bene, la plausibilità coincide con l'esattezza. Il vostro mestiere, usandolo, è sapere quando la coincidenza non è garantita.
 
+## Linguaggio e aritmetica hanno criteri diversi
+
+Una frase può essere approssimativamente giusta: «la spesa cresce molto». Una somma o è 18.742,36 oppure non lo è. Il modello linguistico viene ottimizzato per predire token e seguire istruzioni; non per garantire invarianti numerici su sequenze arbitrariamente lunghe.
+
+Parte della difficoltà nasce dalla rappresentazione. Numeri simili non sono necessariamente scomposti in cifre singole; tokenizzazione e contesto cambiano con formato, separatori e lingua. Parte nasce dall'esecuzione: generare il prossimo simbolo plausibile non equivale ad applicare un algoritmo con riporto e memoria esatta.
+
+I modelli di ragionamento hanno migliorato enormemente matematica e coding, ma la regola professionale resta: se il risultato può essere calcolato da un interprete, fatelo calcolare da un interprete.
+
+## La divisione del lavoro corretta
+
+L'AI è utile prima e dopo il calcolo:
+
+- riconosce tabelle in PDF e immagini;
+- normalizza descrizioni e categorie;
+- traduce una richiesta in formule o codice;
+- individua anomalie e propone controlli;
+- spiega il risultato a destinatari diversi.
+
+Il motore deterministico lavora nel mezzo:
+
+- somma e aggrega;
+- applica aliquote e arrotondamenti;
+- risolve equazioni;
+- esegue simulazioni;
+- valida vincoli.
+
+Program-Aided Language Models ha formalizzato questa architettura: il modello scompone il problema e produce un programma, un runtime esegue il calcolo. Toolformer ha studiato come un modello possa imparare a chiamare strumenti, comprese calcolatrici. Oggi le piattaforme agentiche rendono quella separazione ordinaria.
+
+## Dal numero alla provenienza
+
+Una calcolatrice garantisce l'operazione, non gli input. Se il modello ha letto `1.800,50` come `180050`, il totale sarà riproducibile e sbagliato. Ogni numero importante deve mantenere provenienza:
+
+| Campo | Valore | Documento | Pagina/riga | Trasformazione | Stato |
+|---|---:|---|---|---|---|
+| imponibile | 1.800,50 | fattura-17.pdf | p. 2 | formato EU → decimal | verificato |
+
+Evitate il tipo floating point binario per denaro quando la piattaforma offre decimali esatti. Definite regole di arrotondamento e valuta. Fate fallire la procedura se mancano unità o colonne, invece di riempire i vuoti.
+
+## Un prompt che genera una verifica
+
+```text
+Estrai le righe in CSV conservando testo originale, pagina e confidenza.
+Non calcolare totali. Segnala importi ambigui o privi di valuta.
+Poi scrivi un programma che:
+- usa decimali esatti;
+- applica le regole di arrotondamento allegate;
+- produce subtotali e controllo incrociato;
+- termina con errore se il totale non coincide con quello dichiarato.
+Mostra test per separatori italiani e valori negativi.
+```
+
+La consegna non è «dimmi il totale». È un piccolo sistema verificabile.
+
+## Controlli che trovano errori diversi
+
+La doppia esecuzione con lo stesso codice trova poco: ripete lo stesso difetto. Usate controlli eterogenei:
+
+1. riconciliazione con totale del documento;
+2. somma indipendente in foglio di calcolo;
+3. proprietà: totale lordo ≥ imponibile, salvo note di credito;
+4. campionamento manuale delle righe più grandi e più ambigue;
+5. confronto con periodo precedente per scostamenti anomali.
+
+Un modello può suggerire queste proprietà, ma deve essere il programma a farle rispettare.
+
+## Quando il linguaggio resta indispensabile
+
+Molti problemi numerici non sono difficili per la somma, ma per la definizione. Che cosa conta come «cliente attivo»? L'IVA va inclusa? Il periodo segue competenza o cassa? Qui serve dialogo con chi possiede il dominio. L'AI può portare alla luce assunzioni nascoste e trasformarle in test.
+
+La combinazione potente non è modello contro calcolatrice. È modello per specificare, runtime per eseguire, umano per decidere semantica e rischio.
+
+## Come lavora oggi il commercialista delle dodici fatture
+
 Il commercialista delle dodici fatture, oggi, lavora così: il modello gli trasforma la carta in tabelle, il gestionale fa i conti. Dice che non è mai stato così veloce. I trecento euro non sono più tornati.
+
+## Fonti e approfondimenti
+
+- Gao et al., [PAL: Program-aided Language Models](https://arxiv.org/abs/2211.10435), 2022.
+- Schick et al., [Toolformer](https://arxiv.org/abs/2302.04761), 2023.
+- OpenAI, [Code Interpreter and tools](https://platform.openai.com/docs/guides/tools-code-interpreter), documentazione ufficiale.
+- IEEE 754, [Standard for Floating-Point Arithmetic](https://standards.ieee.org/ieee/754/6210/), riferimento per le proprietà del floating point.

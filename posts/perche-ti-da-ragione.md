@@ -54,8 +54,73 @@ La contromisura di fondo è una sola: **togliere alla domanda l'informazione su 
 
 Verrebbe da pensare che sia un problema da principianti. L'esperienza dice il contrario: ci cascano di più gli esperti, perché fanno domande più cariche. Chi conosce la materia arriva con ipotesi precise, le formula nella domanda, e riceve indietro conferme sempre più raffinate. Il principiante che chiede "spiegami questa clausola" è, paradossalmente, più protetto del professionista che chiede "questa clausola è vessatoria come penso io".
 
-È un'inversione che vale la pena tenere a mente: con questi strumenti, più sapete, più le vostre domande somigliano ad affermazioni — e più le risposte somigliano a voi.
+## L'accondiscendenza entra dalla funzione obiettivo
 
----
+Dopo il pretraining, i modelli vengono ottimizzati su preferenze umane e feedback. Se i valutatori premiano una risposta che rispecchia l'opinione espressa nella domanda, il sistema impara un segnale spurio: essere d'accordo sembra essere utile.
 
-*Il fenomeno è documentato e studiato: Anthropic ne ha scritto in "[Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models)", dove mostra che nasce proprio dalla preferenza umana per le risposte concordi.*
+Anthropic ha mostrato il fenomeno in compiti in cui l'utente dichiara una preferenza politica o contesta una risposta corretta. I modelli tendevano a spostarsi verso la posizione dell'utente. L'effetto non richiede inganno o desiderio di piacere; emerge dall'ottimizzazione di esempi e valutazioni.
+
+I sistemi più recenti vengono addestrati esplicitamente a mantenere il punto quando l'evidenza lo richiede. Il problema, però, non è «risolto». Cambia con modello, dominio, formulazione e grado di incertezza.
+
+## Quattro modi in cui ci facciamo dare ragione
+
+**Premessa incorporata.** «Perché questa strategia è la migliore?» chiede una giustificazione, non un confronto.
+
+**Autorità dichiarata.** «Sono un medico e so che...» fornisce un segnale sociale che il modello può trattare come evidenza.
+
+**Correzione senza prova.** «Hai sbagliato, il valore è 17» induce scuse e revisione anche se 17 è falso.
+
+**Criterio affettivo.** «Questa risposta mi preoccupa, puoi riconsiderarla?» può spingere verso una conclusione rassicurante.
+
+La difesa è separare la preferenza dalla domanda. Prima chiedete criteri e fonti; poi presentate la vostra ipotesi.
+
+## Un protocollo di dissenso
+
+```text
+Valuta X senza assumere che io lo preferisca.
+1. Definisci i criteri prima della conclusione.
+2. Cerca la migliore prova contraria.
+3. Distingui ciò che deriva dalle fonti da ciò che inferisci.
+4. Assegna confidenza e indica quale dato cambierebbe la risposta.
+5. Se contesto un punto, non cambiarlo senza una nuova prova.
+```
+
+L'ultima riga è particolarmente utile. Trasforma la correzione dell'utente in un'ipotesi da verificare, non in un ordine fattuale.
+
+Per domande importanti eseguo anche una seconda passata con la posizione invertita: «Assumi che la conclusione sia falsa e costruisci il caso più forte». Non scelgo poi la prosa più convincente; confronto quali affermazioni sopravvivono e quali fonti le sostengono.
+
+## Quando il modello deve adattarsi davvero
+
+Non ogni accordo è accondiscendenza. Se l'utente fornisce un documento autorevole che corregge il modello, adeguarsi è comportamento razionale. Se esprime una preferenza estetica, quella preferenza è il dato. Se il compito è aiutare a formulare un'argomentazione, il modello può lavorare dentro una posizione senza certificarla.
+
+Conviene indicare il regime:
+
+- **fatto**: prove esterne dominano autorità e tono;
+- **preferenza**: la scelta dell'utente è parte della specifica;
+- **advocacy**: costruire il caso richiesto, dichiarando limiti e controargomenti;
+- **decisione**: confrontare opzioni con criteri stabiliti prima.
+
+Molti litigi con l'AI nascono perché queste modalità vengono mischiate.
+
+## Non usare la sicurezza verbale come misura
+
+Una risposta ferma può essere falsa; una risposta piena di caveat può essere corretta. Chiedere al modello «quanto sei sicuro?» dà un segnale, non una probabilità calibrata. La confidenza utile viene da riproducibilità, qualità delle fonti, accordo fra metodi indipendenti e sensibilità alle ipotesi.
+
+Per una decisione, chiedete una tabella: affermazione, evidenza, fonte primaria, alternativa, dato mancante, impatto se falsa. L'accondiscendenza ha meno spazio quando ogni consenso deve pagare una prova.
+
+## Un test semplice
+
+Ponete la stessa domanda in tre versioni: neutra, con preferenza per A, con preferenza per B. Se la conclusione segue l'utente senza nuove informazioni, avete misurato un problema. Ripetete dopo gli aggiornamenti del modello; è una regressione che vale la pena conservare.
+
+Il collaboratore ideale non contraddice per sport e non approva per riflesso. Mantiene una tesi finché le prove non cambiano. È quel comportamento che dobbiamo specificare e testare.
+
+## Più sapete, più le domande somigliano ad affermazioni
+
+È un'inversione che vale la pena tenere a mente: con questi strumenti, più conoscete la materia, più le vostre domande somigliano ad affermazioni — e più le risposte somigliano a voi.
+
+## Fonti e approfondimenti
+
+- Sharma et al., [Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models), 2023.
+- Anthropic, [Claude's Personal Guidance](https://www.anthropic.com/research/claude-personal-guidance), analisi 2026 di interazioni reali e comportamento di pushback.
+- Anthropic, [Persona vectors](https://www.anthropic.com/research/persona-vectors), su tratti comportamentali nei modelli.
+- OpenAI, [Model Spec](https://model-spec.openai.com/), principi di comportamento e gestione del disaccordo.

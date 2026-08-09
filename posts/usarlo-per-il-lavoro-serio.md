@@ -60,4 +60,93 @@ Sono due righe. In uno studio che le ha scritte, il resto si sistema da sé; in 
 
 Non è che il modello sbagli — sbaglia, e lo si sa. È che smetta di sbagliare abbastanza spesso da farvi abbassare la guardia.
 
+## Serio significa definire il danno
+
+La stessa percentuale di errore ha conseguenze diverse. Un titolo mediocre richiede una riscrittura; una dose medica errata può ferire; una clausola omessa può spostare responsabilità economica. Prima di scegliere modello e prompt bisogna classificare il rischio.
+
+Uso quattro livelli:
+
+1. **esplorativo**: l'output genera opzioni, nessuno lo usa come fatto;
+2. **assistito**: una persona competente controlla ogni risultato;
+3. **operativo**: il sistema agisce entro vincoli, con test e rollback;
+4. **critico**: danni rilevanti o diritti; servono governance, validazione e responsabilità formale.
+
+Il livello determina dati ammessi, grado di autonomia, evidenze, logging e approvazioni. Non esiste un prompt che trasformi un processo di livello quattro in un giocattolo sicuro.
+
+## La scheda dell'incarico
+
+Un collaboratore nuovo riceve mandato, materiali e definizione di completamento. Fate lo stesso:
+
+```text
+Decisione supportata:
+Destinatario e uso previsto:
+Fonti ammesse e data di validità:
+Azioni vietate senza approvazione:
+Formato di consegna:
+Controlli automatici:
+Revisore competente:
+Condizioni di escalation:
+Traccia da conservare:
+```
+
+La voce «uso previsto» impedisce riusi pericolosi. Un riassunto per orientare una riunione non diventa, solo perché ben scritto, un parere da inviare al cliente.
+
+## Fiducia calibrata per componente
+
+Non si assegna una fiducia unica al «modello». Si valuta una pipeline. L'estrazione può essere affidabile e il ragionamento debole; il calcolo corretto e la fonte obsoleta; la bozza ottima e la citazione inventata.
+
+Scomponete e collegate a ogni passaggio un controllo:
+
+| Passaggio | Controllo |
+|---|---|
+| acquisizione documenti | completezza, checksum, versione |
+| estrazione | campione contro originale, coordinate pagina |
+| classificazione | set di test e matrice degli errori |
+| calcolo | runtime deterministico e invarianti |
+| sintesi | copertura delle affermazioni chiave |
+| pubblicazione/azione | approvazione e rollback |
+
+La verifica deve produrre evidenza. «Ho ricontrollato» è un'altra frase generata.
+
+## Gestire eccezioni e cambiamenti
+
+Le demo usano casi puliti. Il lavoro serio contiene scansioni storte, campi mancanti, lingue miste, versioni contraddittorie e richieste fuori perimetro. Il sistema deve saper dire «non processabile» e instradare a una persona.
+
+Ogni aggiornamento di modello, prompt, parser o fonte può cambiare il comportamento. Conservate un set di regressione con casi ordinari, limiti ed errori storici. Eseguitelo prima del rilascio e monitorate in produzione segnali di deriva: aumento dei retry, distribuzione delle confidenze, campi mancanti, correzioni umane.
+
+## Dati e fornitori
+
+Il piano consumer, l'API e un contratto enterprise possono avere condizioni diverse su addestramento, retention e controlli. OpenAI dichiara di non usare per addestramento i dati di API e prodotti business per impostazione predefinita; Anthropic applica condizioni specifiche ai prodotti commerciali e offre accordi di zero data retention per servizi qualificati. Queste frasi non sostituiscono una valutazione del vostro flusso.
+
+Mappate controller, processor, regione, subprocessor, log, backup, strumenti chiamati e durata. Una chat può rispettare la policy mentre un connettore invia il documento altrove. Minimizzate dati e privilegi.
+
+## Chi firma deve poter spiegare
+
+L'accountability non richiede che una persona ripeta internamente ogni token. Richiede che comprenda fonte, metodo, limiti e criterio con cui il risultato è stato accettato. Se il revisore non possiede competenza o tempo, l'etichetta «human in the loop» è decorativa.
+
+Per gli output importanti conservate una *decision record*: input, versione, fonti, controlli, eccezioni, approvatore. Non tutto per sempre; secondo retention proporzionata.
+
+## Il protocollo minimo
+
+1. scegliere un task circoscritto;
+2. misurare baseline umana;
+3. definire rischio e fallimenti inaccettabili;
+4. progettare controlli indipendenti;
+5. fare shadow mode senza effetti esterni;
+6. confrontare qualità, rework e costo;
+7. introdurre autonomia per gradi;
+8. monitorare e riesaminare dopo aggiornamenti.
+
+Usare l'AI per lavoro serio è ingegneria di processo. Il modello è una componente straordinariamente flessibile; proprio per questo i confini devono essere meno flessibili.
+
+## Come le cinture
+
 Dopo tre mesi in cui il riassunto è sempre venuto bene, la lettura di controllo si fa distratta. È il momento in cui arriva il riassunto sbagliato, e nessuno lo vede. La contromisura non è la diffidenza permanente, che non regge: è tenere il controllo dei numeri e dei riferimenti come un gesto meccanico, che non richieda di essere motivati. Come le cinture: non le si mette perché si teme l'incidente.
+
+## Fonti e approfondimenti
+
+- NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), quadro volontario per gestione del rischio.
+- OpenAI, [Business data privacy, security, and compliance](https://openai.com/business-data/), impegni correnti sui dati commerciali.
+- Anthropic, [How long do you store my organization's data?](https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data), retention dei prodotti commerciali.
+- Anthropic, [Zero data retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to), ambito degli accordi ZDR.
+- ILO, [Generative AI and Jobs](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), 2025.

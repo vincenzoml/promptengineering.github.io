@@ -1,11 +1,12 @@
 [
   {
     "tag": "metodo",
-    "count": 15,
+    "count": 16,
     "posts": [
       "usarlo-per-il-lavoro-serio",
       "scrive-meglio-di-me",
       "sa-che-ore-sono",
+      "quiet-mode-agenti-coding",
       "quanto-costa-una-domanda",
       "quando-il-modello-dice-no",
       "puo-sostituire-il-mio-lavoro",
@@ -104,6 +105,15 @@
     ]
   },
   {
+    "tag": "contesto",
+    "count": 3,
+    "posts": [
+      "sa-che-ore-sono",
+      "quiet-mode-agenti-coding",
+      "la-memoria-che-non-ce"
+    ]
+  },
+  {
     "tag": "AI",
     "count": 2,
     "posts": [
@@ -112,11 +122,11 @@
     ]
   },
   {
-    "tag": "contesto",
+    "tag": "token",
     "count": 2,
     "posts": [
-      "sa-che-ore-sono",
-      "la-memoria-che-non-ce"
+      "quiet-mode-agenti-coding",
+      "quanto-costa-una-domanda"
     ]
   },
   {
@@ -172,14 +182,21 @@
     ]
   },
   {
-    "tag": "costi",
+    "tag": "agenti",
     "count": 1,
     "posts": [
-      "quanto-costa-una-domanda"
+      "quiet-mode-agenti-coding"
     ]
   },
   {
-    "tag": "token",
+    "tag": "Claude Code",
+    "count": 1,
+    "posts": [
+      "quiet-mode-agenti-coding"
+    ]
+  },
+  {
+    "tag": "costi",
     "count": 1,
     "posts": [
       "quanto-costa-una-domanda"

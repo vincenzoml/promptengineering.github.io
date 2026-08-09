@@ -64,4 +64,140 @@ Come sono organizzate le cartelle. Dove si cambia un colore, dove si aggiunge un
 
 Senza questo, avete un sito che funziona finché non serve cambiarlo — e al primo cambiamento tornate a dipendere da qualcuno, fosse anche dallo stesso modello, ripartendo però da zero contesto. Con questo, avete una cosa vostra: la potete mantenere, migliorare, e all'occorrenza spiegare al prossimo che ci lavora.
 
+## Prima del layout viene la funzione
+
+«Fammi un sito moderno» porta a hero, gradiente, tre card e call to action perché è la risposta statisticamente comune. Una specifica professionale parte da persone e decisioni:
+
+- chi arriva e da quale canale;
+- che cosa deve capire nei primi trenta secondi;
+- quale azione deve poter completare;
+- quale prova riduce il dubbio;
+- quali contenuti cambieranno spesso;
+- chi li manterrà;
+- quali vincoli legali, tecnici e di accessibilità esistono.
+
+La homepage non è l'intero sito. Disegnate prima mappa dei contenuti e percorsi principali. Se un lettore deve confrontare servizi, leggere casi e contattare l'azienda, ogni passaggio ha informazione e stato propri.
+
+## Fornire materiale vero
+
+Il modello inventa testimonial e metriche quando il brief chiede «social proof» ma non contiene prove. Date testi, immagini, identità visiva, casi, vincoli e fonti. Segnate ciò che può essere riscritto e ciò che deve restare letterale.
+
+Un inventario iniziale:
+
+```text
+Contenuti approvati
+Claim con relativa prova
+Asset e diritti d'uso
+Pagine obbligatorie
+Azioni e destinazioni
+Dati raccolti dai form
+Lingue e mercati
+Elementi ancora mancanti
+```
+
+Se manca un claim, il sito deve mostrare un placeholder o ometterlo, non fabbricarlo.
+
+## Specificare un sistema visivo
+
+Un'immagine di riferimento vale più di «minimal». Ma chiedete al modello di estrarne regole, non copiarla: scala tipografica, spaziatura, griglia, raggi, contrasto, densità, comportamento responsive, trattamento di immagini e stati interattivi.
+
+Definite token di design:
+
+- colori semantici, non `blue-500` sparsi;
+- font e fallback;
+- scala di spaziatura;
+- larghezze e breakpoint;
+- componenti e varianti;
+- focus, hover, errore, loading e vuoto.
+
+La coerenza nasce da poche regole riutilizzate, non dal prompt che dice «mantieni coerenza».
+
+## Accessibilità come criterio di accettazione
+
+WCAG 2.2 offre requisiti testabili: contrasto, tastiera, focus visibile, target size, alternative testuali, etichette, struttura semantica. Inseriteli nella specifica e nei test.
+
+Un controllo minimo comprende:
+
+1. navigazione completa da tastiera;
+2. ordine di focus e skip link;
+3. heading gerarchici;
+4. label e messaggi dei form;
+5. contrasto e zoom al 200%;
+6. `prefers-reduced-motion`;
+7. screen reader su percorsi chiave.
+
+Lighthouse o axe trovano una parte degli errori; non dimostrano usabilità. Il test manuale rimane.
+
+## Prestazioni: budget prima delle animazioni
+
+Core Web Vitals misura aspetti osservabili dell'esperienza: LCP per caricamento principale, INP per reattività, CLS per stabilità. Fissate un budget su mobile reale:
+
+- JavaScript iniziale;
+- peso immagini e font;
+- numero di richieste;
+- soglie CWV al percentile 75;
+- nessuna dipendenza client quando HTML e CSS bastano.
+
+L'AI tende ad aggiungere librerie perché rendono semplice generare il codice. Ogni dipendenza deve giustificare peso, manutenzione e superficie di sicurezza.
+
+## Il prompt deve includere l'ambiente
+
+Indicate framework e versione, package manager, convenzioni, browser supportati, strategia di rendering, CMS, analytics e deployment. Prima di cambiare codice, l'agente deve leggere istruzioni del repository e componenti esistenti.
+
+Per una modifica:
+
+```text
+Implementa la pagina dentro il design system esistente.
+Non introdurre dipendenze senza motivazione.
+Riusa componenti e token; conserva URL e analytics.
+Prima scrivi test/criteri per accessibilità e responsive.
+Alla fine esegui build, test e audit; mostra il diff rilevante.
+```
+
+## Dalla demo al prodotto
+
+Una demo felice ignora stati che occupano metà del lavoro reale:
+
+- loading lento e retry;
+- zero risultati;
+- testo molto lungo o tradotto;
+- immagini mancanti;
+- errore del form;
+- autenticazione scaduta;
+- consenso e preferenze;
+- 404, redirect e metadata social;
+- stampa, condivisione e deep link.
+
+Chiedete una matrice stato–componente e verificatela. Un sito che regge il contenuto peggiore è più vicino alla produzione di uno screenshot perfetto.
+
+## Sicurezza e dati
+
+Non inserite chiavi nel frontend. Validate input sul server, proteggete form da abuso, minimizzate analytics e documentate cookie. Le dipendenze generate devono essere controllate; il codice non diventa sicuro perché compila.
+
+Per siti con CMS, definite chi può pubblicare, anteprima, versioni e rollback. Per contenuti AI, mantenete fonti e responsabilità editoriale.
+
+## Il brief completo, progressivo
+
+1. obiettivo e utenti;
+2. mappa e contenuti reali;
+3. riferimenti e regole visive;
+4. stack e vincoli;
+5. criteri per accessibilità, performance, SEO e sicurezza;
+6. componenti e stati;
+7. piano di implementazione incrementale;
+8. verifiche automatizzate e manuali;
+9. handover e manutenzione.
+
+Fate approvare ogni strato prima di generare il successivo. Correggere una mappa costa minuti; correggere lo stesso errore dopo venti pagine costa giorni.
+
+## Un sito vostro due volte
+
 Che poi era il punto. Il sito medio si compra a poco dappertutto. Quello che non si compra è un sito che è vostro due volte — nelle scelte, perché le avete fatte voi; e nella manutenzione, perché sapete dove mettere le mani.
+
+## Fonti e approfondimenti
+
+- W3C, [Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/), standard di accessibilità.
+- web.dev, [Web Vitals](https://web.dev/articles/vitals), metriche e soglie correnti.
+- MDN, [Responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), riferimento tecnico.
+- OWASP, [Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/), requisiti di sicurezza.
+- W3C, [HTML specification](https://html.spec.whatwg.org/), semantica e comportamento.

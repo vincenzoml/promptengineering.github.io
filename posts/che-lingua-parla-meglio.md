@@ -48,4 +48,63 @@ Vale anche una variante più semplice e molto efficace: chiedere il ragionamento
 
 Le classifiche generali dicono poco del vostro lavoro. Prendete i tre compiti che fate più spesso, formulateli nelle due lingue, e confrontate su cinque casi reali.
 
+## «L'inglese è migliore» è una frase troppo larga
+
+La lingua interviene in almeno quattro punti diversi: quantità e qualità dei testi di addestramento, tokenizzazione, dati di allineamento e benchmark usati durante lo sviluppo. Non segue che ogni domanda inglese riceva una risposta migliore. Un modello può ragionare bene in inglese e conoscere peggio una procedura amministrativa italiana; può tradurre perfettamente una frase e perdere la funzione pragmatica di una formula giuridica.
+
+I benchmark multilingue più recenti cercano proprio di separare queste capacità. MMLU-ProX, pubblicato a EMNLP 2025, estende domande difficili a 29 lingue, italiano compreso, con traduzioni controllate e una valutazione della coerenza. I risultati non producono una classifica eterna: mostrano differenze fra modelli, materie e lingue. Un punteggio aggregato nasconde il caso che interessa a noi.
+
+Il problema si vede bene con il diritto. Una domanda può richiedere insieme comprensione linguistica, conoscenza della giurisdizione e aggiornamento normativo. Tradurla in inglese può aiutare il ragionamento generale e peggiorare i termini d'arte. La soluzione non è scegliere una lingua una volta per tutte: è ancorare il lavoro a fonti italiane vigenti e chiedere che citazioni e terminologia restino nella lingua originale.
+
+## Separare lingua di lavoro e lingua di consegna
+
+Non devono coincidere. In una ricerca tecnica posso far formulare query inglesi, consultare documentazione internazionale e ricevere la consegna in italiano. In una revisione contrattuale posso mantenere testo, definizioni e riferimenti in italiano, chiedendo eventualmente un controllo logico in inglese in un passaggio separato.
+
+Un prompt utile lo dice esplicitamente:
+
+```text
+Analizza le fonti nella lingua in cui sono pubblicate.
+Conserva in italiano termini giuridici e citazioni della normativa.
+Puoi usare l'inglese per cercare letteratura tecnica internazionale.
+Consegna in italiano naturale, senza calchi; segnala i concetti per cui
+la traduzione perde una distinzione rilevante.
+```
+
+Questo evita due errori opposti: limitare la ricerca al solo web italiano e importare lessico inglese dove esiste già un termine preciso.
+
+## Come fare una prova che dica qualcosa
+
+Cinque casi reali sono più informativi di cinquanta domande da quiz. Costruite una piccola matrice con le attività che contano: estrazione, sintesi, classificazione, ragionamento con vincoli, scrittura finale. Preparate per ciascuna lo stesso materiale e gli stessi criteri.
+
+Confrontate tre condizioni:
+
+1. domanda e risposta in italiano;
+2. domanda in inglese, risposta in italiano;
+3. analisi in inglese su fonti originali, revisione finale in italiano.
+
+Valutate accuratezza, omissioni, terminologia, necessità di riscrittura e tempo totale. Fate giudicare le uscite senza mostrare quale condizione le ha prodotte. Se il modello è aggiornabile, annotate nome e data: una conclusione del 2024 può essere falsa per la versione del 2026.
+
+Per la scrittura aggiungete un criterio che i benchmark ignorano: quanto il testo suona tradotto. Calchi come «fare senso», nominalizzazioni eccessive e sequenze di sostantivi possono rendere formalmente corretto un testo che nessun professionista italiano scriverebbe.
+
+## La lingua influenza anche il comportamento sociale
+
+La cortesia, il dissenso e l'intensità non si trasferiscono meccanicamente. Uno studio ACL del 2024 su prompt cortesi e scortesi in inglese, cinese e giapponese ha trovato che l'impolitenza tendeva a danneggiare le prestazioni, ma livelli maggiori di cortesia non producevano un miglioramento monotono e l'optimum cambiava per lingua. È un buon antidoto alle regole universali da social network.
+
+Se il compito riguarda negoziazione, feedback, salute o assistenza al pubblico, testate anche la pragmatica: una risposta può essere fattualmente equivalente e socialmente inappropriata. Specificare destinatario, relazione e conseguenza desiderata conta più dell'inglese in sé.
+
+## Una regola operativa
+
+Partite nella lingua dei dati e del destinatario. Passate all'inglese quando serve accesso migliore a documentazione, terminologia tecnica o capacità di ragionamento osservata nel vostro test. Tornate all'italiano con una revisione dedicata, non con una traduzione alla cieca.
+
+La domanda utile, quindi, non è «quale lingua parla meglio il modello?». È: in quale lingua sono le prove, le decisioni e le persone di questo lavoro?
+
+## La mia esperienza vale meno della vostra mezz'ora
+
 Nella mia esperienza, su testi da riassumere non cambia niente; su estrazione di dati strutturati cambia poco; su ragionamenti lunghi con vincoli multipli l'inglese è ancora davanti. Ma è la mia esperienza sui miei compiti, e vale meno di mezz'ora della vostra sui vostri.
+
+## Fonti e approfondimenti
+
+- Li et al., [MMLU-ProX: A Multilingual Benchmark for Advanced Large Language Model Evaluation](https://aclanthology.org/2025.emnlp-main.79/), EMNLP 2025.
+- Yin et al., [Should We Respect LLMs? A Cross-Lingual Study on the Influence of Prompt Politeness on LLM Performance](https://aclanthology.org/2024.sicon-1.2/), ACL 2024.
+- OpenAI, [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering), documentazione ufficiale su istruzioni e contesto.
+- Anthropic, [Multilingual support](https://docs.anthropic.com/en/docs/build-with-claude/multilingual-support), indicazioni operative sui compiti multilingue.

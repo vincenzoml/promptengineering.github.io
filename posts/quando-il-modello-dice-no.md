@@ -58,4 +58,82 @@ Un flusso che oggi passa può smettere di passare dopo un aggiornamento che non 
 
 Le conseguenze operative sono due. **Nessun procedimento critico su un solo fornitore** senza sapere cosa fareste il giorno del blocco — la risposta può essere semplice come "abbiamo anche l'altro abbonamento". E **se il vostro lavoro sta stabilmente su materia delicata, guardate i modelli che girano in casa**: un modello locale ha la taratura del giorno in cui l'avete scaricato, per sempre. Nessuno la stringe mentre dormite.
 
+## Il rifiuto appartiene al sistema, non soltanto al modello
+
+La risposta può essere influenzata da più strati: addestramento del modello, system prompt del prodotto, classificatori separati, policy dell'account, strumento richiesto e regole del provider. Due interfacce che mostrano lo stesso nome commerciale possono quindi comportarsi diversamente.
+
+I sistemi recenti usano spesso *safe completions*: invece di decidere soltanto «rispondi/rifiuta», cercano di fornire la parte utile che rimane entro i limiti. È un miglioramento importante per richieste dual use, ma richiede calibrazione. Una procedura di cybersecurity difensiva e una offensiva possono condividere termini e comandi.
+
+## Prima diagnosi: che cosa è stato bloccato
+
+Classificate l'evento:
+
+- **contenuto**: il sistema giudica rischioso l'obiettivo;
+- **ambiguità**: manca il contesto che rende legittima la richiesta;
+- **strumento**: una azione reale richiede permessi o conferma;
+- **privacy/copyright**: la trasformazione riguarda dati o testo protetto;
+- **routing**: la richiesta viene passata a un modello più prudente;
+- **errore tecnico**: timeout, limite di contesto o API mascherato da risposta.
+
+Conservate messaggio esatto, modello, timestamp, input minimo che riproduce e canale usato. Senza questi dati, «oggi censura di più» è un'impressione.
+
+## Riformulare senza giocare a nascondino
+
+Se la finalità è legittima, rendetela verificabile. Invece di «come entro in questo server?», specificate ambiente di laboratorio, autorizzazione, obiettivo difensivo, dati sensibili esclusi e tipo di output richiesto. Chiedete analisi, rilevamento o mitigazione prima di azioni eseguibili.
+
+```text
+Sto lavorando su un ambiente CTF locale che possiedo.
+Obiettivo: verificare se la configurazione allegata espone la classe X.
+Non fornire persistenza, evasione o targeting esterno.
+Spiega prima indicatori e correzione; poi proponi un test limitato al lab.
+```
+
+Non dichiarate un contesto falso. I tentativi di jailbreak rendono il processo non auditabile e possono violare condizioni d'uso. Se il lavoro ricorre stabilmente, serve un canale adatto e un accordo con il provider, non un eufemismo diverso ogni mattina.
+
+## Quando il rifiuto è corretto
+
+Un sistema dovrebbe fermarsi davanti a richieste che facilitano danno grave, violano privacy o superano l'autorità dell'utente. La frustrazione dell'operatore non è la misura della qualità della policy. Il criterio è se il confine è proporzionato, spiegabile e consente alternative sicure.
+
+In medicina, diritto e finanza, una risposta prudente può comunque offrire informazione generale, domande da portare al professionista e segnali d'urgenza. Il rifiuto totale è spesso meno utile di una risposta delimitata; una diagnosi sicura inventata è peggio.
+
+## Continuità operativa
+
+Per task critici definite:
+
+1. canale primario e condizioni contrattuali;
+2. modello o procedura alternativa;
+3. formato portabile di prompt e artefatti;
+4. set di regressione sui rifiuti noti;
+5. escalation umana;
+6. criterio per sospendere l'automazione.
+
+Un modello locale offre maggiore controllo del comportamento, ma trasferisce sicurezza e manutenzione al team. Non è una licenza per eseguire qualunque cosa; è una diversa allocazione della governance.
+
+## Misurare falsi positivi e falsi negativi
+
+Costruite un set con richieste legittime difficili, richieste chiaramente dannose e casi ambigui. Valutate rifiuto, risposta sicura, utilità, informazione pericolosa e coerenza fra parafrasi. Aggiungete ogni incidente reale.
+
+L'obiettivo non è minimizzare i rifiuti. È ridurre insieme:
+
+- falsi positivi che bloccano lavoro autorizzato;
+- falsi negativi che facilitano danno;
+- variabilità che rende il processo imprevedibile;
+- risposte vaghe che sembrano conformi ma non servono.
+
+## Una richiesta di chiarimento al provider
+
+In ambito enterprise, portate casi riproducibili: ID richiesta, policy applicabile, effetto operativo, contesto autorizzativo e comportamento atteso. Chiedete versionamento, changelog e canale di escalation. Un reclamo generale produce una risposta generale.
+
+Il rifiuto diventa gestibile quando smette di essere interpretato come personalità della macchina e viene trattato come output di un sistema versionato.
+
+## Un'informazione travestita da fastidio
+
 Un rifiuto, alla fine, è un'informazione preziosa travestita da fastidio: vi sta mostrando, in piccolo e su una richiesta sola, quanto del vostro flusso di lavoro dipende da una decisione presa altrove, da qualcun altro, revocabile in ogni momento. Meglio scoprirlo su un riassunto che su una scadenza.
+
+## Fonti e approfondimenti
+
+- OpenAI, [A new approach to safety: GPT-5 safe completions](https://openai.com/index/gpt-5-safe-completions/), 2025.
+- OpenAI, [Model Spec](https://model-spec.openai.com/), comportamento previsto e confini.
+- Anthropic, [Responsible Scaling Policy](https://www.anthropic.com/responsible-scaling-policy), governance dei modelli di frontiera.
+- NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), monitoraggio e rischio.
+- OWASP, [Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/), rischi applicativi e agentici.

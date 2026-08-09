@@ -16,7 +16,7 @@ Chi usa un abbonamento paga una cifra fissa e non ci pensa. Chi passa all'access
 
 ## Il token
 
-L'unità di misura non è la parola: è il **token**, un frammento. I modelli spezzano il testo in pezzi che a volte sono parole intere, più spesso sillabe o gruppi di lettere. "Intelligenza" può diventare tre o quattro token. I numeri si spezzano in modo capriccioso, la punteggiatura conta, gli spazi anche.
+L'unità di misura è il **token**, un frammento, anziché la parola intera. I modelli spezzano il testo in pezzi che a volte sono parole intere, più spesso sillabe o gruppi di lettere. "Intelligenza" può diventare tre o quattro token. I numeri si spezzano in modo capriccioso, la punteggiatura conta, gli spazi anche.
 
 Una regola pratica per l'italiano: **circa un token ogni tre caratteri**, cioè grosso modo mille token ogni settecento parole. L'inglese rende un po' meglio, perché i vocabolari di questi sistemi sono stati costruiti soprattutto su quello: la stessa cosa detta in italiano costa fra il dieci e il trenta per cento in più di frammenti. È una tassa piccola e reale, che pesa solo su chi lavora a volume.
 
@@ -48,4 +48,84 @@ La voce di spesa vera è **il tempo di verifica**. Un documento prodotto in diec
 
 È il calcolo che nessun listino riporta ed è l'unico che decide se lo strumento vi conviene. Da cui la conseguenza pratica: **investite nel far uscire bene la prima volta** — istruzioni scritte per bene, esempi, contesto — perché ogni minuto risparmiato lì vale mille volte il centesimo dei token.
 
+## Leggere un listino senza sbagliare unità
+
+Le API quotano di solito un milione di token, separando input e output. Alcune distinguono token letti dalla cache, scritti in cache, ragionamento o batch. I prodotti in abbonamento possono applicare limiti d'uso invece di fatturazione puntuale.
+
+Il calcolo base è:
+
+```text
+costo = token_input × prezzo_input
+      + token_output × prezzo_output
+      + strumenti, storage e infrastruttura
+```
+
+I prezzi cambiano spesso; inserirli in un foglio di calcolo con data e link è meglio che memorizzarli in un articolo. Confrontate modelli sullo stesso task e sulla stessa qualità, non sul solo prezzo per token. Un modello economico che richiede tre retry può costare più di quello caro al primo tentativo.
+
+## Il costo del contesto si ripete
+
+In una chat lunga, la richiesta nuova è piccola ma il sistema può dover elaborare anche la cronologia. Un documento da 80.000 token non si paga necessariamente una volta: dipende dal caching e dall'architettura del prodotto. Se viene reinviato o riletto, torna nel conto.
+
+Per agenti e MCP si aggiungono definizioni degli strumenti e risultati. Un terminale da migliaia di righe può diventare input al turno successivo. Anthropic ha mostrato un caso in cui spostare filtraggio e orchestrazione in codice ha ridotto il contesto da circa 150.000 a 2.000 token. Non è una percentuale trasferibile a ogni sistema; dimostra che l'interfaccia degli strumenti può dominare il costo.
+
+## Caching: economico solo se il prefisso è stabile
+
+Il prompt caching riusa calcoli su una porzione identica o compatibile del contesto. Per sfruttarlo, istruzioni e documenti stabili vanno prima; dati variabili dopo. Piccole modifiche nella parte iniziale possono invalidare il riuso.
+
+Misurate separatamente letture e scritture di cache. Una cache migliora costo e latenza su richieste ripetute, non su un prompt che cambia integralmente ogni volta.
+
+## Il costo totale di una procedura
+
+Per un flusso professionale aggiungete:
+
+- ricerca e preparazione dei dati;
+- revisione umana;
+- correzioni e retry;
+- integrazione e manutenzione;
+- GPU o servizi chiamati;
+- errori e incidenti;
+- opportunità persa quando il sistema è lento.
+
+Una formula utile è il costo per **esito accettato**, non per chiamata:
+
+```text
+(API + infrastruttura + revisione + rework + errori attesi)
+---------------------------------------------------------
+                 risultati accettati
+```
+
+Se il modello dimezza il tempo di una pratica da 40 euro di lavoro umano, discutere di tre millesimi è irrilevante. Se l'app fa un miliardo di classificazioni, quei millesimi diventano il progetto.
+
+## Ottimizzare nell'ordine giusto
+
+1. eliminare chiamate che non cambiano il risultato;
+2. ridurre materiale irrilevante e tool output;
+3. usare modelli piccoli per routing ed estrazione semplice;
+4. inviare al modello potente solo casi difficili;
+5. rendere l'output strutturato per evitare retry;
+6. usare batch e caching quando il carico lo consente;
+7. comprimere solo dopo aver misurato la qualità.
+
+Il routing deve avere una via di escalation. Un classificatore economico che assegna un caso difficile al modello sbagliato può far risparmiare token e perdere il cliente.
+
+## Un foglio di misura minimo
+
+Per ogni task registrate modello, token per categoria, cache, latenza, costo, successo al primo tentativo, minuti di revisione e gravità degli errori. Calcolate mediana e percentile 95: le medie nascondono conversazioni esplose o output anomali.
+
+Fate questa misura prima e dopo ogni ottimizzazione. «Rispondi più breve» può ridurre output e aumentare correzioni; un contesto più piccolo può abbassare costo e perdere un requisito raro.
+
+## Il prezzo cambia; l'economia resta
+
+Il costo unitario dei modelli tende a scendere, ma la domanda cresce e i sistemi diventano più agentici. Un'azione dell'utente può attivare ricerca, decine di tool call e più modelli. Il prezzo della «domanda» non è più una riga di chat: è un grafo di lavoro.
+
+Trattare token, attenzione e rischio come risorse misurabili permette di scegliere. Contare soltanto i token produce sistemi economici che nessuno dovrebbe usare.
+
 Il prezzo dell'elaborazione tende a zero ogni anno. Il prezzo della vostra attenzione no.
+
+## Fonti e approfondimenti
+
+- OpenAI, [API pricing](https://openai.com/api/pricing/), listino corrente.
+- Anthropic, [Claude API pricing](https://docs.anthropic.com/en/docs/about-claude/pricing), listino e note sui tool.
+- Anthropic, [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching), comportamento e misurazione.
+- OpenAI, [Prompt caching](https://platform.openai.com/docs/guides/prompt-caching), guida ufficiale.
+- Anthropic, [Code execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp), caso quantitativo sui tool output.

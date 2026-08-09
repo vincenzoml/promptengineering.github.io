@@ -52,7 +52,7 @@ Se vi serve un'immagine ogni tanto per una presentazione, ComfyUI è sproporzion
 
 Trenta schede prodotto che devono avere lo stesso trattamento. Ritratti aziendali che devono somigliarsi fra loro. Una serie di illustrazioni che deve tenere uno stile riconoscibile per mesi, con la possibilità di rifarne una a marzo identica per impostazione a quella di novembre. Lì il flusso costruito una volta — salvato, versionato, riaperto — è un altro mestiere rispetto a riscrivere la frase e sperare che il caso restituisca lo stile della volta scorsa. Il flusso è la ricetta; la casella di testo era ordinare al ristorante.
 
-E c'è il caso della riservatezza, che per i lettori di questo sito pesa: ComfyUI gira in locale, con modelli scaricati, e nessuna immagine va da nessuna parte. Bozzetti non pubblici, foto di persone, materiale di clienti: tutto resta sulla macchina. Per chi lavora su commissione non è una comodità, è una condizione.
+E c'è il caso della riservatezza, che per i lettori di questo sito pesa: ComfyUI può girare in locale con modelli scaricati. Se il workflow non contiene nodi o servizi remoti, bozzetti, foto e materiale dei clienti restano sulla macchina. Per chi lavora su commissione è una condizione da verificare nodo per nodo.
 
 ## La parte che nessuno dice
 
@@ -74,4 +74,94 @@ Il che non toglie niente a quanto scritto sopra. Se volete *capire* come funzion
 
 La casella di testo vi restituisce immagini. La tela coi riquadri vi restituisce anche il *perché*, e il perché è l'unica parte che si accumula: le immagini si buttano, il criterio con cui le giudicate no.
 
+## Il grafo è un programma eseguibile
+
+In ComfyUI un workflow è un grafo: i nodi eseguono operazioni, i collegamenti trasportano dati tipizzati, gli output intermedi determinano le dipendenze. Il file JSON conserva la struttura; spesso il workflow viene incorporato anche nei metadati dell'immagine, rendendo il risultato riproducibile se modelli e componenti sono disponibili.
+
+La conseguenza più importante è la cache. Il server identifica quali nodi sono cambiati e può evitare di ricalcolare parti valide. Se modificate soltanto l'upscaler finale, non è necessario rigenerare la latente dall'inizio. Per ricerca, produzione e confronti sistematici questa proprietà vale più dell'estetica del node editor.
+
+## Una pipeline di diffusione, senza folklore
+
+Nel caso classico di Stable Diffusion o SDXL, i componenti principali sono:
+
+- un encoder testuale che trasforma il prompt in rappresentazioni;
+- un modello di diffusione che denoisa una rappresentazione latente;
+- un VAE che converte fra pixel e spazio latente;
+- sampler, scheduler, seed e numero di passi che governano il percorso;
+- eventuali condizionamenti come ControlNet, reference image o maschera;
+- decodifica, correzioni e upscaling.
+
+La *latent diffusion* riduce il costo lavorando in uno spazio compresso invece che direttamente sui pixel. SDXL usa un'architettura e un regime di condizionamento più ricchi rispetto alle prime versioni. Comprendere questi blocchi permette di diagnosticare: se la composizione è sbagliata, aumentare la nitidezza alla fine non la aggiusta; se il VAE è incompatibile, il prompt non è il colpevole.
+
+## Seed e confronto controllato
+
+Un confronto utile cambia una variabile per volta. Bloccate seed, modello, dimensioni, sampler e prompt; cambiate solo il parametro che state studiando. Salvate output e workflow. Poi ripetete su più seed: una conclusione tratta da una singola immagine può essere fortuna.
+
+Per confrontare due modelli usate un piccolo set di prompt che rappresenta il vostro lavoro: volti, mani, testo, composizioni dense, stile, controllo spaziale. Valutate alla cieca e annotate tempi, VRAM, fallimenti e interventi manuali. Le classifiche generiche non sostituiscono questo test.
+
+## Custom node: potenza e supply chain
+
+L'ecosistema di nodi aggiuntivi è la forza di ComfyUI e il suo rischio operativo. Un custom node è codice Python eseguito sulla macchina con i vostri permessi. Può installare dipendenze, scaricare file, rompere compatibilità o scomparire.
+
+Per produzione:
+
+1. fissate repository e commit;
+2. conservate ambiente e versioni;
+3. leggete licenza e provenienza;
+4. testate in ambiente isolato;
+5. non eseguite workflow di terzi come documenti inerti;
+6. create una distinta di modelli e nodi;
+7. conservate una procedura di ripristino.
+
+Il JSON del workflow non contiene necessariamente tutto ciò che serve per riprodurlo. Pesi, encoder, LoRA, custom node e relative versioni sono parte dell'artefatto.
+
+## Modelli e licenze
+
+Scaricabile non significa utilizzabile per qualsiasi finalità. I checkpoint hanno licenze e *acceptable use policies* differenti; LoRA e dataset possono aggiungere vincoli; un workflow può chiamare API commerciali. Prima di vendere un risultato verificate componenti e condizioni effettive.
+
+Anche la privacy dipende dal grafo. Un workflow «locale» con un nodo che invia l'immagine a un servizio esterno non è locale end-to-end. La trasparenza di ComfyUI aiuta soltanto se ispezioniamo il nodo.
+
+## Dal laboratorio alla produzione
+
+Un workflow di produzione ha input espliciti, valori di default sensati, errori leggibili e output nominati. Se l'utente deve cercare il nodo 87 per cambiare una risoluzione, non avete costruito un'interfaccia: avete condiviso il banco di lavoro.
+
+ComfyUI ha introdotto modalità e strumenti per esporre input semplificati. Altri prodotti possono usare il grafo come runtime e offrire una vista basata su asset e workflow. La separazione è sana: autore e operatore non devono vedere lo stesso livello di dettaglio.
+
+## Debug per famiglie di errore
+
+**Out of memory:** ridurre dimensioni o batch, usare precisione e offload adeguati, controllare nodi che conservano tensori.
+
+**Output incoerente:** bloccare seed e parametri, verificare che il modello e il VAE siano quelli previsti, isolare condizionamenti.
+
+**Workflow non riproducibile:** identificare nodi mancanti, nomi dei modelli e versioni; evitare percorsi assoluti.
+
+**Lentezza:** osservare quale nodo ricalcola e perché la cache è invalidata; misurare trasferimenti fra disco, CPU e GPU.
+
+**Qualità che peggiora dopo un'aggiunta:** bypassare il nodo nuovo e confrontare a parità di seed. Non compensare subito con altri tre nodi.
+
+## Quando ComfyUI non è la scelta giusta
+
+Per generare poche immagini con un modello gestito, la casella di testo può essere perfetta. Il grafo ripaga quando servono controllo, ripetibilità, automazione, modelli aperti, batch o pipeline personalizzate. Ha costi: installazione, aggiornamenti, VRAM, debugging e apprendimento.
+
+La maturità consiste nel scegliere il livello di esposizione adeguato. Imparare il grafo una volta consente di capire il calcolo; non obbliga a mostrare cavi a chiunque debba usarlo.
+
+## Un percorso in quattro esercizi
+
+1. caricare un workflow minimale e modificare soltanto prompt e seed;
+2. aggiungere un controllo e confrontare su tre seed;
+3. inserire upscaling e osservare la cache;
+4. impacchettare input, versioni e output perché un'altra persona lo riproduca.
+
+Il quarto esercizio distingue un'immagine riuscita da un processo posseduto.
+
+## Prima capire, poi semplificare
+
 Poi, quando il criterio ce l'avete, potete legittimamente cercare uno strumento che vi risparmi i cavi. Ma in quell'ordine — prima capire, poi semplificare. Al contrario si ottiene solo una casella di testo più costosa.
+
+## Fonti e approfondimenti
+
+- ComfyUI, [Workflow](https://docs.comfy.org/development/core-concepts/workflow) e [Nodes](https://docs.comfy.org/development/core-concepts/nodes), documentazione ufficiale.
+- ComfyUI, [Server overview](https://docs.comfy.org/custom-nodes/backend/server_overview), cache ed esecuzione.
+- Rombach et al., [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752), CVPR 2022.
+- Podell et al., [SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis](https://arxiv.org/abs/2307.01952), 2023.
+- ComfyUI, [Custom nodes](https://docs.comfy.org/custom-nodes/overview), installazione e sviluppo.

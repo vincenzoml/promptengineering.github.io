@@ -56,4 +56,66 @@ Confrontate. Nella maggior parte dei casi il suo è più ordinato del vostro, e 
 
 Quella cosa lì è il vostro mestiere. Il resto — l'ordine, la scorrevolezza, la struttura — è lavoro che potete smettere di fare a mano.
 
+## Prima definire «meglio»
+
+Scorrevolezza, correttezza grammaticale, velocità, originalità, accuratezza e capacità di cambiare una decisione sono criteri diversi. Il modello può vincere sulla prima stesura e perdere sulla scelta dei fatti. Un testo elegante con una fonte falsa è peggiore di appunti ruvidi ma veri.
+
+Per valutare, costruite una rubrica prima di leggere:
+
+- accuratezza e provenienza;
+- copertura delle domande del lettore;
+- struttura e leggibilità;
+- specificità degli esempi;
+- forza e limiti dell'argomento;
+- voce e appropriatezza;
+- tempo totale fino alla pubblicazione.
+
+Fate giudicare versioni anonime. Se sapete quale è «vostra», state misurando identità oltre alla qualità.
+
+## Il vantaggio della prima stesura
+
+Il modello non teme la pagina bianca, possiede molte forme testuali e produce in pochi secondi una struttura coerente. È fortissimo nel trasformare materiale già selezionato: da trascrizione a memo, da note a scaletta, da specifica a documentazione.
+
+È più debole dove manca il materiale. Se chiediamo un articolo senza ricerca, esperienza o tesi, colma i vuoti con la media dei testi simili. È esattamente ciò che gli abbiamo chiesto. La mediocrità non è un bug imprevisto; è la soluzione statisticamente sicura a un incarico privo di differenze.
+
+## Una pipeline editoriale che migliora entrambi
+
+1. **Raccolta umana:** tesi, episodi, dati, fonti e destinatario.
+2. **Interrogazione:** il modello trova buchi, contraddizioni e domande.
+3. **Scaletta:** ogni sezione deve sostenere un punto, non occupare spazio.
+4. **Bozza:** generazione vincolata a fonti ed esempi.
+5. **Fact-check:** matrice affermazione–fonte; numeri e citazioni aperti.
+6. **Riscrittura autoriale:** posizione, ritmo, omissioni intenzionali.
+7. **Revisione ostile:** migliore obiezione e failure mode.
+8. **Editing finale:** togliere ripetizioni e prosa di servizio.
+
+Il modello non deve compiere ogni fase nello stesso turno. Separarle rende visibile dove introduce valore o errore.
+
+## Stile imitato e voce reale
+
+La ricerca del 2025 su imitazione autoriale mostra che i modelli riproducono alcuni segnali strutturati ma faticano con stili impliciti e informali. Altri lavori del 2026 esplorano personalizzazione tramite post-editing. Il progresso è reale, ma l'imitazione resta dipendente dagli esempi e dai criteri.
+
+La voce include informazioni che il modello non può dedurre: che cosa siete disposti a firmare, quale episodio avete vissuto, quale fonte considerate sufficiente, dove preferite perdere una vendita invece di semplificare. Nessun elenco di aggettivi sostituisce queste decisioni.
+
+## Il rischio dell'abbondanza
+
+Quando generare costa quasi zero, pubblichiamo più di quanto sappiamo verificare. Il risultato può essere un sito pieno di articoli corretti in superficie e senza autorità cumulativa. Ogni pezzo dovrebbe aggiungere almeno una di queste cose: dato originale, sintesi di fonti difficili, metodo ripetibile, posizione falsificabile, esperienza documentata.
+
+Se non aggiunge nulla, forse non serve pubblicarlo. L'AI dovrebbe aumentare la soglia, non abbassarla.
+
+## Un esperimento onesto
+
+Scegliete tre articoli passati. Fate produrre al modello una nuova versione usando le stesse fonti disponibili allora. Misurate tempo fino alla versione accettabile, correzioni fattuali, frasi generiche eliminate e giudizio cieco dei lettori. Poi ripetete fornendo nuovi dati ed esempi vostri.
+
+La seconda differenza misura il valore del materiale; la prima, quello della sola generazione. Di solito è una lezione salutare: il modello scrive rapidamente, ma la qualità distinta arriva da ciò che gli abbiamo portato.
+
+## Se non trovate niente che il modello non abbia detto
+
 Non è una risposta consolatoria. Se rileggendo i due testi non trovate niente che il modello non abbia detto, quella è un'informazione preziosa su cosa stavate facendo davvero fino a ieri.
+
+## Fonti e approfondimenti
+
+- Patel et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), EMNLP 2025.
+- [Personalized Style Transfer via Post-Editing](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
+- Madaan et al., [Self-Refine](https://arxiv.org/abs/2303.17651), feedback iterativo.
+- Sadasivan et al., [Can AI-Generated Text be Reliably Detected?](https://arxiv.org/abs/2303.11156), sui limiti dell'attribuzione automatica.
