@@ -34,18 +34,28 @@
     "nickname": "vincenzo",
     "name": "Vincenzo Ciancia",
     "bio": "40 anni di codice. 20 di ricerca. Zero pazienza per le cose inutili.",
-    "fullBio": "Ho scritto la mia prima riga di codice a 8 anni, su un Commodore 64. Da allora non ho mai smesso.\n\nOggi sono ricercatore senior al [CNR di Pisa](https://www.isti.cnr.it/en/), dove sviluppo software che analizza immagini mediche usando logica e AI ibrida. Il progetto si chiama [VoxLogicA](http://www.voxlogica.com) — serve a codificare conoscenza medica in algoritmi che un computer può eseguire.\n\nNel tempo libero ho fondato [Anymatix](https://anymatix.com), dove esploro l'AI generativa aperta e locale, e ne studio l'usabilità per metterla al servizio di tutti.\n\nSebbene io sia uno sviluppatore con 4 decadi di esperienza, programmo oramai solo dialogando con Claude Opus. Però il termine \"vibe coding\" mi fa sorridere. \n\nCon Prompt Engineering Italia, voglio dimostrare che comunicare con le macchine non è un trucco — è un'arte o meglio un procedimento, che si può imparare.",
+    "fullBio": "Ho scritto la mia prima riga di codice a 8 anni, su un Commodore 64. Da allora non ho mai smesso.\n\nOggi sono ricercatore senior al [CNR di Pisa](https://www.isti.cnr.it/en/), dove sviluppo software che analizza immagini mediche usando logica e AI ibrida. Il progetto si chiama [VoxLogicA](http://www.voxlogica.com) — serve a codificare conoscenza medica in algoritmi che un computer può eseguire.\n\nNel tempo libero ho fondato [Anymatix](https://anymatix.com), dove esploro l'AI generativa aperta e locale, e ne studio l'usabilità per metterla al servizio di tutti.\n\nSebbene io sia uno sviluppatore con 4 decadi di esperienza, programmo oramai solo dialogando con Claude Opus. Però il termine \"vibe coding\" mi fa sorridere. \n\nCon Prompt Engineering Italia voglio mostrare che comunicare con le macchine è un procedimento, e che come tutti i procedimenti si impara.",
     "avatar": null,
     "twitter": null,
     "linkedin": "vincenzo-ciancia-2032445",
-    "github": "vincenzoml",
+    "github": "make-become",
     "cta": {
       "title": "Se volete portare l'AI dentro al vostro lavoro",
-      "text": "Oltre a scrivere qui, passo giornate in studio con chi vuole imparare a usare questi strumenti sul serio — commercialisti, avvocati, notai, tecnici, piccole imprese. Si parte da un problema vostro, non da una presentazione. Se avete in mente qualcosa, o anche solo un dubbio, scrivetemi due righe.",
+      "text": "Oltre a scrivere qui, tengo corsi in sede, seminari anche da remoto per gruppi ampi, e seguo progetti su commissione — commercialisti, avvocati, notai, tecnici, piccole imprese. Si parte da un problema vostro, non da una presentazione. Se avete in mente qualcosa, o anche solo un dubbio, scrivetemi due righe.",
       "label": "Scrivimi due righe",
       "href": "mailto:vincenzoml@gmail.com?subject=Due%20righe%20da%20promptengineering.it"
     },
     "posts": [
+      "fable-instradamento",
+      "mythos",
+      "dove-finiscono-i-dati",
+      "prompt-di-un-sito",
+      "quando-il-modello-dice-no",
+      "comfyui",
+      "pesi-aperti",
+      "i-conti-non-tornano",
+      "perche-ti-da-ragione",
+      "la-memoria-che-non-ce",
       "welcome"
     ]
   }

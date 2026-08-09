@@ -1,5 +1,27 @@
 [
   {
+    "tag": "metodo",
+    "count": 5,
+    "posts": [
+      "quando-il-modello-dice-no",
+      "prompt-di-un-sito",
+      "perche-ti-da-ragione",
+      "fable-instradamento",
+      "dove-finiscono-i-dati"
+    ]
+  },
+  {
+    "tag": "LLM",
+    "count": 5,
+    "posts": [
+      "quando-il-modello-dice-no",
+      "pesi-aperti",
+      "perche-ti-da-ragione",
+      "la-memoria-che-non-ce",
+      "i-conti-non-tornano"
+    ]
+  },
+  {
     "tag": "intelligenza artificiale",
     "count": 4,
     "posts": [
@@ -27,6 +49,46 @@
     ]
   },
   {
+    "tag": "limiti",
+    "count": 2,
+    "posts": [
+      "quando-il-modello-dice-no",
+      "fable-instradamento"
+    ]
+  },
+  {
+    "tag": "laboratorio",
+    "count": 2,
+    "posts": [
+      "prompt-di-un-sito",
+      "comfyui"
+    ]
+  },
+  {
+    "tag": "modelli aperti",
+    "count": 2,
+    "posts": [
+      "pesi-aperti",
+      "comfyui"
+    ]
+  },
+  {
+    "tag": "verifica",
+    "count": 2,
+    "posts": [
+      "perche-ti-da-ragione",
+      "i-conti-non-tornano"
+    ]
+  },
+  {
+    "tag": "fondamenta",
+    "count": 2,
+    "posts": [
+      "la-memoria-che-non-ce",
+      "i-conti-non-tornano"
+    ]
+  },
+  {
     "tag": "guida",
     "count": 1,
     "posts": [
@@ -38,6 +100,146 @@
     "count": 1,
     "posts": [
       "welcome"
+    ]
+  },
+  {
+    "tag": "rifiuti",
+    "count": 1,
+    "posts": [
+      "quando-il-modello-dice-no"
+    ]
+  },
+  {
+    "tag": "prompt engineering",
+    "count": 1,
+    "posts": [
+      "prompt-di-un-sito"
+    ]
+  },
+  {
+    "tag": "web",
+    "count": 1,
+    "posts": [
+      "prompt-di-un-sito"
+    ]
+  },
+  {
+    "tag": "open source",
+    "count": 1,
+    "posts": [
+      "pesi-aperti"
+    ]
+  },
+  {
+    "tag": "infrastruttura",
+    "count": 1,
+    "posts": [
+      "pesi-aperti"
+    ]
+  },
+  {
+    "tag": "accondiscendenza",
+    "count": 1,
+    "posts": [
+      "perche-ti-da-ragione"
+    ]
+  },
+  {
+    "tag": "Mythos",
+    "count": 1,
+    "posts": [
+      "mythos"
+    ]
+  },
+  {
+    "tag": "sicurezza",
+    "count": 1,
+    "posts": [
+      "mythos"
+    ]
+  },
+  {
+    "tag": "modelli di frontiera",
+    "count": 1,
+    "posts": [
+      "mythos"
+    ]
+  },
+  {
+    "tag": "Anthropic",
+    "count": 1,
+    "posts": [
+      "mythos"
+    ]
+  },
+  {
+    "tag": "contesto",
+    "count": 1,
+    "posts": [
+      "la-memoria-che-non-ce"
+    ]
+  },
+  {
+    "tag": "memoria",
+    "count": 1,
+    "posts": [
+      "la-memoria-che-non-ce"
+    ]
+  },
+  {
+    "tag": "numeri",
+    "count": 1,
+    "posts": [
+      "i-conti-non-tornano"
+    ]
+  },
+  {
+    "tag": "Fable",
+    "count": 1,
+    "posts": [
+      "fable-instradamento"
+    ]
+  },
+  {
+    "tag": "strumenti",
+    "count": 1,
+    "posts": [
+      "fable-instradamento"
+    ]
+  },
+  {
+    "tag": "dati",
+    "count": 1,
+    "posts": [
+      "dove-finiscono-i-dati"
+    ]
+  },
+  {
+    "tag": "riservatezza",
+    "count": 1,
+    "posts": [
+      "dove-finiscono-i-dati"
+    ]
+  },
+  {
+    "tag": "professioni",
+    "count": 1,
+    "posts": [
+      "dove-finiscono-i-dati"
+    ]
+  },
+  {
+    "tag": "ComfyUI",
+    "count": 1,
+    "posts": [
+      "comfyui"
+    ]
+  },
+  {
+    "tag": "immagini",
+    "count": 1,
+    "posts": [
+      "comfyui"
     ]
   },
   {

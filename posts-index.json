@@ -1,5 +1,165 @@
 [
   {
+    "slug": "fable-instradamento",
+    "title": "Perché a metà lavoro vi risponde un altro modello",
+    "description": "Claude Fable 5 controlla ogni richiesta e su certi argomenti la passa a un altro modello, con tanto di avviso. Non è un guasto, è documentato, e può scattare perfino alla prima riga — per colpa di una cartella che si chiama male.",
+    "date": "2026-08-11",
+    "readingTime": 7,
+    "tags": [
+      "Fable",
+      "limiti",
+      "strumenti",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-fable-instradamento.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "mythos",
+    "title": "Il modello che è uscito dalla scatola",
+    "description": "Ad aprile Anthropic ha annunciato Mythos e nello stesso giorno ha detto che non lo avrebbe messo in vendita. Cosa dice davvero il documento di sicurezza, perché la lettura \"la macchina è viva\" è quella sbagliata, e cosa cambia per tutti gli altri.",
+    "date": "2026-08-08",
+    "readingTime": 7,
+    "tags": [
+      "Mythos",
+      "sicurezza",
+      "modelli di frontiera",
+      "Anthropic"
+    ],
+    "image": "/images/posts/cover-mythos.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "dove-finiscono-i-dati",
+    "title": "Dove finiscono i documenti che caricate",
+    "description": "Fra \"va tutto in cloud\" e \"tanto è anonimo\" c'è una realtà articolata, fatta di quattro domande diverse che tutti confondono. Per chi tratta materiale coperto da segreto conviene distinguerle prima di caricare il primo file.",
+    "date": "2026-08-04",
+    "readingTime": 7,
+    "tags": [
+      "dati",
+      "riservatezza",
+      "professioni",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-dove-finiscono-i-dati.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "prompt-di-un-sito",
+    "title": "Come si chiede a un'AI un sito web fatto bene",
+    "description": "Il primo tentativo esce sempre uguale a mille altri, e il motivo non è il modello. Cosa contiene davvero una richiesta generica, in che ordine si lavora, e le tre regole che separano un sito che regge da uno che si sfalda.",
+    "date": "2026-07-28",
+    "readingTime": 7,
+    "tags": [
+      "prompt engineering",
+      "web",
+      "metodo",
+      "laboratorio"
+    ],
+    "image": "/images/posts/cover-prompt-di-un-sito.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "quando-il-modello-dice-no",
+    "title": "Quando il modello dice no",
+    "description": "Un rifiuto non è un guasto e non è quasi mai una censura mirata. Come nascono, perché sono incoerenti, perché colpiscono proprio i mestieri seri, e cosa fare quando arrivano su una richiesta legittima.",
+    "date": "2026-07-21",
+    "readingTime": 7,
+    "tags": [
+      "rifiuti",
+      "limiti",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-quando-il-modello-dice-no.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "comfyui",
+    "title": "ComfyUI, ovvero smettere di tirare a indovinare",
+    "description": "I generatori di immagini con la casella di testo nascondono tutto quello che conta. ComfyUI mostra i passaggi uno per uno — ed è per questo che sembra difficile, e per questo che poi non si torna indietro.",
+    "date": "2026-07-14",
+    "readingTime": 8,
+    "tags": [
+      "ComfyUI",
+      "immagini",
+      "modelli aperti",
+      "laboratorio"
+    ],
+    "image": "/images/posts/cover-comfyui.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "pesi-aperti",
+    "title": "I modelli a pesi aperti, spiegati senza mitologia",
+    "description": "Open source\" applicato a un modello di AI vuol dire una cosa diversa da quella a cui siamo abituati col software. Cosa si scarica davvero, cosa cambia nel lavoro quotidiano, quanto costa, e quando conviene.",
+    "date": "2026-07-07",
+    "readingTime": 7,
+    "tags": [
+      "modelli aperti",
+      "open source",
+      "LLM",
+      "infrastruttura"
+    ],
+    "image": "/images/posts/cover-pesi-aperti.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "i-conti-non-tornano",
+    "title": "I conti non tornano, e il motivo è interessante",
+    "description": "Un sistema che discute di matematica a livello universitario e poi sbaglia una somma da terza elementare. Non è un paradosso, è la chiave per capire cosa avete davanti — e per fargli fare i conti nel modo giusto.",
+    "date": "2026-06-30",
+    "readingTime": 6,
+    "tags": [
+      "numeri",
+      "verifica",
+      "fondamenta",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-i-conti-non-tornano.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "perche-ti-da-ragione",
+    "title": "Perché ti dà sempre ragione",
+    "description": "Contestate una risposta giusta e il modello si scusa e la cambia. Non è cortesia ed è più insidioso di un errore normale. Da dove viene l'accondiscendenza, e come si lavora con un collaboratore che non sa tenere il punto.",
+    "date": "2026-06-23",
+    "readingTime": 6,
+    "tags": [
+      "accondiscendenza",
+      "verifica",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-perche-ti-da-ragione.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "la-memoria-che-non-ce",
+    "title": "La memoria che non c'è",
+    "description": "Ogni conversazione riparte da zero, eppure il modello sembra ricordare. Cos'è davvero il contesto, perché a metà di un lavoro lungo \"dimentica\", e come organizzarsi di conseguenza.",
+    "date": "2026-06-16",
+    "readingTime": 6,
+    "tags": [
+      "contesto",
+      "memoria",
+      "fondamenta",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-la-memoria-che-non-ce.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
     "slug": "IA-generativa",
     "title": "IA generativa: cosa significa quando una macchina inventa",
     "description": "Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.",
@@ -60,15 +220,15 @@
   {
     "slug": "welcome",
     "title": "L'arte del prompt engineering — guida pratica",
-    "description": "Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione. Senza fronzoli.",
+    "description": "Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione — e le abitudini che vengono dopo, quando si comincia a lavorare sul serio.",
     "date": "2026-01-06",
-    "readingTime": 3,
+    "readingTime": 4,
     "tags": [
       "guida",
       "fondamenti",
       "AI"
     ],
-    "image": null,
+    "image": "/images/posts/cover-welcome.png",
     "author": "vincenzo",
     "lang": "it"
   },
