@@ -160,6 +160,189 @@
     "lang": "it"
   },
   {
+    "slug": "due-risposte-diverse",
+    "title": "Perché la stessa domanda dà due risposte diverse",
+    "description": "Non è memoria e non è un difetto: dentro la generazione c'è una dose di caso, e si regola. Cosa cambia fra una risposta creativa e una ripetibile, e quando serve l'una o l'altra.",
+    "date": "2026-06-09",
+    "readingTime": 4,
+    "tags": [
+      "temperatura",
+      "riproducibilità",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-due-risposte-diverse.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "conviene-essere-gentili",
+    "title": "Conviene essere gentili con un modello?",
+    "description": "La domanda sembra oziosa e non lo è. Il modello non si offende, ma la cortesia cambia comunque quello che ottenete — per una ragione che non ha niente a che fare con i sentimenti.",
+    "date": "2026-06-02",
+    "readingTime": 4,
+    "tags": [
+      "prompt engineering",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-conviene-essere-gentili.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "sa-che-ore-sono",
+    "title": "Un modello non sa che ore sono",
+    "description": "Non ha orologio, non ha finestre, e la sua conoscenza del mondo si ferma a una data. Cosa questo comporta davvero nel lavoro quotidiano, e le tre abitudini che lo rendono un non problema.",
+    "date": "2026-05-26",
+    "readingTime": 4,
+    "tags": [
+      "limiti",
+      "contesto",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-sa-che-ore-sono.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "scrive-meglio-di-me",
+    "title": "Scrive meglio di me?",
+    "description": "La domanda che nessuno fa ad alta voce. La risposta onesta richiede di distinguere fra scrivere bene e scrivere qualcosa — e di guardare cosa succede a un testo quando lo si delega del tutto.",
+    "date": "2026-05-19",
+    "readingTime": 4,
+    "tags": [
+      "scrittura",
+      "mestiere",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-scrive-meglio-di-me.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "quanto-costa-una-domanda",
+    "title": "Quanto costa una domanda",
+    "description": "Il prezzo si misura in token, che non sono parole. Come si legge davvero una bolletta, perché i documenti lunghi costano più di quanto sembri, e dove va a finire il costo che conta — che non è quello.",
+    "date": "2026-05-12",
+    "readingTime": 4,
+    "tags": [
+      "costi",
+      "token",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-quanto-costa-una-domanda.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "dirgli-di-essere-breve",
+    "title": "Come si ottiene una risposta breve",
+    "description": "In tre righe\" è l'istruzione più sottovalutata che ci sia, e funziona meglio di qualsiasi \"sii conciso\". Perché i modelli sono prolissi per costruzione, e i quattro modi per farla finita.",
+    "date": "2026-05-05",
+    "readingTime": 4,
+    "tags": [
+      "prompt engineering",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-dirgli-di-essere-breve.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "ripete-le-stesse-parole",
+    "title": "Perché ripete sempre le stesse parole",
+    "description": "Fondamentale\", \"cruciale\", \"nel panorama attuale\". C'è un lessico che tradisce un testo generato, e ha una spiegazione precisa. Come si riconosce, e come si esce dalla media.",
+    "date": "2026-04-28",
+    "readingTime": 3,
+    "tags": [
+      "stile",
+      "scrittura",
+      "prompt engineering"
+    ],
+    "image": "/images/posts/cover-ripete-le-stesse-parole.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "che-lingua-parla-meglio",
+    "title": "In che lingua conviene parlargli",
+    "description": "L'inglese resta avanti, di poco e non ovunque. Dove l'italiano perde davvero, perché sui testi giuridici italiani serve cautela, e quando ha senso cambiare lingua a metà lavoro.",
+    "date": "2026-04-21",
+    "readingTime": 4,
+    "tags": [
+      "italiano",
+      "lingue",
+      "metodo",
+      "LLM"
+    ],
+    "image": "/images/posts/cover-che-lingua-parla-meglio.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "farlo-suonare-come-me",
+    "title": "Come si insegna a un modello la propria voce",
+    "description": "Descrivere il proprio stile a parole non funziona quasi mai. Funziona dargli tre cose che avete scritto — e sapere quali tre. Il procedimento, e il punto in cui conviene fermarsi.",
+    "date": "2026-04-14",
+    "readingTime": 3,
+    "tags": [
+      "voce",
+      "scrittura",
+      "prompt engineering"
+    ],
+    "image": "/images/posts/cover-farlo-suonare-come-me.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "puo-sostituire-il-mio-lavoro",
+    "title": "Può sostituire il mio lavoro?",
+    "description": "La domanda vera non è se un mestiere sparisce, ma quali sue parti si spostano. Un metodo per guardarci dentro senza consolarsi e senza spaventarsi, applicato a mestieri concreti.",
+    "date": "2026-04-07",
+    "readingTime": 4,
+    "tags": [
+      "lavoro",
+      "professioni",
+      "metodo"
+    ],
+    "image": "/images/posts/cover-puo-sostituire-il-mio-lavoro.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "usarlo-per-il-lavoro-serio",
+    "title": "Si può usare per il lavoro serio?",
+    "description": "Sì, con lo stesso trattamento che riservereste a un collaboratore nuovo e bravo: fiducia proporzionata, verifica sistematica, e chiarezza su chi firma. Il protocollo, in pratica.",
+    "date": "2026-03-31",
+    "readingTime": 4,
+    "tags": [
+      "metodo",
+      "verifica",
+      "professioni"
+    ],
+    "image": "/images/posts/cover-usarlo-per-il-lavoro-serio.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
+    "slug": "chiedergli-di-criticarsi",
+    "title": "Fatevi trovare i difetti, non i complimenti",
+    "description": "La richiesta più utile che si possa fare a un modello è di demolire quello che ha appena scritto. Funziona bene, per una ragione precisa — e ci sono tre modi di chiederlo, uno molto migliore degli altri.",
+    "date": "2026-03-24",
+    "readingTime": 3,
+    "tags": [
+      "revisione",
+      "metodo",
+      "verifica"
+    ],
+    "image": "/images/posts/cover-chiedergli-di-criticarsi.png",
+    "author": "vincenzo",
+    "lang": "it"
+  },
+  {
     "slug": "IA-generativa",
     "title": "IA generativa: cosa significa quando una macchina inventa",
     "description": "Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.",

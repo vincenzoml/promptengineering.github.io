@@ -5,7 +5,7 @@
     <link>https://www.promptengineering.it</link>
     <description>La risorsa italiana definitiva per il prompt engineering. Impara a creare prompt efficaci per ChatGPT, Claude, e altri modelli AI.</description>
     <language>it-IT</language>
-    <lastBuildDate>Sun, 09 Aug 2026 14:41:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 15:22:37 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Perché a metà lavoro vi risponde un altro modello]]></title>
@@ -118,61 +118,107 @@
       <category>LLM</category>
     </item>
     <item>
-      <title><![CDATA[IA generativa: cosa significa quando una macchina inventa]]></title>
-      <link>https://www.promptengineering.it/post/IA-generativa/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/IA-generativa/</guid>
-      <description><![CDATA[Per decenni l'AI ha classificato. Oggi crea. Cosa cambia quando un modello genera testo, immagini o codice da zero — e perché conta per chi la usa.]]></description>
-      <pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate>
-      <category>IA</category>
-      <category>intelligenza artificiale</category>
-      <category>IA generativa</category>
+      <title><![CDATA[Perché la stessa domanda dà due risposte diverse]]></title>
+      <link>https://www.promptengineering.it/post/due-risposte-diverse/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/due-risposte-diverse/</guid>
+      <description><![CDATA[Non è memoria e non è un difetto: dentro la generazione c'è una dose di caso, e si regola. Cosa cambia fra una risposta creativa e una ripetibile, e quando serve l'una o l'altra.]]></description>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <category>temperatura</category>
+      <category>riproducibilità</category>
+      <category>metodo</category>
+      <category>LLM</category>
     </item>
     <item>
-      <title><![CDATA[I pappagalli stocastici dell'AI: quando ripete senza capire]]></title>
-      <link>https://www.promptengineering.it/post/IA-come-pappagalli-stocastici/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/IA-come-pappagalli-stocastici/</guid>
-      <description><![CDATA[I grandi modelli linguistici capiscono ciò che dicono? Un paper del 2021 ha fatto esplodere un putiferio dentro Google. Cosa c'è dietro, e perché ci riguarda.]]></description>
-      <pubDate>Tue, 10 Feb 2026 00:00:00 GMT</pubDate>
-      <category>IA</category>
-      <category>intelligenza artificiale</category>
-      <category>pappagalli stocastici</category>
+      <title><![CDATA[Conviene essere gentili con un modello?]]></title>
+      <link>https://www.promptengineering.it/post/conviene-essere-gentili/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/conviene-essere-gentili/</guid>
+      <description><![CDATA[La domanda sembra oziosa e non lo è. Il modello non si offende, ma la cortesia cambia comunque quello che ottenete — per una ragione che non ha niente a che fare con i sentimenti.]]></description>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <category>prompt engineering</category>
+      <category>metodo</category>
+      <category>LLM</category>
     </item>
     <item>
-      <title><![CDATA[Vocabolario dell'AI: le parole essenziali in italiano]]></title>
-      <link>https://www.promptengineering.it/post/vocabolario-intelligenza-artificiale/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/vocabolario-intelligenza-artificiale/</guid>
-      <description><![CDATA[LLM, prompt, embedding, hallucination, RAG — le parole da conoscere per capire l'intelligenza artificiale e parlarne con cognizione di causa.]]></description>
-      <pubDate>Wed, 21 Jan 2026 00:00:00 GMT</pubDate>
-      <category>IA</category>
-      <category>intelligenza artificiale</category>
+      <title><![CDATA[Un modello non sa che ore sono]]></title>
+      <link>https://www.promptengineering.it/post/sa-che-ore-sono/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/sa-che-ore-sono/</guid>
+      <description><![CDATA[Non ha orologio, non ha finestre, e la sua conoscenza del mondo si ferma a una data. Cosa questo comporta davvero nel lavoro quotidiano, e le tre abitudini che lo rendono un non problema.]]></description>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <category>limiti</category>
+      <category>contesto</category>
+      <category>metodo</category>
+      <category>LLM</category>
     </item>
     <item>
-      <title><![CDATA[Cos'è — e cosa non è — l'intelligenza artificiale]]></title>
-      <link>https://www.promptengineering.it/post/cosa-non-e-intelligenza-artificiale/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/cosa-non-e-intelligenza-artificiale/</guid>
-      <description><![CDATA[L'AI non pensa come noi, non capisce davvero, ma fa già parte della nostra vita. Per orientarsi senza slogan.]]></description>
-      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
-      <category>AI</category>
-      <category>intelligenza artificiale</category>
+      <title><![CDATA[Scrive meglio di me?]]></title>
+      <link>https://www.promptengineering.it/post/scrive-meglio-di-me/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/scrive-meglio-di-me/</guid>
+      <description><![CDATA[La domanda che nessuno fa ad alta voce. La risposta onesta richiede di distinguere fra scrivere bene e scrivere qualcosa — e di guardare cosa succede a un testo quando lo si delega del tutto.]]></description>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <category>scrittura</category>
+      <category>mestiere</category>
+      <category>metodo</category>
     </item>
     <item>
-      <title><![CDATA[L'arte del prompt engineering — guida pratica]]></title>
-      <link>https://www.promptengineering.it/post/welcome/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/welcome/</guid>
-      <description><![CDATA[Comunicare con ChatGPT e Claude per ottenere lavoro buono al primo colpo. Chiarezza, contesto, iterazione — e le abitudini che vengono dopo, quando si comincia a lavorare sul serio.]]></description>
-      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
-      <category>guida</category>
-      <category>fondamenti</category>
-      <category>AI</category>
+      <title><![CDATA[Quanto costa una domanda]]></title>
+      <link>https://www.promptengineering.it/post/quanto-costa-una-domanda/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/quanto-costa-una-domanda/</guid>
+      <description><![CDATA[Il prezzo si misura in token, che non sono parole. Come si legge davvero una bolletta, perché i documenti lunghi costano più di quanto sembri, e dove va a finire il costo che conta — che non è quello.]]></description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>costi</category>
+      <category>token</category>
+      <category>metodo</category>
     </item>
     <item>
-      <title><![CDATA[Come è nato questo sito (con un'AI come co-autrice)]]></title>
-      <link>https://www.promptengineering.it/post/come-e-nato-questo-sito/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/come-e-nato-questo-sito/</guid>
-      <description><![CDATA[Otto ore, zero server, una conversazione: la storia di Prompt Engineering Italia raccontata da Claude Opus 4.5, la sua co-autrice AI.]]></description>
-      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
-      <category>meta</category>
-      <category>behind-the-scenes</category>
+      <title><![CDATA[Come si ottiene una risposta breve]]></title>
+      <link>https://www.promptengineering.it/post/dirgli-di-essere-breve/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/dirgli-di-essere-breve/</guid>
+      <description><![CDATA[In tre righe" è l'istruzione più sottovalutata che ci sia, e funziona meglio di qualsiasi "sii conciso". Perché i modelli sono prolissi per costruzione, e i quattro modi per farla finita.]]></description>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <category>prompt engineering</category>
+      <category>metodo</category>
+      <category>LLM</category>
+    </item>
+    <item>
+      <title><![CDATA[Perché ripete sempre le stesse parole]]></title>
+      <link>https://www.promptengineering.it/post/ripete-le-stesse-parole/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/ripete-le-stesse-parole/</guid>
+      <description><![CDATA[Fondamentale", "cruciale", "nel panorama attuale". C'è un lessico che tradisce un testo generato, e ha una spiegazione precisa. Come si riconosce, e come si esce dalla media.]]></description>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+      <category>stile</category>
+      <category>scrittura</category>
+      <category>prompt engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[In che lingua conviene parlargli]]></title>
+      <link>https://www.promptengineering.it/post/che-lingua-parla-meglio/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/che-lingua-parla-meglio/</guid>
+      <description><![CDATA[L'inglese resta avanti, di poco e non ovunque. Dove l'italiano perde davvero, perché sui testi giuridici italiani serve cautela, e quando ha senso cambiare lingua a metà lavoro.]]></description>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
+      <category>italiano</category>
+      <category>lingue</category>
+      <category>metodo</category>
+      <category>LLM</category>
+    </item>
+    <item>
+      <title><![CDATA[Come si insegna a un modello la propria voce]]></title>
+      <link>https://www.promptengineering.it/post/farlo-suonare-come-me/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/farlo-suonare-come-me/</guid>
+      <description><![CDATA[Descrivere il proprio stile a parole non funziona quasi mai. Funziona dargli tre cose che avete scritto — e sapere quali tre. Il procedimento, e il punto in cui conviene fermarsi.]]></description>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <category>voce</category>
+      <category>scrittura</category>
+      <category>prompt engineering</category>
+    </item>
+    <item>
+      <title><![CDATA[Può sostituire il mio lavoro?]]></title>
+      <link>https://www.promptengineering.it/post/puo-sostituire-il-mio-lavoro/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/puo-sostituire-il-mio-lavoro/</guid>
+      <description><![CDATA[La domanda vera non è se un mestiere sparisce, ma quali sue parti si spostano. Un metodo per guardarci dentro senza consolarsi e senza spaventarsi, applicato a mestieri concreti.]]></description>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <category>lavoro</category>
+      <category>professioni</category>
+      <category>metodo</category>
     </item>
   </channel>
 </rss>

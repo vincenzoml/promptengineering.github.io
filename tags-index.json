@@ -1,24 +1,50 @@
 [
   {
     "tag": "metodo",
-    "count": 5,
+    "count": 15,
     "posts": [
+      "usarlo-per-il-lavoro-serio",
+      "scrive-meglio-di-me",
+      "sa-che-ore-sono",
+      "quanto-costa-una-domanda",
       "quando-il-modello-dice-no",
+      "puo-sostituire-il-mio-lavoro",
       "prompt-di-un-sito",
       "perche-ti-da-ragione",
       "fable-instradamento",
-      "dove-finiscono-i-dati"
+      "due-risposte-diverse",
+      "dove-finiscono-i-dati",
+      "dirgli-di-essere-breve",
+      "conviene-essere-gentili",
+      "chiedergli-di-criticarsi",
+      "che-lingua-parla-meglio"
     ]
   },
   {
     "tag": "LLM",
-    "count": 5,
+    "count": 10,
     "posts": [
+      "sa-che-ore-sono",
       "quando-il-modello-dice-no",
       "pesi-aperti",
       "perche-ti-da-ragione",
       "la-memoria-che-non-ce",
-      "i-conti-non-tornano"
+      "i-conti-non-tornano",
+      "due-risposte-diverse",
+      "dirgli-di-essere-breve",
+      "conviene-essere-gentili",
+      "che-lingua-parla-meglio"
+    ]
+  },
+  {
+    "tag": "prompt engineering",
+    "count": 5,
+    "posts": [
+      "ripete-le-stesse-parole",
+      "prompt-di-un-sito",
+      "farlo-suonare-come-me",
+      "dirgli-di-essere-breve",
+      "conviene-essere-gentili"
     ]
   },
   {
@@ -32,12 +58,49 @@
     ]
   },
   {
+    "tag": "verifica",
+    "count": 4,
+    "posts": [
+      "usarlo-per-il-lavoro-serio",
+      "perche-ti-da-ragione",
+      "i-conti-non-tornano",
+      "chiedergli-di-criticarsi"
+    ]
+  },
+  {
     "tag": "IA",
     "count": 3,
     "posts": [
       "vocabolario-intelligenza-artificiale",
       "IA-generativa",
       "IA-come-pappagalli-stocastici"
+    ]
+  },
+  {
+    "tag": "professioni",
+    "count": 3,
+    "posts": [
+      "usarlo-per-il-lavoro-serio",
+      "puo-sostituire-il-mio-lavoro",
+      "dove-finiscono-i-dati"
+    ]
+  },
+  {
+    "tag": "scrittura",
+    "count": 3,
+    "posts": [
+      "scrive-meglio-di-me",
+      "ripete-le-stesse-parole",
+      "farlo-suonare-come-me"
+    ]
+  },
+  {
+    "tag": "limiti",
+    "count": 3,
+    "posts": [
+      "sa-che-ore-sono",
+      "quando-il-modello-dice-no",
+      "fable-instradamento"
     ]
   },
   {
@@ -49,11 +112,11 @@
     ]
   },
   {
-    "tag": "limiti",
+    "tag": "contesto",
     "count": 2,
     "posts": [
-      "quando-il-modello-dice-no",
-      "fable-instradamento"
+      "sa-che-ore-sono",
+      "la-memoria-che-non-ce"
     ]
   },
   {
@@ -70,14 +133,6 @@
     "posts": [
       "pesi-aperti",
       "comfyui"
-    ]
-  },
-  {
-    "tag": "verifica",
-    "count": 2,
-    "posts": [
-      "perche-ti-da-ragione",
-      "i-conti-non-tornano"
     ]
   },
   {
@@ -103,6 +158,34 @@
     ]
   },
   {
+    "tag": "mestiere",
+    "count": 1,
+    "posts": [
+      "scrive-meglio-di-me"
+    ]
+  },
+  {
+    "tag": "stile",
+    "count": 1,
+    "posts": [
+      "ripete-le-stesse-parole"
+    ]
+  },
+  {
+    "tag": "costi",
+    "count": 1,
+    "posts": [
+      "quanto-costa-una-domanda"
+    ]
+  },
+  {
+    "tag": "token",
+    "count": 1,
+    "posts": [
+      "quanto-costa-una-domanda"
+    ]
+  },
+  {
     "tag": "rifiuti",
     "count": 1,
     "posts": [
@@ -110,10 +193,10 @@
     ]
   },
   {
-    "tag": "prompt engineering",
+    "tag": "lavoro",
     "count": 1,
     "posts": [
-      "prompt-di-un-sito"
+      "puo-sostituire-il-mio-lavoro"
     ]
   },
   {
@@ -173,13 +256,6 @@
     ]
   },
   {
-    "tag": "contesto",
-    "count": 1,
-    "posts": [
-      "la-memoria-che-non-ce"
-    ]
-  },
-  {
     "tag": "memoria",
     "count": 1,
     "posts": [
@@ -191,6 +267,13 @@
     "count": 1,
     "posts": [
       "i-conti-non-tornano"
+    ]
+  },
+  {
+    "tag": "voce",
+    "count": 1,
+    "posts": [
+      "farlo-suonare-come-me"
     ]
   },
   {
@@ -208,6 +291,20 @@
     ]
   },
   {
+    "tag": "temperatura",
+    "count": 1,
+    "posts": [
+      "due-risposte-diverse"
+    ]
+  },
+  {
+    "tag": "riproducibilità",
+    "count": 1,
+    "posts": [
+      "due-risposte-diverse"
+    ]
+  },
+  {
     "tag": "dati",
     "count": 1,
     "posts": [
@@ -216,13 +313,6 @@
   },
   {
     "tag": "riservatezza",
-    "count": 1,
-    "posts": [
-      "dove-finiscono-i-dati"
-    ]
-  },
-  {
-    "tag": "professioni",
     "count": 1,
     "posts": [
       "dove-finiscono-i-dati"
@@ -254,6 +344,27 @@
     "count": 1,
     "posts": [
       "come-e-nato-questo-sito"
+    ]
+  },
+  {
+    "tag": "revisione",
+    "count": 1,
+    "posts": [
+      "chiedergli-di-criticarsi"
+    ]
+  },
+  {
+    "tag": "italiano",
+    "count": 1,
+    "posts": [
+      "che-lingua-parla-meglio"
+    ]
+  },
+  {
+    "tag": "lingue",
+    "count": 1,
+    "posts": [
+      "che-lingua-parla-meglio"
     ]
   },
   {
