@@ -1,7 +1,7 @@
 {
     "name": "Prompt Engineering Italia",
     "short_name": "PE Italia",
-    "description": "La risorsa italiana definitiva per il prompt engineering",
+    "description": "Una cosa alla volta sull'AI. Guide, tecniche e workshop di chi l'AI la costruisce.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#1a1c26",
