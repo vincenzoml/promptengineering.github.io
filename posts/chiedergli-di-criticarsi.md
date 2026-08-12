@@ -117,5 +117,5 @@ Con quel limite in mente, resta la richiesta con il miglior rapporto fra costo e
 
 - Madaan et al., [Self-Refine](https://arxiv.org/abs/2303.17651), 2023.
 - Shinn et al., [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366), 2023.
-- Pan et al., [The Perils of Self-Rewarding Language Models](https://arxiv.org/abs/2407.04549), sui rischi dei segnali di ricompensa prodotti dal modello.
+- Pan et al., [Spontaneous Reward Hacking in Iterative Self-Refinement](https://arxiv.org/abs/2407.04549), sui rischi dei segnali di ricompensa prodotti dal modello.
 - Anthropic, [Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models), sul bias verso risposte gradite all'utente.

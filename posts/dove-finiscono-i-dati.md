@@ -153,7 +153,7 @@ Lo faccio fare all'inizio di ogni percorso, e in circa metà degli studi salta f
 ## Fonti e approfondimenti
 
 - OpenAI, [Business data privacy, security, and compliance](https://openai.com/business-data/), condizioni correnti per API e prodotti business.
-- Anthropic, [Commercial product data retention](https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data), retention dichiarata.
+- Anthropic, [How long do you store my organization's data?](https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data), retention dichiarata.
 - Anthropic, [Zero data retention](https://privacy.anthropic.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to), perimetro degli accordi ZDR.
 - EDPB, [Opinion 28/2024 on AI models](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en), anonimato, interesse legittimo e dati illeciti.
 - NIST, [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), gestione del rischio.

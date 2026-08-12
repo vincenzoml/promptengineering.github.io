@@ -113,7 +113,7 @@ Un testo con dentro un fatto vero non somiglia più a nessun altro, quali che si
 
 ## Fonti e approfondimenti
 
-- Patel et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), EMNLP 2025, sull'imitazione di stili impliciti.
+- Wang et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), Findings of EMNLP 2025, sull'imitazione di stili impliciti.
 - Sadasivan et al., [Can AI-Generated Text be Reliably Detected?](https://arxiv.org/abs/2303.11156), sui limiti teorici e pratici del rilevamento.
 - OpenAI, [AI classifier no longer available due to low rate of accuracy](https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/), un caso documentato di ritiro di un detector.
-- [Personalized Style Transfer via Post-Editing](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
+- Baumler et al., [Can You Make It Sound Like You? Post-Editing LLM-Generated Text for Personal Style](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.

@@ -88,7 +88,7 @@ Per la scrittura aggiungete un criterio che i benchmark ignorano: quanto il test
 
 ## La lingua influenza anche il comportamento sociale
 
-La cortesia, il dissenso e l'intensità non si trasferiscono meccanicamente. Uno studio ACL del 2024 su prompt cortesi e scortesi in inglese, cinese e giapponese ha trovato che l'impolitenza tendeva a danneggiare le prestazioni, ma livelli maggiori di cortesia non producevano un miglioramento monotono e l'optimum cambiava per lingua. È un buon antidoto alle regole universali da social network.
+La cortesia, il dissenso e l'intensità non si trasferiscono meccanicamente. Uno studio del 2024, presentato al workshop SICon, su prompt cortesi e scortesi in inglese, cinese e giapponese ha trovato che l'impolitenza tendeva a danneggiare le prestazioni, ma livelli maggiori di cortesia non producevano un miglioramento monotono e l'optimum cambiava per lingua. È un buon antidoto alle regole universali da social network.
 
 Se il compito riguarda negoziazione, feedback, salute o assistenza al pubblico, testate anche la pragmatica: una risposta può essere fattualmente equivalente e socialmente inappropriata. Specificare destinatario, relazione e conseguenza desiderata conta più dell'inglese in sé.
 
@@ -105,6 +105,6 @@ Nella mia esperienza, su testi da riassumere non cambia niente; su estrazione di
 ## Fonti e approfondimenti
 
 - Li et al., [MMLU-ProX: A Multilingual Benchmark for Advanced Large Language Model Evaluation](https://aclanthology.org/2025.emnlp-main.79/), EMNLP 2025.
-- Yin et al., [Should We Respect LLMs? A Cross-Lingual Study on the Influence of Prompt Politeness on LLM Performance](https://aclanthology.org/2024.sicon-1.2/), ACL 2024.
+- Yin et al., [Should We Respect LLMs? A Cross-Lingual Study on the Influence of Prompt Politeness on LLM Performance](https://aclanthology.org/2024.sicon-1.2/), workshop SICon 2024.
 - OpenAI, [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering), documentazione ufficiale su istruzioni e contesto.
 - Anthropic, [Multilingual support](https://docs.anthropic.com/en/docs/build-with-claude/multilingual-support), indicazioni operative sui compiti multilingue.

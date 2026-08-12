@@ -121,6 +121,6 @@ Il collaboratore ideale non contraddice per sport e non approva per riflesso. Ma
 ## Fonti e approfondimenti
 
 - Sharma et al., [Towards Understanding Sycophancy in Language Models](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models), 2023.
-- Anthropic, [Claude's Personal Guidance](https://www.anthropic.com/research/claude-personal-guidance), analisi 2026 di interazioni reali e comportamento di pushback.
+- Anthropic, [How people ask Claude for personal guidance](https://www.anthropic.com/research/claude-personal-guidance), aprile 2026: su circa 639.000 conversazioni, l'eccesso di convalida sale dal 9% al 18% quando l'utente insiste.
 - Anthropic, [Persona vectors](https://www.anthropic.com/research/persona-vectors), su tratti comportamentali nei modelli.
 - OpenAI, [Model Spec](https://model-spec.openai.com/), principi di comportamento e gestione del disaccordo.

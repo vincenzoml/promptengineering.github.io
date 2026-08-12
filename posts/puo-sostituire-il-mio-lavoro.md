@@ -133,7 +133,7 @@ Il modo di scoprirlo non è leggere previsioni: è prendere l'agenda di una sett
 ## Fonti e approfondimenti
 
 - ILO, [Generative AI and Jobs: A Refined Global Index of Occupational Exposure](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure), 2025.
-- Anthropic, [Economic Index — June 2026 report](https://www.anthropic.com/research/economic-index-june-2026-report), dati d'uso e limiti metodologici.
-- Anthropic, [How AI is transforming software development](https://www.anthropic.com/research/impact-software-development), analisi di Claude Code.
-- NBER, [Generative AI, Performance, and Education](https://www.nber.org/papers/w34851), studio randomizzato 2026.
+- Anthropic, [Economic Index, rapporto di giugno 2026](https://www.anthropic.com/research/economic-index-june-2026-report), ritmi d'uso reali e limiti dichiarati del campione.
+- Anthropic, [Economic Index: AI's impact on software development](https://www.anthropic.com/research/impact-software-development), analisi di Claude Code.
+- Cruces et al., [Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment](https://www.nber.org/papers/w34851), NBER working paper, 2026.
 - NBER, [The Economics of Generative AI](https://www.nber.org/reporter/2024number1/economics-generative-ai), rassegna di evidenze iniziali.

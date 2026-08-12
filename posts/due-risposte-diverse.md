@@ -116,4 +116,3 @@ La variabilità della risposta misura, abbastanza bene, l'ambiguità della doman
 - OpenAI, [Text generation](https://platform.openai.com/docs/guides/text-generation), documentazione su generazione e parametri.
 - OpenAI, [API reference](https://platform.openai.com/docs/api-reference/responses), per parametri e metadati correnti.
 - Holtzman et al., [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751), sul nucleus sampling.
-- BINDER, [Neural-symbolic Language Model for Knowledge-intensive Text Generation](https://arxiv.org/abs/2210.02875), che documenta anche variabilità osservata in configurazioni deterministiche.

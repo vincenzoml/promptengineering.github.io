@@ -128,4 +128,4 @@ La memoria che non c'è, insomma, non è un difetto da aggirare. È la forma del
 - Zhang et al., [Found in the Middle](https://arxiv.org/abs/2406.16008), su mitigazioni della dipendenza dalla posizione.
 - Anthropic, [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents), 2025.
 - OpenAI, [Memory FAQ](https://help.openai.com/en/articles/8590148-memory-faq), funzioni e controlli correnti del prodotto.
-- Anthropic, [Claude Code memory](https://docs.anthropic.com/en/docs/claude-code/memory), istruzioni persistenti e gerarchia dei file.
+- Anthropic, [How Claude remembers your project](https://docs.anthropic.com/en/docs/claude-code/memory), istruzioni persistenti e gerarchia dei file.

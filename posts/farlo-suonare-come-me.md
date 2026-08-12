@@ -110,7 +110,7 @@ Il che ridimensiona l'obiettivo in modo utile. Non serve un modello che scriva a
 
 ## Fonti e approfondimenti
 
-- Patel et al., [Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Authors](https://aclanthology.org/2025.findings-emnlp.532/), EMNLP 2025.
-- [Personalized Style Transfer via Post-Editing](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
+- Wang et al., [Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors](https://aclanthology.org/2025.findings-emnlp.532/), Findings of EMNLP 2025.
+- Baumler et al., [Can You Make It Sound Like You? Post-Editing LLM-Generated Text for Personal Style](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
 - OpenAI, [Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering), su esempi e istruzioni.
 - Madaan et al., [Self-Refine](https://arxiv.org/abs/2303.17651), su feedback e revisione iterativa.

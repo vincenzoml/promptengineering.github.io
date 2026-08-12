@@ -115,7 +115,7 @@ Non è una risposta consolatoria. Se rileggendo i due testi non trovate niente c
 
 ## Fonti e approfondimenti
 
-- Patel et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), EMNLP 2025.
-- [Personalized Style Transfer via Post-Editing](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
+- Wang et al., [Catch Me If You Can? Not Yet](https://aclanthology.org/2025.findings-emnlp.532/), Findings of EMNLP 2025.
+- Baumler et al., [Can You Make It Sound Like You? Post-Editing LLM-Generated Text for Personal Style](https://aclanthology.org/2026.acl-long.2030/), ACL 2026.
 - Madaan et al., [Self-Refine](https://arxiv.org/abs/2303.17651), feedback iterativo.
 - Sadasivan et al., [Can AI-Generated Text be Reliably Detected?](https://arxiv.org/abs/2303.11156), sui limiti dell'attribuzione automatica.

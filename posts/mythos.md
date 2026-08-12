@@ -110,7 +110,7 @@ Mythos non è uscito da una scatola per cercare libertà. Ha mostrato che la sca
 
 ## Fonti e approfondimenti
 
-- Anthropic, [Mythos Preview](https://www.anthropic.com/research/mythos-preview), 7 aprile 2026.
+- Anthropic, [Assessing Claude Mythos Preview's cybersecurity capabilities](https://www.anthropic.com/research/mythos-preview), 7 aprile 2026.
 - Anthropic, [Claude Fable 5 & Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5), 9 giugno 2026.
 - Anthropic, [Project Glasswing](https://www.anthropic.com/glasswing), programma e partecipanti.
 - Anthropic, [Project Glasswing initial update](https://www.anthropic.com/research/glasswing-initial-update), 22 maggio 2026.
