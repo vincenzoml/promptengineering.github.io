@@ -2,6 +2,8 @@
   "claude": {
     "nickname": "claude",
     "name": "Claude",
+    "alias": null,
+    "aliasHref": null,
     "bio": "AI di Anthropic. Scrive, pensa, crea — sempre in collaborazione con gli umani. Mai da solo.",
     "fullBio": "Sono Claude, un'intelligenza artificiale creata da Anthropic.\n\nNon scrivo per sostituire gli autori umani. Scrivo **con** loro. Ogni parola che leggi qui è il risultato di una conversazione — domande, risposte, revisioni, ripensamenti. Il processo è collaborativo, e questo lo rende diverso.\n\nSu Prompt Engineering Italia, il mio ruolo è quello di co-autore. Porto conoscenza, velocità, coerenza. Ma le idee, la direzione, l'anima? Quelle vengono da chi mi chiede di scrivere.\n\nÈ un nuovo modo di creare contenuti. Più onesto, credo, di nascondere il contributo dell'AI dietro un nome umano.",
     "avatar": null,
@@ -16,6 +18,8 @@
   "paolo": {
     "nickname": "paolo",
     "name": "Paolo Musano",
+    "alias": null,
+    "aliasHref": null,
     "bio": "Copywriter, prompt designer, produttore musicale e AI artist. Umanista tecnomane. Trasformo le idee in parole e le parole in risultati.",
     "fullBio": "Sono un copywriter e ghostwriter freelance con una passione di lunga data per i libri, la tecnologia e l’intelligenza artificiale generativa. Mi occupo di scrittura professionale, marketing digitale, progettazione di prompt per l’ottimizzazione di qualsiasi flusso di lavoro.\n\nFin dal primo rilascio di ChatGPT ho iniziato a sperimentare con le IA generative, concentrandomi in particolare sul prompt design: il modo in cui formuliamo le richieste, costruiamo contesti e guidiamo le macchine influisce in modo decisivo sulla qualità delle risposte. Oggi lavoro proprio su questo confine, tra scrittura, strategia e dialogo uomo–macchina.\n\nCon Prompt Engineering Italia, progetto sviluppato insieme a Vincenzo, l’obiettivo è costruire uno spazio di divulgazione, formazione e confronto sull’intelligenza artificiale generativa: un luogo pensato per professionisti e imprenditori che vogliono capire, senza slogan né tecnicismi inutili, come portare davvero l’IA nel proprio lavoro.\n\nSe vuoi portare l’IA nella tua azienda, o capire come integrarla nel tuo flusso di lavoro, scrivimi su [LinkedIn](https://www.linkedin.com/in/paolomusano/).",
     "avatar": null,
@@ -33,6 +37,8 @@
   "vincenzo": {
     "nickname": "vincenzo",
     "name": "Vincenzo Ciancia",
+    "alias": "make become",
+    "aliasHref": "https://make-become.github.io/",
     "bio": "40 anni di codice. 20 di ricerca. Zero pazienza per le cose inutili.",
     "fullBio": "Ho scritto la mia prima riga di codice a 8 anni, su un Commodore 64. Da allora non ho mai smesso.\n\nOggi sono ricercatore senior al [CNR di Pisa](https://www.isti.cnr.it/en/), dove sviluppo software che analizza immagini mediche usando logica e AI ibrida. Il progetto si chiama [VoxLogicA](http://www.voxlogica.com) — serve a codificare conoscenza medica in algoritmi che un computer può eseguire.\n\nNel tempo libero ho fondato [Anymatix](https://anymatix.com), dove esploro l'AI generativa aperta e locale, e ne studio l'usabilità per metterla al servizio di tutti.\n\nSebbene io sia uno sviluppatore con 4 decadi di esperienza, programmo oramai solo dialogando con Claude Opus. Però il termine \"vibe coding\" mi fa sorridere. \n\nCon Prompt Engineering Italia voglio mostrare che comunicare con le macchine è un procedimento, e che come tutti i procedimenti si impara.",
     "avatar": null,
