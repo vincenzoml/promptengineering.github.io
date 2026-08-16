@@ -14,7 +14,26 @@
     ],
     "image": "/images/posts/cover-quiet-mode-agenti-coding.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
+  },
+  {
+    "slug": "passare-il-lavoro-a-un-altra-chat",
+    "title": "Passare il lavoro a un'altra chat senza ricominciare",
+    "description": "I crediti finiscono a metà lavoro, o volete continuare da terminale quello che avete cominciato nell'app desktop. Le conversazioni con Claude sono file sul vostro disco, e un'altra sessione può leggerle.",
+    "date": "2026-08-15",
+    "readingTime": 10,
+    "tags": [
+      "agenti",
+      "Claude Code",
+      "contesto",
+      "metodo",
+      "token"
+    ],
+    "image": "/images/posts/cover-passare-il-lavoro-a-un-altra-chat.png",
+    "author": "vincenzo",
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "fable-instradamento",
@@ -30,7 +49,8 @@
     ],
     "image": "/images/posts/cover-fable-instradamento.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "mythos",
@@ -46,7 +66,8 @@
     ],
     "image": "/images/posts/cover-mythos.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "dove-finiscono-i-dati",
@@ -62,7 +83,8 @@
     ],
     "image": "/images/posts/cover-dove-finiscono-i-dati.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "prompt-di-un-sito",
@@ -78,7 +100,8 @@
     ],
     "image": "/images/posts/cover-prompt-di-un-sito.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "quando-il-modello-dice-no",
@@ -94,7 +117,8 @@
     ],
     "image": "/images/posts/cover-quando-il-modello-dice-no.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "comfyui",
@@ -110,7 +134,8 @@
     ],
     "image": "/images/posts/cover-comfyui.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "pesi-aperti",
@@ -126,7 +151,8 @@
     ],
     "image": "/images/posts/cover-pesi-aperti.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "i-conti-non-tornano",
@@ -142,7 +168,8 @@
     ],
     "image": "/images/posts/cover-i-conti-non-tornano.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "perche-ti-da-ragione",
@@ -158,7 +185,8 @@
     ],
     "image": "/images/posts/cover-perche-ti-da-ragione.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "la-memoria-che-non-ce",
@@ -174,7 +202,8 @@
     ],
     "image": "/images/posts/cover-la-memoria-che-non-ce.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "due-risposte-diverse",
@@ -190,7 +219,8 @@
     ],
     "image": "/images/posts/cover-due-risposte-diverse.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "conviene-essere-gentili",
@@ -205,7 +235,8 @@
     ],
     "image": "/images/posts/cover-conviene-essere-gentili.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "sa-che-ore-sono",
@@ -221,7 +252,8 @@
     ],
     "image": "/images/posts/cover-sa-che-ore-sono.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "scrive-meglio-di-me",
@@ -236,7 +268,8 @@
     ],
     "image": "/images/posts/cover-scrive-meglio-di-me.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "quanto-costa-una-domanda",
@@ -251,7 +284,8 @@
     ],
     "image": "/images/posts/cover-quanto-costa-una-domanda.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "dirgli-di-essere-breve",
@@ -266,7 +300,8 @@
     ],
     "image": "/images/posts/cover-dirgli-di-essere-breve.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "ripete-le-stesse-parole",
@@ -281,7 +316,8 @@
     ],
     "image": "/images/posts/cover-ripete-le-stesse-parole.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "che-lingua-parla-meglio",
@@ -297,7 +333,8 @@
     ],
     "image": "/images/posts/cover-che-lingua-parla-meglio.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "farlo-suonare-come-me",
@@ -312,7 +349,8 @@
     ],
     "image": "/images/posts/cover-farlo-suonare-come-me.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "puo-sostituire-il-mio-lavoro",
@@ -327,7 +365,8 @@
     ],
     "image": "/images/posts/cover-puo-sostituire-il-mio-lavoro.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "usarlo-per-il-lavoro-serio",
@@ -342,7 +381,8 @@
     ],
     "image": "/images/posts/cover-usarlo-per-il-lavoro-serio.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "chiedergli-di-criticarsi",
@@ -357,7 +397,8 @@
     ],
     "image": "/images/posts/cover-chiedergli-di-criticarsi.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "IA-generativa",
@@ -372,7 +413,8 @@
     ],
     "image": "/images/posts/IA-generativa-prima-dopo.jpg",
     "author": "paolo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "IA-come-pappagalli-stocastici",
@@ -387,7 +429,8 @@
     ],
     "image": "/images/posts/IA-pappagallo-stocastico.jpg",
     "author": "paolo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "vocabolario-intelligenza-artificiale",
@@ -401,7 +444,8 @@
     ],
     "image": "/images/posts/vocabolario-IA.jpg",
     "author": "paolo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "cosa-non-e-intelligenza-artificiale",
@@ -415,7 +459,8 @@
     ],
     "image": "/images/posts/mente-IA.jpg",
     "author": "paolo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "welcome",
@@ -430,7 +475,8 @@
     ],
     "image": "/images/posts/cover-welcome.png",
     "author": "vincenzo",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   },
   {
     "slug": "come-e-nato-questo-sito",
@@ -444,6 +490,7 @@
     ],
     "image": null,
     "author": "claude",
-    "lang": "it"
+    "lang": "it",
+    "discussione": {}
   }
 ]

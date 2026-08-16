@@ -12,7 +12,9 @@ lang: it
 
 C'è un momento riconoscibile nelle sessioni lunghe con un agente di coding. La richiesta iniziale è circoscritta; l'agente esplora il repository, apre file vicini, cerca simboli, esegue test. Poi comincia il diario: che cosa sta per fare, che cosa ha appena fatto, che cosa «sembra» aver trovato. Un comando restituisce cinquecento righe. Un altro ripete quasi le stesse. Quando arriva la modifica, il contesto contiene più cronaca che problema.
 
-La diagnosi è ormai comune. Si consigliano server MCP specializzati, hook, indici semantici, compattatori, wrapper per la shell e sistemi di memoria. Sono strumenti utili. Io ho cominciato con una frase:
+La diagnosi è ormai comune. Si consigliano server MCP specializzati, hook, indici semantici, compattatori, wrapper per la shell e sistemi di memoria. Sono strumenti utili, ma non sempre si possono usare: magari lavorate con un altro programma, magari la macchina non è vostra, magari il progetto non permette di aggiungere nulla.
+
+C'è però un'alternativa che è sempre disponibile, e consiste nel far risolvere il problema all'AI stessa. Come? Con una frase:
 
 > Usa la tua intelligenza per risparmiare crediti.
 
@@ -49,9 +51,9 @@ Dire «risparmio token» senza specificare quali rende qualsiasi percentuale sos
 2. **risultati degli strumenti reimmessi nel contesto**: file letti, log, diff, risposte di API;
 3. **contesto di input dei turni successivi**: istruzioni, cronologia, tool call e risultati che il modello deve rileggere.
 
-Il silenzio riduce direttamente il primo. La regola sugli output riduce il secondo. Entrambi, se la piattaforma conserva la cronologia, riducono anche il terzo nei turni seguenti.
+Il silenzio riduce direttamente il primo. La regola sugli strumenti riduce il secondo. Entrambi, se la piattaforma conserva la cronologia, riducono anche il terzo nei turni seguenti.
 
-Non riducono necessariamente il ragionamento interno del modello. Non rendono gratuiti i tool. Non impediscono alla piattaforma di reinviare istruzioni fisse o definizioni degli strumenti. E non garantiscono una bolletta inferiore nello stesso rapporto: caching, prezzi differenziati, compattazione e implementazione dell'agente cambiano il conto.
+Restano fuori dal loro raggio parecchie cose. Il ragionamento interno del modello, che si paga comunque. Il costo di ogni chiamata a uno strumento, che è dovuto a prescindere da quanto se ne stampa. Le istruzioni fisse e le definizioni degli strumenti, che la piattaforma rimanda a ogni turno. E la bolletta finale, che dipende anche da come vengono contati e scontati i token: due sessioni che consumano lo stesso possono costare diverso.
 
 Questa distinzione spiega perché il prompt funziona senza attribuirgli poteri mistici.
 
@@ -96,21 +98,19 @@ Esistono poi due failure mode meno evidenti.
 
 Il primo è l'**assunzione muta**. Per non interrompere, il modello prende una decisione che cambia l'architettura o interpreta un requisito in modo conveniente. La seconda eccezione del prompt esiste per questo: un'ipotesi moderatamente rischiosa va resa esplicita, anche se non richiede ancora autorizzazione.
 
-Il secondo è la **compressione della verifica**. «Sii breve» può diventare «fai meno controlli» se il criterio non distingue comunicazione e lavoro. Per questo chiedo di minimizzare i token, non le verifiche; e alla fine giudico artefatti, test e diff, non la sicurezza del riepilogo.
+Il secondo è la **compressione della verifica**. «Sii breve» può diventare «fai meno controlli» se il criterio non distingue comunicazione e lavoro.
 
-Per attività ad alto rischio aggiungo checkpoint espliciti: piano prima delle modifiche, consenso prima di migrazioni o cancellazioni, rapporto di verifica con evidenze. Quiet mode è una policy di comunicazione, non una deroga al processo.
+Per attività ad alto rischio aggiungo checkpoint espliciti: piano prima delle modifiche, consenso prima di migrazioni o cancellazioni, rapporto di verifica con evidenze. Il quiet mode governa quanto l'agente parla; il processo di lavoro resta quello di prima.
 
 ## Il mio risultato, e il limite della testimonianza
 
-Nelle mie sessioni — repository grandi, Git, test, debugging, connessioni SSH — molti task complessi rimangono sotto i mille token di risposta visibile per richiesta. Prima erano facilmente dominati da aggiornamenti e log. È un'osservazione personale, non un benchmark: cambiano modello, piattaforma, caching, difficoltà e quantità di output degli strumenti.
-
-La versione precedente di questo articolo trattava quell'osservazione quasi come una misura sufficiente. Non lo è. Per sapere se il prompt risparmia davvero bisogna misurare insieme costo e qualità.
+Nelle mie sessioni — repository grandi, Git, test, debugging, connessioni SSH — molti task complessi rimangono sotto i mille token di risposta visibile per richiesta. Prima erano dominati da aggiornamenti e log, e arrivavano a decine di migliaia. È un'osservazione personale, non un benchmark: cambiano modello, piattaforma, caching, difficoltà e quantità di output degli strumenti.
 
 ## Provatelo su un lavoro vero
 
-Prendete cinque task simili. Eseguitene alcuni con le istruzioni abituali e gli altri aggiungendo quiet mode. Tenete fissi modello e repository; confrontate token, costo, test superati e tempo di revisione. Se risparmia soltanto perché controlla meno, ha fallito.
+Prendete cinque task simili. Eseguitene alcuni con le istruzioni abituali e gli altri aggiungendo quiet mode. Tenete fissi modello e repository; confrontate token, costo, test superati e tempo di revisione.
 
-Se fate la prova, [scrivetemi due righe](mailto:vincenzoml@gmail.com?subject=Quiet%20mode%3A%20il%20mio%20risultato&body=Task%3A%20%0AModello%20e%20strumento%3A%20%0APrima%2Fdopo%3A%20%0ACosa%20%C3%A8%20migliorato%20o%20peggiorato%3A%20) oppure [mandatemi un messaggio su LinkedIn](https://www.linkedin.com/in/vincenzo-ciancia-2032445/). Mi bastano task, modello, prima/dopo e una cosa che è peggiorata. Questo sito è statico e voglio lasciarlo tale: niente account, database o moderazione automatica. Con il permesso di chi scrive raccoglierò qui i risultati interessanti, comprese le smentite. È più vicino a una corrispondenza fra persone che a una colonna di commenti, e probabilmente produce dati migliori.
+Se fate la prova, [scrivetemi due righe](mailto:vincenzoml@gmail.com?subject=Quiet%20mode%3A%20il%20mio%20risultato&body=Task%3A%20%0AModello%20e%20strumento%3A%20%0APrima%2Fdopo%3A%20%0ACosa%20%C3%A8%20migliorato%20o%20peggiorato%3A%20). Mi bastano il compito, il modello, il prima e il dopo, e una cosa che è peggiorata.
 
 ## Una versione adattata ai diversi lavori
 

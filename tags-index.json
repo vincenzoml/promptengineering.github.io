@@ -1,7 +1,7 @@
 [
   {
     "tag": "metodo",
-    "count": 16,
+    "count": 17,
     "posts": [
       "usarlo-per-il-lavoro-serio",
       "scrive-meglio-di-me",
@@ -12,6 +12,7 @@
       "puo-sostituire-il-mio-lavoro",
       "prompt-di-un-sito",
       "perche-ti-da-ragione",
+      "passare-il-lavoro-a-un-altra-chat",
       "fable-instradamento",
       "due-risposte-diverse",
       "dove-finiscono-i-dati",
@@ -69,6 +70,16 @@
     ]
   },
   {
+    "tag": "contesto",
+    "count": 4,
+    "posts": [
+      "sa-che-ore-sono",
+      "quiet-mode-agenti-coding",
+      "passare-il-lavoro-a-un-altra-chat",
+      "la-memoria-che-non-ce"
+    ]
+  },
+  {
     "tag": "IA",
     "count": 3,
     "posts": [
@@ -105,12 +116,12 @@
     ]
   },
   {
-    "tag": "contesto",
+    "tag": "token",
     "count": 3,
     "posts": [
-      "sa-che-ore-sono",
       "quiet-mode-agenti-coding",
-      "la-memoria-che-non-ce"
+      "quanto-costa-una-domanda",
+      "passare-il-lavoro-a-un-altra-chat"
     ]
   },
   {
@@ -122,11 +133,19 @@
     ]
   },
   {
-    "tag": "token",
+    "tag": "agenti",
     "count": 2,
     "posts": [
       "quiet-mode-agenti-coding",
-      "quanto-costa-una-domanda"
+      "passare-il-lavoro-a-un-altra-chat"
+    ]
+  },
+  {
+    "tag": "Claude Code",
+    "count": 2,
+    "posts": [
+      "quiet-mode-agenti-coding",
+      "passare-il-lavoro-a-un-altra-chat"
     ]
   },
   {
@@ -179,20 +198,6 @@
     "count": 1,
     "posts": [
       "ripete-le-stesse-parole"
-    ]
-  },
-  {
-    "tag": "agenti",
-    "count": 1,
-    "posts": [
-      "quiet-mode-agenti-coding"
-    ]
-  },
-  {
-    "tag": "Claude Code",
-    "count": 1,
-    "posts": [
-      "quiet-mode-agenti-coding"
     ]
   },
   {

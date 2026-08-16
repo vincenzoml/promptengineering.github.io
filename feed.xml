@@ -5,7 +5,7 @@
     <link>https://www.promptengineering.it</link>
     <description>Una cosa alla volta sull'AI. Guide, tecniche e workshop di chi l'AI la costruisce.</description>
     <language>it-IT</language>
-    <lastBuildDate>Wed, 12 Aug 2026 09:44:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 06:42:57 GMT</lastBuildDate>
     <atom:link href="https://www.promptengineering.it/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[Ho chiesto all'agente di coding di spendere meno token. Ha funzionato]]></title>
@@ -18,6 +18,18 @@
       <category>token</category>
       <category>contesto</category>
       <category>metodo</category>
+    </item>
+    <item>
+      <title><![CDATA[Passare il lavoro a un'altra chat senza ricominciare]]></title>
+      <link>https://www.promptengineering.it/post/passare-il-lavoro-a-un-altra-chat/</link>
+      <guid isPermaLink="true">https://www.promptengineering.it/post/passare-il-lavoro-a-un-altra-chat/</guid>
+      <description><![CDATA[I crediti finiscono a metà lavoro, o volete continuare da terminale quello che avete cominciato nell'app desktop. Le conversazioni con Claude sono file sul vostro disco, e un'altra sessione può leggerle.]]></description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>agenti</category>
+      <category>Claude Code</category>
+      <category>contesto</category>
+      <category>metodo</category>
+      <category>token</category>
     </item>
     <item>
       <title><![CDATA[Perché a metà lavoro vi risponde un altro modello]]></title>
@@ -211,16 +223,6 @@
       <category>lingue</category>
       <category>metodo</category>
       <category>LLM</category>
-    </item>
-    <item>
-      <title><![CDATA[Come si insegna a un modello la propria voce]]></title>
-      <link>https://www.promptengineering.it/post/farlo-suonare-come-me/</link>
-      <guid isPermaLink="true">https://www.promptengineering.it/post/farlo-suonare-come-me/</guid>
-      <description><![CDATA[Descrivere il proprio stile a parole non funziona quasi mai. Funziona dargli tre cose che avete scritto — e sapere quali tre. Il procedimento, e il punto in cui conviene fermarsi.]]></description>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
-      <category>voce</category>
-      <category>scrittura</category>
-      <category>prompt engineering</category>
     </item>
   </channel>
 </rss>
